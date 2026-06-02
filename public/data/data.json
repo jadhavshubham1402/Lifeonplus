@@ -71,10 +71,10 @@
     ],
     "CourseDetailData": [
         {
-            "course": "HTML, CSS, JS",
-            "imageSrc": "/images/courses/coursesOne.svg",
+            "course": "Basic",
+            "imageSrc": "/images/courses/dehk.jpeg",
             "profession": "HTML, CSS, Javascript Development",
-            "price": "40",
+            "price": "300",
             "category": "webdevelopment"
         },
         {
@@ -128,7 +128,7 @@
         },
         {
             "course": "TensorFlow",
-            "imageSrc": "/images/courses/coursesTwo.svg",
+            "imageSrc": "/images/courses/ept.jpeg",
             "profession": "Learn TensorFlow with SQL",
             "price": "99",
             "category": "datascience"
@@ -230,14 +230,14 @@
     "TestimonialData": [
         {
             "profession": "UX/UI Designer",
-            "name": "Andrew Williams",
+            "name": "Robin NG",
             "imgSrc": "/images/testimonial/user-1.jpg",
             "starimg": "/images/testimonial/stars.png",
             "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
         },
         {
-            "profession": "UX/UI Designer",
-            "name": "Cristian Doru Barin",
+            "profession": "Member of Lok Sabha",
+            "name": "Annasaheb Shankar Jolle",
             "imgSrc": "/images/testimonial/user-2.jpg",
             "starimg": "/images/testimonial/stars.png",
             "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
