@@ -5,42 +5,34 @@
             "href": "/#Home"
         },
         {
-            "label": "Courses",
+            "label": "Shop",
             "href": "/#Courses"
         },
         {
-            "label": "Mentors",
+            "label": "Services",
             "href": "/#mentors-section"
         },
         {
-            "label": "Testimonial",
+            "label": "Lifeonplus",
             "href": "/#testimonial-section"
         },
         {
-            "label": "Join",
+            "label": "Download App",
             "href": "/#join-section"
-        },
-        {
-            "label": "Contact Us",
-            "href": "/#contact"
-        },
-        {
-            "label": "Docs",
-            "href": "/documentation"
         }
     ],
     "CourseData": [
         {
-            "name": "Mobile Development"
+            "name": "Emergency Digital Health Kit"
         },
         {
-            "name": "Web Development"
+            "name": "Pharmacy"
         },
         {
-            "name": "Data Science"
+            "name": "Express Medical test"
         },
         {
-            "name": "Cloud Computing"
+            "name": "Diagnostic Services"
         }
     ],
     "HourData": [

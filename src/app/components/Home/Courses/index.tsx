@@ -151,7 +151,7 @@ const NamesList = () => {
                                 : 'text-black/40') +
                             ' pb-2 text-lg hidden sm:block hover:cursor-pointer'
                         }>
-                        Web Development
+                        Emergency Digital Health Kit
                     </button>
                     <button
                         onClick={() => setSelectedButton('mobiledevelopment')}
@@ -162,7 +162,7 @@ const NamesList = () => {
                                 : 'text-black/40') +
                             ' pb-2 text-lg hidden sm:block hover:cursor-pointer'
                         }>
-                        Mobile Development
+                        Pharmacy
                     </button>
                     <button
                         onClick={() => setSelectedButton('datascience')}
@@ -173,7 +173,7 @@ const NamesList = () => {
                                 : 'text-black/40') +
                             ' pb-2 text-lg hidden sm:block hover:cursor-pointer'
                         }>
-                        Data Science
+                        Express Medical test
                     </button>
                     <button
                         onClick={() => setSelectedButton('cloudcomputing')}
@@ -184,7 +184,7 @@ const NamesList = () => {
                                 : 'text-black/40') +
                             ' pb-2 text-lg hidden sm:block hover:cursor-pointer'
                         }>
-                        Cloud Computing
+                        Diagnostic Services
                     </button>
 
                     {/* FOR MOBILE VIEW */}
