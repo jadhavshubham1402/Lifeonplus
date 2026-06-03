@@ -75,112 +75,91 @@
             "imageSrc": "/images/courses/dehk.jpeg",
             "profession": "HTML, CSS, Javascript Development",
             "price": "300",
-            "category": "webdevelopment"
+            "category": "dek"
         },
         {
-            "course": "Node.js",
+            "course": "Basic Plus",
             "imageSrc": "/images/courses/coursesTwo.svg",
             "profession": "Backend with Node.js and Express.js",
-            "price": "21",
-            "category": "webdevelopment"
+            "price": "400",
+            "category": "dek"
         },
         {
-            "course": "Database",
-            "imageSrc": "/images/courses/coursesThree.svg",
-            "profession": "Learn Mongodb with Mongoose",
-            "price": "21",
-            "category": "webdevelopment"
-        },
-        {
-            "course": "React.js",
-            "imageSrc": "/images/courses/coursesFour.svg",
-            "profession": "Learn React with Redux toolkit",
-            "price": "99",
-            "category": "webdevelopment"
-        },
-        {
-            "course": "React Native",
+            "course": "Bronze",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Learn React Native with Node.js",
-            "price": "89",
-            "category": "mobiledevelopment"
+            "price": "600",
+            "category": "dmek"
         },
         {
-            "course": "Swift",
+            "course": "Bronze Plus",
             "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Learn Swift from Scratch",
-            "price": "89",
-            "category": "mobiledevelopment"
+            "price": "1000",
+            "category": "dmek"
         },
         {
-            "course": "Flutter",
-            "imageSrc": "/images/courses/coursesFour.svg",
-            "profession": "Flutter App Development",
-            "price": "69",
-            "category": "mobiledevelopment"
-        },
-        {
-            "course": "Onsen UI",
-            "imageSrc": "/images/courses/coursesTwo.svg",
-            "profession": "Learn Onsen Ui with HTML, CSS",
-            "price": "69",
-            "category": "mobiledevelopment"
-        },
-        {
-            "course": "TensorFlow",
-            "imageSrc": "/images/courses/ept.jpeg",
+            "course": "Package 1",
+            "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Learn TensorFlow with SQL",
-            "price": "99",
-            "category": "datascience"
+            "price": "1500",
+            "category": "diagnosis"
         },
         {
-            "course": "AWS",
+            "course": "Package 2",
             "imageSrc": "/images/courses/coursesFour.svg",
             "profession": "AWS Deep Learning AMI",
-            "price": "99",
-            "category": "datascience"
+            "price": "2500",
+            "category": "diagnosis"
         },
         {
-            "course": "Bokeh",
+            "course": "Package 1",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Learn Bokeh with Python",
-            "price": "99",
-            "category": "datascience"
+            "price": "2000",
+            "category": "qhc"
         },
         {
-            "course": "Scikit",
-            "imageSrc": "/images/courses/coursesThree.svg",
+            "course": "Package 1",
+            "imageSrc": "/images/courses/ept.jpeg",
             "profession": "Scikit with Python Development",
-            "price": "89",
-            "category": "datascience"
+            "price": "999",
+            "category": "emt"
         },
         {
-            "course": "Laas",
+            "course": "Package 2",
             "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Infra-as-a-Service",
-            "price": "21",
-            "category": "cloudcomputing"
+            "price": "1499",
+            "category": "emt"
         },
         {
-            "course": "Iaas",
+            "course": "Package 3",
             "imageSrc": "/images/courses/coursesFour.svg",
             "profession": "Info-as-a-Service",
-            "price": "29",
-            "category": "cloudcomputing"
+            "price": "2199",
+            "category": "emt"
         },
         {
-            "course": "Paas",
+            "course": "Package 1",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Platform-as-a-Service",
-            "price": "99",
-            "category": "cloudcomputing"
+            "price": "1500",
+            "category": "brs"
         },
         {
-            "course": "Saas",
+            "course": "Package 2",
             "imageSrc": "/images/courses/coursesTwo.svg",
             "profession": "Software-as-a-Service",
-            "price": "58",
-            "category": "cloudcomputing"
+            "price": "1500",
+            "category": "brs"
+        },
+                {
+            "course": "Package 3",
+            "imageSrc": "/images/courses/coursesTwo.svg",
+            "profession": "Software-as-a-Service",
+            "price": "1500",
+            "category": "brs"
         }
     ],
     "MentorData": [

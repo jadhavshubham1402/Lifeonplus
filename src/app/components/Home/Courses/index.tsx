@@ -12,11 +12,7 @@ interface Name {
   course: string;
   price: string;
   profession: string;
-  category:
-    | "webdevelopment"
-    | "mobiledevelopment"
-    | "datascience"
-    | "cloudcomputing";
+  category: "dek" | "dmek" | "diagnosis" | "qhc" | "emt" | "brs";
 }
 
 const NamesList = () => {
@@ -42,35 +38,32 @@ const NamesList = () => {
   // -------------------------------------------------------------
 
   const [selectedButton, setSelectedButton] = useState<
-    | "mobiledevelopment"
-    | "webdevelopment"
-    | "datascience"
-    | "cloudcomputing"
-    | "all"
-    | null
-  >("webdevelopment");
+    "dmek" | "dek" | "diagnosis" | "qhc" | "emt" | "brs" | "all" | null
+  >("dek");
   const mobileDevelopment = courseDetail.filter(
-    (name) => name.category === "mobiledevelopment",
+    (name) => name.category === "dmek",
   );
-  const webDevelopment = courseDetail.filter(
-    (name) => name.category === "webdevelopment",
-  );
+  const webDevelopment = courseDetail.filter((name) => name.category === "dek");
   const dataScience = courseDetail.filter(
-    (name) => name.category === "datascience",
+    (name) => name.category === "diagnosis",
   );
-  const cloudComputing = courseDetail.filter(
-    (name) => name.category === "cloudcomputing",
-  );
+  const cloudComputing = courseDetail.filter((name) => name.category === "qhc");
+  const expressMedical = courseDetail.filter((name) => name.category === "emt");
+  const bodyRecharge = courseDetail.filter((name) => name.category === "brs");
 
   let selectedNames: Name[] = [];
-  if (selectedButton === "mobiledevelopment") {
+  if (selectedButton === "dmek") {
     selectedNames = mobileDevelopment;
-  } else if (selectedButton === "webdevelopment") {
+  } else if (selectedButton === "dek") {
     selectedNames = webDevelopment;
-  } else if (selectedButton === "datascience") {
+  } else if (selectedButton === "diagnosis") {
     selectedNames = dataScience;
-  } else if (selectedButton === "cloudcomputing") {
+  } else if (selectedButton === "qhc") {
     selectedNames = cloudComputing;
+  } else if (selectedButton === "emt") {
+    selectedNames = expressMedical;
+  } else if (selectedButton === "brs") {
+    selectedNames = bodyRecharge;
   }
 
   const nameElements = selectedNames.map((name, index) => (
@@ -90,19 +83,11 @@ const NamesList = () => {
             <div className="flex items-center justify-between">
               <p className="block font-normal text-gray-900">{name.course}</p>
               <div className="block text-lg font-semibold text-success border-solid border-2 border-success rounded-md px-1">
-                <p>${name.price}</p>
+                <p>₹ {name.price}</p>
               </div>
             </div>
-            <Link href={"/"}>
-              <p
-                aria-hidden="true"
-                className="text-xl font-semibold group-hover:text-primary group-hover:cursor-pointer"
-              >
-                {name.profession}
-              </p>
-            </Link>
           </div>
-          <div className="flex justify-between border-solid border-2 rounded-md p-2">
+          {/* <div className="flex justify-between border-solid border-2 rounded-md p-2">
             <p>12 Classes</p>
             <div className="flex flex-row space-x-4">
               <div className="flex">
@@ -124,7 +109,7 @@ const NamesList = () => {
                 <p className="ml-1">4.5</p>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
@@ -134,44 +119,69 @@ const NamesList = () => {
     <section id="courses-section">
       <div className="container mx-auto max-w-7xl px-4">
         <div className="flex flex-col sm:flex-row justify-between sm:items-center gap-5 mb-4">
-          <h2 className="font-bold tracking-tight">Popular Courses</h2>
-          <div>
+          <h2 className="font-bold tracking-tight">Popular Services</h2>
+          {/* <div>
             <button className="bg-transparent cursor-pointer hover:bg-primary text-primary font-medium hover:text-white py-3 px-4 border border-primary hover:border-transparent rounded-sm duration-300">
               Explore Classes
             </button>
-          </div>
+          </div> */}
         </div>
         <div className="flex nowhitespace space-x-5 rounded-xl bg-white p-1 overflow-x-auto mb-4">
           {/* FOR DESKTOP VIEW */}
           <button
-            onClick={() => setSelectedButton("webdevelopment")}
+            onClick={() => setSelectedButton("dek")}
             className={
               "bg-white" +
-              (selectedButton === "webdevelopment"
+              (selectedButton === "dek"
                 ? "text-black border-b-2 border-yellow-200"
                 : "text-black/40") +
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
             }
           >
-            Emergency Digital Health Kit
+            Digital Emergency Kit
           </button>
           <button
-            onClick={() => setSelectedButton("mobiledevelopment")}
+            onClick={() => setSelectedButton("dmek")}
             className={
               "bg-white " +
-              (selectedButton === "mobiledevelopment"
+              (selectedButton === "dmek"
                 ? "text-black border-b-2 border-yellow-200"
                 : "text-black/40") +
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
             }
           >
-            Pharmacy
+            Digital and medical emergency Kit
           </button>
+
           <button
-            onClick={() => setSelectedButton("datascience")}
+            onClick={() => setSelectedButton("diagnosis")}
             className={
               "bg-white " +
-              (selectedButton === "datascience"
+              (selectedButton === "diagnosis"
+                ? "text-black border-b-2 border-yellow-200"
+                : "text-black/40") +
+              " pb-2 text-lg hidden sm:block hover:cursor-pointer"
+            }
+          >
+            Diagnosis
+          </button>
+          <button
+            onClick={() => setSelectedButton("qhc")}
+            className={
+              "bg-white " +
+              (selectedButton === "qhc"
+                ? "text-black border-b-2 border-yellow-200"
+                : "text-black/40") +
+              " pb-2 text-lg hidden sm:block hover:cursor-pointer"
+            }
+          >
+            Quick Health Checkup
+          </button>
+          <button
+            onClick={() => setSelectedButton("emt")}
+            className={
+              "bg-white " +
+              (selectedButton === "emt"
                 ? "text-black border-b-2 border-yellow-200"
                 : "text-black/40") +
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
@@ -180,22 +190,10 @@ const NamesList = () => {
             Express Medical test
           </button>
           <button
-            onClick={() => setSelectedButton("cloudcomputing")}
+            onClick={() => setSelectedButton("brs")}
             className={
               "bg-white " +
-              (selectedButton === "cloudcomputing"
-                ? "text-black border-b-2 border-yellow-200"
-                : "text-black/40") +
-              " pb-2 text-lg hidden sm:block hover:cursor-pointer"
-            }
-          >
-            Diagnostic Services
-          </button>
-          <button
-            onClick={() => setSelectedButton("cloudcomputing")}
-            className={
-              "bg-white " +
-              (selectedButton === "cloudcomputing"
+              (selectedButton === "brs"
                 ? "text-black border-b-2 border-yellow-200"
                 : "text-black/40") +
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
@@ -203,27 +201,14 @@ const NamesList = () => {
           >
             Body Recharge Station
           </button>
-          <button
-            onClick={() => setSelectedButton("cloudcomputing")}
-            className={
-              "bg-white " +
-              (selectedButton === "cloudcomputing"
-                ? "text-black border-b-2 border-yellow-200"
-                : "text-black/40") +
-              " pb-2 text-lg hidden sm:block hover:cursor-pointer"
-            }
-          >
-            Wearable Technologies
-          </button>
-          
 
           {/* FOR MOBILE VIEW */}
           <Icon
             icon="solar:global-line-duotone"
-            onClick={() => setSelectedButton("webdevelopment")}
+            onClick={() => setSelectedButton("dek")}
             className={
               "text-5xl sm:hidden block " +
-              (selectedButton === "webdevelopment"
+              (selectedButton === "dek"
                 ? "border-b-2 border-yellow-200"
                 : "text-gray-400")
             }
@@ -231,10 +216,10 @@ const NamesList = () => {
 
           <Icon
             icon="solar:smartphone-line-duotone"
-            onClick={() => setSelectedButton("mobiledevelopment")}
+            onClick={() => setSelectedButton("dmek")}
             className={
               "text-5xl sm:hidden block " +
-              (selectedButton === "mobiledevelopment"
+              (selectedButton === "dmek"
                 ? "border-b-2 border-yellow-200"
                 : "text-gray-400")
             }
@@ -242,10 +227,10 @@ const NamesList = () => {
 
           <Icon
             icon="solar:database-line-duotone"
-            onClick={() => setSelectedButton("datascience")}
+            onClick={() => setSelectedButton("diagnosis")}
             className={
               "text-5xl sm:hidden block " +
-              (selectedButton === "datascience"
+              (selectedButton === "diagnosis"
                 ? "border-b-2 border-yellow-200"
                 : "text-gray-400")
             }
@@ -253,10 +238,32 @@ const NamesList = () => {
 
           <Icon
             icon="solar:cloud-line-duotone"
-            onClick={() => setSelectedButton("cloudcomputing")}
+            onClick={() => setSelectedButton("qhc")}
             className={
               "text-5xl sm:hidden block " +
-              (selectedButton === "cloudcomputing"
+              (selectedButton === "qhc"
+                ? "border-b-2 border-yellow-200"
+                : "text-gray-400")
+            }
+          />
+
+          <Icon
+            icon="solar:cloud-line-duotone"
+            onClick={() => setSelectedButton("emt")}
+            className={
+              "text-5xl sm:hidden block " +
+              (selectedButton === "emt"
+                ? "border-b-2 border-yellow-200"
+                : "text-gray-400")
+            }
+          />
+
+          <Icon
+            icon="solar:cloud-line-duotone"
+            onClick={() => setSelectedButton("brs")}
+            className={
+              "text-5xl sm:hidden block " +
+              (selectedButton === "brs"
                 ? "border-b-2 border-yellow-200"
                 : "text-gray-400")
             }
