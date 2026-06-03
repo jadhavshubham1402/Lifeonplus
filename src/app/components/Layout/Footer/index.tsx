@@ -198,7 +198,7 @@ const Footer = () => {
               Registered Office
             </h3>
 
-            <p className="text-white text-lg leading-10">
+            <p className="text-white text-base leading-10">
               # No.301, 3rd Floor, "MasterMind 1,
               <br />
               Royal Palms" Aarey Milk Colony,
@@ -221,7 +221,7 @@ const Footer = () => {
               Branch Office
             </h3>
 
-            <p className="text-white text-lg leading-10">
+            <p className="text-white text-base leading-10">
               No. 15, Devraja Mudali Street,
               <br />
               1st Floor, Park Town,
@@ -236,7 +236,7 @@ const Footer = () => {
               Branch Office
             </h3>
 
-            <p className="text-white text-lg leading-10">
+            <p className="text-white text-base leading-10">
               WeWork Cinnabar Hills,
               <br />
               Embassy Golf Links Business Park,
@@ -255,7 +255,7 @@ const Footer = () => {
               In Collaboration with Technical Partner
             </h3>
 
-            <p className="text-white text-lg leading-10">
+            <p className="text-white text-base leading-10">
               Paxykop Technologies Pte Ltd
               <br />
               L-39, MBFC,
