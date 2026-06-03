@@ -31,10 +31,10 @@ const Footer = () => {
           <div className="col-span-4 flex flex-col gap-5">
             <div>
               <Image
-                src={withBasePath("/images/logo/logo2.svg")}
+                src={withBasePath("/images/logo/logo.svg")}
                 alt="Logo"
-                width={48}
-                height={64}
+                width={100}
+                height={100}
               />
             </div>
             <p className="text-white text-lg font-medium leading-7">
@@ -43,7 +43,7 @@ const Footer = () => {
             </p>
             <div className="flex gap-4">
               <Link
-                href="#!"
+                href="https://www.instagram.com/lifeonplus.india/"
                 scroll={false}
                 className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
               >
@@ -52,33 +52,39 @@ const Footer = () => {
                   className="text-2xl inline-block"
                 />
               </Link>
+              {/* Facebook */}
               <Link
-                href="/"
-                scroll={false}
+                href="https://www.facebook.com/lifeonplus.india/"
+                target="_blank"
                 className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
               >
-                <Icon
-                  icon="tabler:brand-dribbble"
-                  className="text-2xl inline-block"
-                />
+                <Icon icon="tabler:brand-facebook" className="text-2xl" />
+              </Link>
+
+              {/* LinkedIn */}
+              <Link
+                href="https://www.linkedin.com/in/lifeonplus/"
+                target="_blank"
+                className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
+              >
+                <Icon icon="tabler:brand-linkedin" className="text-2xl" />
+              </Link>
+
+              {/* WhatsApp */}
+              <Link
+                href="https://api.whatsapp.com/send/?phone=91%206580136083&text=Hi+Lifeonplus&app_absent=0"
+                target="_blank"
+                className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
+              >
+                <Icon icon="tabler:brand-whatsapp" className="text-2xl" />
               </Link>
               <Link
-                href="/"
+                href="https://x.com/Lifeonplus"
                 scroll={false}
                 className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
               >
                 <Icon
                   icon="tabler:brand-twitter-filled"
-                  className="text-2xl inline-block"
-                />
-              </Link>
-              <Link
-                href="/"
-                scroll={false}
-                className="bg-white/20 rounded-full p-2 text-white hover:bg-cream hover:text-primary duration-300"
-              >
-                <Icon
-                  icon="tabler:brand-youtube-filled"
                   className="text-2xl inline-block"
                 />
               </Link>
@@ -113,28 +119,69 @@ const Footer = () => {
           {/* CLOUMN-4 */}
 
           <div className="col-span-4">
+            {/* Get In Touch */}
             <h3 className="text-white text-xl font-semibold mb-6">
-              Stay up to date
+              Get In Touch
             </h3>
-            <div className="relative text-white focus-within:text-white flex flex-row-reverse w-[50%] lg:w-full">
-              <input
-                type="Email address"
-                name="q"
-                className="py-4 text-sm w-full text-white bg-white/15 rounded-md pl-4 focus:outline-hidden bg-emailbg focus:text-white"
-                placeholder="Your email address"
-                autoComplete="off"
-              />
-              <div className="absolute inset-y-0 right-0 flex items-center pr-2">
-                <button
-                  type="submit"
-                  className="p-1 focus:outline-hidden focus:shadow-outline"
+
+            <div className="space-y-4 mb-8">
+              <p className="text-white flex items-center gap-2">
+                <span className="font-semibold">Email:</span>
+                <a
+                  href="mailto:info@lifeonplus.com"
+                  className="hover:text-[#35A93E]"
                 >
-                  <Icon
-                    icon="tabler:send"
-                    className="text-white text-2xl inline-block me-2"
-                  />
-                </button>
-              </div>
+                  info@lifeonplus.com
+                </a>
+              </p>
+
+              <p className="text-white flex items-center gap-3">
+                <span className="text-2xl">🇮🇳</span>
+                <a href="tel:+919986880000" className="hover:text-[#35A93E]">
+                  +91 99868 80000
+                </a>
+              </p>
+
+              <p className="text-white flex items-center gap-3">
+                <span className="text-2xl">🇸🇬</span>
+                <a href="tel:+6580136083" className="hover:text-[#35A93E]">
+                  +65 8013 6083
+                </a>
+              </p>
+            </div>
+
+            <h3 className="text-white text-xl font-semibold mb-4">
+              App Download
+            </h3>
+
+            <div className="flex items-center gap-4 flex-wrap">
+              <Link
+                href="https://apps.apple.com/us/app/lifeonplus-digital-health-hub/id6739937070"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={withBasePath("/images/appstore.png")}
+                  alt="Download on App Store"
+                  width={150}
+                  height={50}
+                  className="cursor-pointer hover:opacity-90 transition"
+                />
+              </Link>
+
+              <Link
+                href="https://play.google.com/store/apps/details?id=com.paxykop.lifeonplus"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <Image
+                  src={withBasePath("/images/playstore.png")}
+                  alt="Get it on Google Play"
+                  width={150}
+                  height={50}
+                  className="cursor-pointer hover:opacity-90 transition"
+                />
+              </Link>
             </div>
           </div>
         </div>
