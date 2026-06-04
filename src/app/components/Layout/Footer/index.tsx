@@ -25,7 +25,7 @@ const Footer = () => {
   }, []);
 
   return (
-    <div className="bg-primary" id="first-section">
+    <div className="bg-black" id="first-section">
       <div className="container pt-60 pb-10">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-12 gap-16 xl:gap-8">
           <div className="col-span-4 flex flex-col gap-5">
@@ -165,7 +165,7 @@ const Footer = () => {
                   alt="Download on App Store"
                   width={150}
                   height={50}
-                  className="cursor-pointer hover:opacity-90 transition"
+                  className="block rounded-md ring-2 ring-white"
                 />
               </Link>
 
@@ -179,7 +179,7 @@ const Footer = () => {
                   alt="Get it on Google Play"
                   width={150}
                   height={50}
-                  className="cursor-pointer hover:opacity-90 transition"
+                  className="block rounded-md ring-2 ring-white"
                 />
               </Link>
             </div>
