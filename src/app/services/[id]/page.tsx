@@ -1,3 +1,4 @@
+"use client";
 import data from "../../../../public/data/data.json";
 
 export async function generateStaticParams() {
