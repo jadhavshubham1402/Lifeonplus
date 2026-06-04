@@ -71,6 +71,7 @@
     ],
     "CourseDetailData": [
         {
+            "id":"1",
             "course": "Basic",
             "imageSrc": "/images/courses/dehk.jpeg",
             "profession": "HTML, CSS, Javascript Development",
@@ -78,6 +79,7 @@
             "category": "dek"
         },
         {
+            "id":"2",
             "course": "Basic Plus",
             "imageSrc": "/images/courses/coursesTwo.svg",
             "profession": "Backend with Node.js and Express.js",
@@ -85,6 +87,7 @@
             "category": "dek"
         },
         {
+            "id":"3",
             "course": "Bronze",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Learn React Native with Node.js",
@@ -92,69 +95,70 @@
             "category": "dmek"
         },
         {
+            "id":"4",
             "course": "Bronze Plus",
             "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Learn Swift from Scratch",
             "price": "1000",
             "category": "dmek"
         },
-        {
+        {"id":"5",
             "course": "Package 1",
             "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Learn TensorFlow with SQL",
             "price": "1500",
             "category": "diagnosis"
         },
-        {
+        {"id":"6",
             "course": "Package 2",
             "imageSrc": "/images/courses/coursesFour.svg",
             "profession": "AWS Deep Learning AMI",
             "price": "2500",
             "category": "diagnosis"
         },
-        {
+        {"id":"7",
             "course": "Package 1",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Learn Bokeh with Python",
             "price": "2000",
             "category": "qhc"
         },
-        {
+        {"id":"8",
             "course": "Package 1",
             "imageSrc": "/images/courses/ept.jpeg",
             "profession": "Scikit with Python Development",
             "price": "999",
             "category": "emt"
         },
-        {
+        {"id":"9",
             "course": "Package 2",
             "imageSrc": "/images/courses/coursesThree.svg",
             "profession": "Infra-as-a-Service",
             "price": "1499",
             "category": "emt"
         },
-        {
+        {"id":"10",
             "course": "Package 3",
             "imageSrc": "/images/courses/coursesFour.svg",
             "profession": "Info-as-a-Service",
             "price": "2199",
             "category": "emt"
         },
-        {
+        {"id":"11",
             "course": "Package 1",
             "imageSrc": "/images/courses/coursesOne.svg",
             "profession": "Platform-as-a-Service",
             "price": "1500",
             "category": "brs"
         },
-        {
+        {"id":"12",
             "course": "Package 2",
             "imageSrc": "/images/courses/coursesTwo.svg",
             "profession": "Software-as-a-Service",
             "price": "1500",
             "category": "brs"
         },
-                {
+                {"id":"13",
             "course": "Package 3",
             "imageSrc": "/images/courses/coursesTwo.svg",
             "profession": "Software-as-a-Service",

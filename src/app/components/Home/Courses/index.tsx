@@ -8,6 +8,7 @@ import CourseDetailSkeleton from "../../Skeleton/CourseDetail";
 import Link from "next/link";
 
 interface Name {
+  id: String;
   imageSrc: string;
   course: string;
   price: string;
@@ -69,25 +70,29 @@ const NamesList = () => {
   const nameElements = selectedNames.map((name, index) => (
     <div id="Courses" key={index} className="shadow-lg rounded-xl group flex">
       <div className="py-5 lg:py-0 flex flex-col">
-        <div className="overflow-hidden rounded-lg bg-gray-100">
-          <Image
-            src={withBasePath(name.imageSrc)}
-            alt={name.course}
-            width={700}
-            height={700}
-            className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300 ease-in-out"
-          />
-        </div>
-        <div className="p-4 flex flex-col justify-between gap-5 flex-1">
-          <div className="flex flex-col gap-5">
-            <div className="flex items-center justify-between">
-              <p className="block font-normal text-gray-900">{name.course}</p>
-              <div className="block text-lg font-semibold text-success border-solid border-2 border-success rounded-md px-1">
-                <p>₹ {name.price}</p>
+        <Link
+          href={`/services/${name.id}`}
+          className="cursor-pointer"
+        >
+          <div className="overflow-hidden rounded-lg bg-gray-100">
+            <Image
+              src={withBasePath(name.imageSrc)}
+              alt={name.course}
+              width={700}
+              height={700}
+              className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300 ease-in-out"
+            />
+          </div>
+          <div className="p-4 flex flex-col justify-between gap-5 flex-1">
+            <div className="flex flex-col gap-5">
+              <div className="flex items-center justify-between">
+                <p className="block font-normal text-gray-900">{name.course}</p>
+                <div className="block text-lg font-semibold text-success border-solid border-2 border-success rounded-md px-1">
+                  <p>₹ {name.price}</p>
+                </div>
               </div>
             </div>
-          </div>
-          {/* <div className="flex justify-between border-solid border-2 rounded-md p-2">
+            {/* <div className="flex justify-between border-solid border-2 rounded-md p-2">
             <p>12 Classes</p>
             <div className="flex flex-row space-x-4">
               <div className="flex">
@@ -110,7 +115,8 @@ const NamesList = () => {
               </div>
             </div>
           </div> */}
-        </div>
+          </div>
+        </Link>
       </div>
     </div>
   ));
