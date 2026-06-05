@@ -1,15 +1,33 @@
-import data from "../../../../public/data/data.json";
+"use client";
+import { CourseDetailType } from "@/app/types/coursedetail";
+import withBasePath from "@/utils/basePath";
+import { useParams } from "next/navigation";
+import { useEffect, useState } from "react";
 
-export async function generateStaticParams() {
-  return data.CourseDetailData.map((item) => ({
-    id: String(item.id),
-  }));
-}
+export default function ServiceDetails() {
+  const params = useParams();
+  const id = String(params.id);
+  // -------------------------------------------------------------
+  const [courseDetail, setCourseDetail] = useState<CourseDetailType[]>([]);
+  const [loading, setLoading] = useState(true);
 
-export default function ServiceDetails({ params }: any) {
-  const service = data.CourseDetailData.find(
-    (item) => String(item.id) === params.id,
-  );
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const res = await fetch(withBasePath("/data/data.json"));
+        if (!res.ok) throw new Error("Failed to fetch.");
+        const data = await res.json();
+        setCourseDetail(data.CourseDetailData);
+      } catch (error) {
+        console.error("Error fetching services:", error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    fetchData();
+  }, []);
+
+  const service = courseDetail.find((item) => String(item.id) === id);
 
   if (!service) {
     return <div className="p-10">Service not found</div>;
@@ -21,18 +39,22 @@ export default function ServiceDetails({ params }: any) {
       {service.category === "dek" && (
         <div className="container mx-auto p-10">
           <h1 className="text-3xl font-bold text-green-600 mb-4">
-            Digital Health Card
+            Digital Emergency Kit
           </h1>
 
           <p className="mb-6 text-gray-700">
-            Digital Health Smart Card powered by LifeOnPlus – Your Health
-            Anytime, Anywhere.
+            Digital Emergency Kit powered by LifeOnPlus – Your Health Anytime,
+            Anywhere.
           </p>
 
           <h2 className="text-xl font-semibold mb-2">Overview</h2>
           <p className="text-gray-700 mb-4">
-            A secure digital health identity system that stores your medical
-            records and allows instant access during emergencies.
+            Every second counts in a medical emergency. Yet, most people lack
+            readily available medical records — causing delays in diagnosis and
+            even avoidable loss of life. LifeOnPlus introduces the Global
+            Digital Emergency Kit — a game-changing, universally compatible card
+            that securely stores and provides instant access to your health data
+            anytime, anywhere.
           </p>
 
           <h2 className="text-xl font-semibold mb-2">Key Benefits</h2>
@@ -59,10 +81,6 @@ export default function ServiceDetails({ params }: any) {
             <li>Verify information</li>
             <li>Get your digital card instantly</li>
           </ol>
-
-          <div className="text-2xl font-bold text-green-600">
-            ₹ {service.price}
-          </div>
         </div>
       )}
 
@@ -128,15 +146,15 @@ export default function ServiceDetails({ params }: any) {
             {[
               {
                 title: "M-Kit",
-                desc: "Quick health screening kit with instant report access.",
+                desc: "As a Lifeonplus Digital Health Accessed with Advanced state-of-the-art technologies enabled Medical Devices & equipment brings a quick health screening of your body main vitals within 10 mins with instant results in your health card/prints to you at any location which gives a big relief in an affordable way",
               },
               {
                 title: "Emma",
-                desc: "Smart diagnostic device integrated with mobile app.",
+                desc: "Device with 40+ Tests with immediate result in Mobile App & results are stored in your account automatically.",
               },
               {
                 title: "Quick Health Check-up",
-                desc: "Basic health parameters checked instantly.",
+                desc: "Your health deserves timely attention—not just when symptoms arise, but even before they appear. That’s where the Quick Health Check-up plays a vital role.",
               },
             ].map((item, i) => (
               <div key={i} className="border rounded-lg p-5 shadow-sm">
