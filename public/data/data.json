@@ -1,299 +1,422 @@
 {
-    "HeaderData": [
+  "HeaderData": [
+    {
+      "label": "Home",
+      "href": "/"
+    },
+    {
+      "label": "Shop",
+      "href": "/#Courses"
+    },
+    {
+      "label": "Services",
+      "href": "/services"
+    },
+    {
+      "label": "Lifeonplus",
+      "href": "/#testimonial-section"
+    },
+    {
+      "label": "Download App",
+      "href": "/#join-section"
+    }
+  ],
+  "CourseData": [
+    {
+      "name": "Emergency Digital Health Kit"
+    },
+    {
+      "name": "Pharmacy"
+    },
+    {
+      "name": "Express Medical test"
+    },
+    {
+      "name": "Diagnostic Services"
+    }
+  ],
+  "HourData": [
+    {
+      "name": "20hrs in a Month"
+    },
+    {
+      "name": "30hrs in a Month"
+    },
+    {
+      "name": "40hrs in a Month"
+    },
+    {
+      "name": "50hrs in a Month"
+    }
+  ],
+  "Companiesdata": [
+    {
+      "imgSrc": "/images/slickCompany/airbnb.svg"
+    },
+    {
+      "imgSrc": "/images/slickCompany/hubspot.svg"
+    },
+    {
+      "imgSrc": "/images/slickCompany/microsoft.svg"
+    },
+    {
+      "imgSrc": "/images/slickCompany/google.svg"
+    },
+    {
+      "imgSrc": "/images/slickCompany/walmart.svg"
+    },
+    {
+      "imgSrc": "/images/slickCompany/fedex.svg"
+    }
+  ],
+  "CourseDetailData": [
+    {
+      "id": "1",
+      "course": "Basic",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "HTML, CSS, Javascript Development",
+      "price": "300",
+      "category": "dek"
+    },
+    {
+      "id": "2",
+      "course": "Basic Plus",
+      "imageSrc": "/images/courses/coursesTwo.svg",
+      "profession": "Backend with Node.js and Express.js",
+      "price": "400",
+      "category": "dek"
+    },
+    {
+      "id": "3",
+      "course": "Bronze",
+      "imageSrc": "/images/courses/coursesOne.svg",
+      "profession": "Learn React Native with Node.js",
+      "price": "600",
+      "category": "dmek"
+    },
+    {
+      "id": "4",
+      "course": "Bronze Plus",
+      "imageSrc": "/images/courses/coursesThree.svg",
+      "profession": "Learn Swift from Scratch",
+      "price": "1000",
+      "category": "dmek"
+    },
+    {
+      "id": "5",
+      "course": "Package 1",
+      "imageSrc": "/images/courses/coursesThree.svg",
+      "profession": "Learn TensorFlow with SQL",
+      "price": "1500",
+      "category": "diagnosis"
+    },
+    {
+      "id": "6",
+      "course": "Package 2",
+      "imageSrc": "/images/courses/coursesFour.svg",
+      "profession": "AWS Deep Learning AMI",
+      "price": "2500",
+      "category": "diagnosis"
+    },
+    {
+      "id": "7",
+      "course": "Package 1",
+      "imageSrc": "/images/courses/coursesOne.svg",
+      "profession": "Learn Bokeh with Python",
+      "price": "2000",
+      "category": "qhc"
+    },
+    {
+      "id": "8",
+      "course": "Package 1",
+      "imageSrc": "/images/courses/ept.jpeg",
+      "profession": "Scikit with Python Development",
+      "price": "999",
+      "category": "emt"
+    },
+    {
+      "id": "9",
+      "course": "Package 2",
+      "imageSrc": "/images/courses/coursesThree.svg",
+      "profession": "Infra-as-a-Service",
+      "price": "1499",
+      "category": "emt"
+    },
+    {
+      "id": "10",
+      "course": "Package 3",
+      "imageSrc": "/images/courses/coursesFour.svg",
+      "profession": "Info-as-a-Service",
+      "price": "2199",
+      "category": "emt"
+    },
+    {
+      "id": "11",
+      "course": "Package 1",
+      "imageSrc": "/images/courses/coursesOne.svg",
+      "profession": "Platform-as-a-Service",
+      "price": "1500",
+      "category": "brs"
+    },
+    {
+      "id": "12",
+      "course": "Package 2",
+      "imageSrc": "/images/courses/coursesTwo.svg",
+      "profession": "Software-as-a-Service",
+      "price": "1500",
+      "category": "brs"
+    },
+    {
+      "id": "13",
+      "course": "Package 3",
+      "imageSrc": "/images/courses/coursesTwo.svg",
+      "profession": "Software-as-a-Service",
+      "price": "1500",
+      "category": "brs"
+    }
+  ],
+  "serviceData": [
+    {
+      "id": "1",
+      "course": "Emergency Digital Health Kit ",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "World's First card with Multi application using QR code, RFID & NFC Technologies. Preservation and presentation of your medical record.",
+      "category": "dek"
+    },
+    {
+      "id": "2",
+      "course": "Pharmacy ",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Order trusted medicines anytime,anywhere-right from your LifeOnPlus app!",
+      "category": "pharmacy"
+    },
+    {
+      "id": "3",
+      "course": "Express Medical Test",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Get Express medical tests at your doorstep with LifeOnPlus-fast,easy,and reliable!",
+      "category": "emt"
+    },
+    {
+      "id": "4",
+      "course": "Diagnostic Services",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Accurate detection and analysis of health conditions through advanced invasive and non-invasive techniques.",
+      "category": "diagnosis"
+    },
+    {
+      "id": "5",
+      "course": "Body Recharge Station",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Revitalize your body and mind with non-invasive therapies that recharge, detox, and restore your natural energy balance.",
+      "category": "brs"
+    },
+    {
+      "id": "6",
+      "course": "Wearable Technologies",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
+      "category": "wt"
+    },
+    {
+      "id": "7",
+      "course": "Remote Patient Monitoring Tech",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Connecting people to personalized healthcare anytime, anywhere—digitally and seamlessly.",
+      "category": "rpmt"
+    },
+    {
+      "id": "8",
+      "course": "Scalar Energy Products",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Harness the power of scalar energy (holistic health and wellness products) to restore balance, boost vitality, and support overall wellness.",
+      "category": "sep"
+    },
+    {
+      "id": "9",
+      "course": "Skin Caroteniod Test",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "A simple, non-invasive test that measures your skin’s carotenoid levels to assess overall health and antioxidant status.",
+      "category": "sct"
+    },
+    {
+      "id": "10",
+      "course": "Advanced Kiosk",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "A self-service, interactive kiosk offering instant health assessments, diagnostics, and personalized wellness insights at your fingertips.",
+      "category": "ak"
+    },
+    {
+      "id": "11",
+      "course": "AI in Healthcare",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Leveraging AI to deliver personalized health insights, predictive care, and real-time monitoring, ensuring smarter, more efficient healthcare.",
+      "category": "aih"
+    },
+    {
+      "id": "12",
+      "course": "Food Supplements",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Enhance your health and vitality with scientifically-backed food supplements that fill nutritional gaps and support overall wellness.",
+      "category": "fs"
+    },
+    {
+      "id": "13",
+      "course": "Medical Devices",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
+      "category": "md"
+    },
+    {
+      "id": "14",
+      "course": "Doctor Consulation",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Expert doctor advice, anytime, anywhere.",
+      "category": "dc"
+    },
+    {
+      "id": "15",
+      "course": "Health Tech",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "LifeOnPlus offers comprehensive software and hardware solutions designed to streamline operations, improve patient care.",
+      "category": "ht"
+    },
+    {
+      "id": "16",
+      "course": "Accessing Emergency Services",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "In life’s most critical moments, every second matters. LifeOnPlus brings together essential emergency services—ambulance, air ambulance.",
+      "category": "acs"
+    }
+  ],
+  "MentorData": [
+    {
+      "name": "Senior UX Designer",
+      "href": "#",
+      "imageSrc": "/images/mentor/boy1.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Shoo Thar Mein"
+    },
+    {
+      "name": "Photoshop Instructor",
+      "href": "#",
+      "imageSrc": "/images/mentor/boy2.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Cristian Doru Barin"
+    },
+    {
+      "name": "SEO Expert",
+      "href": "#",
+      "imageSrc": "/images/mentor/boy3.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Tanzeel Ur Rehman"
+    },
+    {
+      "name": "UI/UX Designer",
+      "href": "#",
+      "imageSrc": "/images/mentor/boy4.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Andrew Williams"
+    },
+    {
+      "name": "Web Development / Web Design",
+      "href": "#",
+      "imageSrc": "/images/mentor/boy5.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Brad Schiff"
+    },
+    {
+      "name": "Adobe Certified Instructor",
+      "href": "#",
+      "imageSrc": "/images/mentor/girl1.svg",
+      "imageAlt": "Front of men's Basic Tee in black.",
+      "color": "Daniel Walter Scott"
+    }
+  ],
+  "TestimonialData": [
+    {
+      "profession": "UX/UI Designer",
+      "name": "Robin NG",
+      "imgSrc": "/images/testimonial/user-1.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+    },
+    {
+      "profession": "Member of Lok Sabha",
+      "name": "Annasaheb Shankar Jolle",
+      "imgSrc": "/images/testimonial/user-2.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+    },
+    {
+      "profession": "UX/UI Designer",
+      "name": "Tanzeel Ur Rehman",
+      "imgSrc": "/images/testimonial/user-3.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+    },
+    {
+      "profession": "UX/UI Designer",
+      "name": "Andrew Williams",
+      "imgSrc": "/images/testimonial/user-1.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+    }
+  ],
+  "FooterLinkData": [
+    {
+      "section": "Company",
+      "links": [
         {
-            "label": "Home",
-            "href": "/#Home"
+          "label": "Home",
+          "href": "/#Home"
         },
         {
-            "label": "Shop",
-            "href": "/#Courses"
+          "label": "Courses",
+          "href": "/#Courses"
         },
         {
-            "label": "Services",
-            "href": "/#mentors-section"
+          "label": "Mentors",
+          "href": "/#mentors-section"
         },
         {
-            "label": "Lifeonplus",
-            "href": "/#testimonial-section"
+          "label": "Testimonial",
+          "href": "/#testimonial-section"
         },
         {
-            "label": "Download App",
-            "href": "/#join-section"
+          "label": "Join",
+          "href": "/#join-section"
+        },
+        {
+          "label": "Contact Us",
+          "href": "/#contact"
         }
-    ],
-    "CourseData": [
+      ]
+    },
+    {
+      "section": "Support",
+      "links": [
         {
-            "name": "Emergency Digital Health Kit"
+          "label": "Help center",
+          "href": "/"
         },
         {
-            "name": "Pharmacy"
+          "label": "Terms of service",
+          "href": "/"
         },
         {
-            "name": "Express Medical test"
+          "label": "Legal",
+          "href": "/"
         },
         {
-            "name": "Diagnostic Services"
+          "label": "Privacy Policy",
+          "href": "/"
+        },
+        {
+          "label": "Status",
+          "href": "/"
         }
-    ],
-    "HourData": [
-        {
-            "name": "20hrs in a Month"
-        },
-        {
-            "name": "30hrs in a Month"
-        },
-        {
-            "name": "40hrs in a Month"
-        },
-        {
-            "name": "50hrs in a Month"
-        }
-    ],
-    "Companiesdata": [
-        {
-            "imgSrc": "/images/slickCompany/airbnb.svg"
-        },
-        {
-            "imgSrc": "/images/slickCompany/hubspot.svg"
-        },
-        {
-            "imgSrc": "/images/slickCompany/microsoft.svg"
-        },
-        {
-            "imgSrc": "/images/slickCompany/google.svg"
-        },
-        {
-            "imgSrc": "/images/slickCompany/walmart.svg"
-        },
-        {
-            "imgSrc": "/images/slickCompany/fedex.svg"
-        }
-    ],
-    "CourseDetailData": [
-        {
-            "id":"1",
-            "course": "Basic",
-            "imageSrc": "/images/courses/dehk.jpeg",
-            "profession": "HTML, CSS, Javascript Development",
-            "price": "300",
-            "category": "dek"
-        },
-        {
-            "id":"2",
-            "course": "Basic Plus",
-            "imageSrc": "/images/courses/coursesTwo.svg",
-            "profession": "Backend with Node.js and Express.js",
-            "price": "400",
-            "category": "dek"
-        },
-        {
-            "id":"3",
-            "course": "Bronze",
-            "imageSrc": "/images/courses/coursesOne.svg",
-            "profession": "Learn React Native with Node.js",
-            "price": "600",
-            "category": "dmek"
-        },
-        {
-            "id":"4",
-            "course": "Bronze Plus",
-            "imageSrc": "/images/courses/coursesThree.svg",
-            "profession": "Learn Swift from Scratch",
-            "price": "1000",
-            "category": "dmek"
-        },
-        {"id":"5",
-            "course": "Package 1",
-            "imageSrc": "/images/courses/coursesThree.svg",
-            "profession": "Learn TensorFlow with SQL",
-            "price": "1500",
-            "category": "diagnosis"
-        },
-        {"id":"6",
-            "course": "Package 2",
-            "imageSrc": "/images/courses/coursesFour.svg",
-            "profession": "AWS Deep Learning AMI",
-            "price": "2500",
-            "category": "diagnosis"
-        },
-        {"id":"7",
-            "course": "Package 1",
-            "imageSrc": "/images/courses/coursesOne.svg",
-            "profession": "Learn Bokeh with Python",
-            "price": "2000",
-            "category": "qhc"
-        },
-        {"id":"8",
-            "course": "Package 1",
-            "imageSrc": "/images/courses/ept.jpeg",
-            "profession": "Scikit with Python Development",
-            "price": "999",
-            "category": "emt"
-        },
-        {"id":"9",
-            "course": "Package 2",
-            "imageSrc": "/images/courses/coursesThree.svg",
-            "profession": "Infra-as-a-Service",
-            "price": "1499",
-            "category": "emt"
-        },
-        {"id":"10",
-            "course": "Package 3",
-            "imageSrc": "/images/courses/coursesFour.svg",
-            "profession": "Info-as-a-Service",
-            "price": "2199",
-            "category": "emt"
-        },
-        {"id":"11",
-            "course": "Package 1",
-            "imageSrc": "/images/courses/coursesOne.svg",
-            "profession": "Platform-as-a-Service",
-            "price": "1500",
-            "category": "brs"
-        },
-        {"id":"12",
-            "course": "Package 2",
-            "imageSrc": "/images/courses/coursesTwo.svg",
-            "profession": "Software-as-a-Service",
-            "price": "1500",
-            "category": "brs"
-        },
-                {"id":"13",
-            "course": "Package 3",
-            "imageSrc": "/images/courses/coursesTwo.svg",
-            "profession": "Software-as-a-Service",
-            "price": "1500",
-            "category": "brs"
-        }
-    ],
-    "MentorData": [
-        {
-            "name": "Senior UX Designer",
-            "href": "#",
-            "imageSrc": "/images/mentor/boy1.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Shoo Thar Mein"
-        },
-        {
-            "name": "Photoshop Instructor",
-            "href": "#",
-            "imageSrc": "/images/mentor/boy2.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Cristian Doru Barin"
-        },
-        {
-            "name": "SEO Expert",
-            "href": "#",
-            "imageSrc": "/images/mentor/boy3.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Tanzeel Ur Rehman"
-        },
-        {
-            "name": "UI/UX Designer",
-            "href": "#",
-            "imageSrc": "/images/mentor/boy4.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Andrew Williams"
-        },
-        {
-            "name": "Web Development / Web Design",
-            "href": "#",
-            "imageSrc": "/images/mentor/boy5.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Brad Schiff"
-        },
-        {
-            "name": "Adobe Certified Instructor",
-            "href": "#",
-            "imageSrc": "/images/mentor/girl1.svg",
-            "imageAlt": "Front of men's Basic Tee in black.",
-            "color": "Daniel Walter Scott"
-        }
-    ],
-    "TestimonialData": [
-        {
-            "profession": "UX/UI Designer",
-            "name": "Robin NG",
-            "imgSrc": "/images/testimonial/user-1.jpg",
-            "starimg": "/images/testimonial/stars.png",
-            "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
-        },
-        {
-            "profession": "Member of Lok Sabha",
-            "name": "Annasaheb Shankar Jolle",
-            "imgSrc": "/images/testimonial/user-2.jpg",
-            "starimg": "/images/testimonial/stars.png",
-            "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
-        },
-        {
-            "profession": "UX/UI Designer",
-            "name": "Tanzeel Ur Rehman",
-            "imgSrc": "/images/testimonial/user-3.jpg",
-            "starimg": "/images/testimonial/stars.png",
-            "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
-        },
-        {
-            "profession": "UX/UI Designer",
-            "name": "Andrew Williams",
-            "imgSrc": "/images/testimonial/user-1.jpg",
-            "starimg": "/images/testimonial/stars.png",
-            "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
-        }
-    ],
-    "FooterLinkData": [
-        {
-            "section": "Company",
-            "links": [
-                {
-                    "label": "Home",
-                    "href": "/#Home"
-                },
-                {
-                    "label": "Courses",
-                    "href": "/#Courses"
-                },
-                {
-                    "label": "Mentors",
-                    "href": "/#mentors-section"
-                },
-                {
-                    "label": "Testimonial",
-                    "href": "/#testimonial-section"
-                },
-                {
-                    "label": "Join",
-                    "href": "/#join-section"
-                },
-                {
-                    "label": "Contact Us",
-                    "href": "/#contact"
-                }
-            ]
-        },
-        {
-            "section": "Support",
-            "links": [
-                {
-                    "label": "Help center",
-                    "href": "/"
-                },
-                {
-                    "label": "Terms of service",
-                    "href": "/"
-                },
-                {
-                    "label": "Legal",
-                    "href": "/"
-                },
-                {
-                    "label": "Privacy Policy",
-                    "href": "/"
-                },
-                {
-                    "label": "Status",
-                    "href": "/"
-                }
-            ]
-        }
-    ]
+      ]
+    }
+  ]
 }

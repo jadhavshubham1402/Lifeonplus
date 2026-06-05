@@ -379,6 +379,120 @@ export default function ServiceDetails() {
           </ul>
         </div>
       )}
+      {service.category === "qhc" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-4">
+            Quick Health Check-up – A Smarter Step Toward Preventive Wellness
+          </h1>
+
+          {/* INTRO */}
+          <p className="text-gray-700 mb-6">
+            Your health deserves timely attention — not just when symptoms
+            arise, but even before they appear. Quick Health Check-up plays a
+            vital role in preventive wellness.
+          </p>
+
+          {/* WHAT IS SECTION */}
+          <h2 className="text-2xl font-semibold mb-3">
+            What is a Quick Health Check-up?
+          </h2>
+
+          <p className="text-gray-700 mb-4">
+            A quick health check-up is a fast, non-invasive screening that gives
+            an overview of your general health status and key parameters.
+          </p>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Blood pressure</li>
+            <li>Pulse rate</li>
+            <li>Blood sugar (random)</li>
+            <li>BMI (Body Mass Index)</li>
+            <li>Oxygen saturation (SpO2)</li>
+            <li>Temperature</li>
+            <li>Basic vital screening</li>
+          </ul>
+
+          {/* BENEFITS */}
+          <h2 className="text-2xl font-semibold mb-3">
+            Benefits of Quick Health Check-up
+          </h2>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Early detection of diseases</li>
+            <li>Time-saving & convenient</li>
+            <li>Affordable preventive care</li>
+            <li>Encourages healthy lifestyle habits</li>
+            <li>Quick and reliable health insights</li>
+          </ul>
+
+          {/* WHO SHOULD USE */}
+          <h2 className="text-2xl font-semibold mb-3">Who Should Use This?</h2>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Working professionals</li>
+            <li>Elderly individuals</li>
+            <li>Students</li>
+            <li>Corporate employees</li>
+            <li>Anyone focused on preventive health</li>
+          </ul>
+
+          {/* PROCESS */}
+          <h2 className="text-2xl font-semibold mb-3">How the Process Works</h2>
+
+          <ol className="list-decimal pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Register via LifeOnPlus app</li>
+            <li>Visit or schedule health camp</li>
+            <li>Basic screening is done</li>
+            <li>Get instant digital report</li>
+            <li>Doctor consultation if needed</li>
+          </ol>
+
+          {/* SERVICES */}
+          <h2 className="text-2xl font-semibold mb-3">Included Services</h2>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Health & wellness camps</li>
+            <li>Screening at clinics / camps</li>
+            <li>Community health programs</li>
+          </ul>
+
+          {/* CORE CHECKUP */}
+          <h2 className="text-2xl font-semibold mb-3">
+            Quick Health Check-up Components
+          </h2>
+
+          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
+            <li>Non-invasive testing</li>
+            <li>Fast results (within minutes)</li>
+            <li>Digital report generation</li>
+          </ul>
+
+          {/* SUB SECTIONS */}
+          <h3 className="text-xl font-semibold mb-2">Advanced ECG</h3>
+
+          <p className="text-gray-700 mb-4">
+            Detects heart rhythm abnormalities and cardiovascular risk
+            indicators.
+          </p>
+
+          <h3 className="text-xl font-semibold mb-2">
+            Vascular & Biological Age
+          </h3>
+
+          <p className="text-gray-700 mb-4">
+            Helps evaluate arterial health and biological aging patterns.
+          </p>
+
+          <h3 className="text-xl font-semibold mb-2">
+            Blood Capillary & Circulation
+          </h3>
+
+          <p className="text-gray-700 mb-6">
+            Evaluates blood flow, oxygen delivery, and circulation efficiency.
+          </p>
+        </div>
+      )}
       <img
         src={service.imageSrc}
         alt={service.course}
