@@ -59,30 +59,30 @@ html {
 .bg-banner-image {
   background-image: var(--banner-url);
   background-size: cover;
-  background-position: center;
+  background-position: center top;
   background-repeat: no-repeat;
-  margin-top: 100px;
-  width: 100vw;
-  height: 100vh
-}
-
-/* Desktop */
-@media (min-width: 1024px) {
-  .bg-banner-image {
-    /* min-height: 80vh; */
+  
+  width: 99vw;
+  min-height: 852px;           /* Adjusted for your banner image */
+  height: auto;
+  
+  margin-top: 90px;           /* You wanted extra top margin */
+  padding-top: 120px;
+  padding-bottom: 80px;
+  
+  /* Responsive heights */
+  @media (max-width: 1280px) {
+    min-height: 852px;
   }
-}
-
-/* Tablet */
-@media (min-width: 768px) and (max-width: 1023px) {
-  .bg-banner-image {
-    /* min-height: 60vh; */
+  
+  @media (max-width: 1024px) {
+    min-height: 580px;
+    padding-top: 100px;
   }
-}
-
-/* Mobile */
-@media (max-width: 767px) {
-  .bg-banner-image {
-    /* min-height: 45vh; */
+  
+  @media (max-width: 768px) {
+    min-height: 520px;
+    padding-top: 80px;
+    margin-top: 80px;
   }
 }

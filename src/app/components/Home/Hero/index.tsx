@@ -6,9 +6,9 @@ import withBasePath from "@/utils/basePath";
 
 const Banner = () => {
   return (
-    <section id="Home" className="bg-banner-image pt-28 pb-20 mt-24">
+    <section id="Home" className="bg-banner-image relative">
       <div className="relative px-6 lg:px-8">
-        <div className="container">
+        <div className="container mx-auto">
           <div className="flex flex-col gap-4 text-center">
             {/* <h1 className="leading-tight font-bold tracking-tight max-w-4xl mx-auto">
               LifeOnPlus – Your Digital Health & Wellness Partner
