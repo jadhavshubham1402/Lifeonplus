@@ -6,18 +6,18 @@ import withBasePath from "@/utils/basePath";
 
 const Banner = () => {
   return (
-    <section id="Home" className="bg-banner-image pt-28 pb-20">
+    <section id="Home" className="bg-banner-image pt-28 pb-20 mt-24">
       <div className="relative px-6 lg:px-8">
         <div className="container">
           <div className="flex flex-col gap-4 text-center">
-            <h1 className="leading-tight font-bold tracking-tight max-w-4xl mx-auto">
+            {/* <h1 className="leading-tight font-bold tracking-tight max-w-4xl mx-auto">
               LifeOnPlus – Your Digital Health & Wellness Partner
-            </h1>
-            <p className="text-lg leading-8 text-black">
+            </h1> */}
+            {/* <p className="text-lg leading-8 text-black">
               Build skills with our courses and mentor from world-class
               companies.
-            </p>
-            <div className="backdrop-blur-md bg-white/30 border border-white/30 rounded-lg shadow-lg p-6 w-fit mx-auto">
+            </p> */}
+            {/* <div className="backdrop-blur-md bg-white/30 border border-white/30 rounded-lg shadow-lg p-6 w-fit mx-auto">
               <div className="flex items-center justify-center gap-8">
                 <div className="hidden sm:block -space-x-2 overflow-hidden">
                   <Image
@@ -73,12 +73,12 @@ const Banner = () => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
 
           {/* DROPDOWN BUTTONS */}
 
-          <div className="mx-auto max-w-4xl mt-12 p-6 lg:max-w-4xl lg:px-8 bg-white rounded-lg boxshadow">
+          {/* <div className="mx-auto max-w-4xl mt-12 p-6 lg:max-w-4xl lg:px-8 bg-white rounded-lg boxshadow">
             <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-8 xl:gap-x-8">
               <div className="col-span-3">
                 <Dropdownone />
@@ -94,7 +94,7 @@ const Banner = () => {
                 </Link>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

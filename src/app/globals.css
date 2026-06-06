@@ -55,3 +55,34 @@
 html {
   scroll-behavior: smooth;
 }
+
+.bg-banner-image {
+  background-image: var(--banner-url);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 100px;
+  width: 100vw;
+  height: 100vh
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .bg-banner-image {
+    /* min-height: 80vh; */
+  }
+}
+
+/* Tablet */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .bg-banner-image {
+    /* min-height: 60vh; */
+  }
+}
+
+/* Mobile */
+@media (max-width: 767px) {
+  .bg-banner-image {
+    /* min-height: 45vh; */
+  }
+}
