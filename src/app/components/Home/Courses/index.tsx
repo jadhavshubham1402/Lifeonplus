@@ -70,10 +70,10 @@ const NamesList = () => {
   const nameElements = selectedNames.map((name, index) => (
     <div id="Courses" key={index} className="shadow-lg rounded-xl group flex">
       <div className="py-5 lg:py-0 flex flex-col">
-        <Link
+        {/* <Link
           href={`/services/${name.id}`}
           className="cursor-pointer"
-        >
+        > */}
           <div className="overflow-hidden rounded-lg bg-gray-100">
             <Image
               src={withBasePath(name.imageSrc)}
@@ -116,7 +116,7 @@ const NamesList = () => {
             </div>
           </div> */}
           </div>
-        </Link>
+        {/* </Link> */}
       </div>
     </div>
   ));

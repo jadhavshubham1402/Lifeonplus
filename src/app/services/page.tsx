@@ -4,10 +4,9 @@ import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import withBasePath from "@/utils/basePath";
-import { CourseDetailType } from "@/app/types/coursedetail";
 
 export default function ServicesPage() {
-  const [services, setServices] = useState<CourseDetailType[]>([]);
+  const [services, setServices] = useState<any>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
