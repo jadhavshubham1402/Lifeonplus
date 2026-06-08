@@ -335,32 +335,47 @@
   ],
   "TestimonialData": [
     {
-      "profession": "UX/UI Designer",
-      "name": "Robin NG",
+      "profession": "Tamil Actor",
+      "name": "Sharath Kumar",
       "imgSrc": "/images/testimonial/user-1.jpg",
       "starimg": "/images/testimonial/stars.png",
-      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+      "detail": "Innovative Product"
     },
     {
       "profession": "Member of Lok Sabha",
       "name": "Annasaheb Shankar Jolle",
       "imgSrc": "/images/testimonial/user-2.jpg",
       "starimg": "/images/testimonial/stars.png",
-      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+      "detail": "Highly advanced Medical & Digital Health Technology, I have seen the demo & appriciated , getting aligned with this company"
     },
     {
-      "profession": "UX/UI Designer",
-      "name": "Tanzeel Ur Rehman",
+      "profession": "BBM - Founder & Chairman of United Medicare Pte Ltd, Singapore ",
+      "name": "Robin NG",
       "imgSrc": "/images/testimonial/user-3.jpg",
       "starimg": "/images/testimonial/stars.png",
-      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+      "detail": "Very Good Medical Technology and Devices"
     },
     {
-      "profession": "UX/UI Designer",
-      "name": "Andrew Williams",
+      "profession": "Former Education Minister",
+      "name": "Suresh Kumar",
       "imgSrc": "/images/testimonial/user-1.jpg",
       "starimg": "/images/testimonial/stars.png",
-      "detail": "I have been a Junior Graphic Designer for more then 10 years. Some things are problem that I had and teach how to solve them. That's why this course is so great!"
+      "detail": "Excellent Medical Health Technology"
+    },
+
+    {
+      "profession": "Actress, Bangalore",
+      "name": "Ragini Dwivedi",
+      "imgSrc": "/images/testimonial/user-1.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": " Having Spent Many Years on Research and Development on Innovative Medical Technology. Finally we got a very good product for Human Being. I Wish Mr. Rajanikanth and His Team great Success."
+    },
+    {
+      "profession": "National University of Singapore",
+      "name": "Cynthia Chan",
+      "imgSrc": "/images/testimonial/user-1.jpg",
+      "starimg": "/images/testimonial/stars.png",
+      "detail": "New Medical & Innovative Idea"
     }
   ],
   "FooterLinkData": [
