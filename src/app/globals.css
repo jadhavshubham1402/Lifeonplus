@@ -81,7 +81,7 @@ html {
   }
   
   @media (max-width: 768px) {
-    min-height: 520px;
+    min-height: 237px;
     padding-top: 80px;
     margin-top: 80px;
   }
