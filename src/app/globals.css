@@ -107,21 +107,21 @@ html {
 
 @media (max-width: 768px) {
   .bg-banner-image {
-    margin-top: 60px;
+    margin-top: 100px;
     padding-top: 70px;
     padding-bottom: 50px;
-    aspect-ratio: 4 / 3;        /* More square for tablets */
+    /* aspect-ratio: 4 / 3;        More square for tablets */
     min-height: 420px;
   }
 }
 
 @media (max-width: 480px) {
   .bg-banner-image {
-    margin-top: 50px;
+    margin-top: 100px;
     padding-top: 60px;
     padding-bottom: 40px;
-    aspect-ratio: 9 / 8;        /* Good for mobile */
-    min-height: 320px;
+    /* aspect-ratio: 10 / 5;        Good for mobile */
+    min-height: 176px;
   }
 }
 
