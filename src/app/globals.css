@@ -62,27 +62,73 @@ html {
   background-position: center top;
   background-repeat: no-repeat;
   
-  width: 99vw;
-  min-height: 852px;           /* Adjusted for your banner image */
-  height: auto;
+  /* Width */
+  width: 100%;
+  max-width: 100vw;
   
-  margin-top: 90px;           /* You wanted extra top margin */
+  /* Height using aspect ratio (best modern approach) */
+  min-height: 580px;           /* fallback for very old browsers */
+  aspect-ratio: 16 / 9;        /* Adjust this ratio based on your banner image */
+  
+  /* Spacing */
+  margin-top: 90px;
   padding-top: 120px;
   padding-bottom: 80px;
   
-  /* Responsive heights */
-  @media (max-width: 1280px) {
-    min-height: 852px;
+  /* Make sure content doesn't overflow */
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* ================== RESPONSIVE BREAKPOINTS ================== */
+
+@media (max-width: 1440px) {
+  .bg-banner-image {
+    margin-top: 80px;
+    padding-top: 110px;
   }
-  
-  @media (max-width: 1024px) {
-    min-height: 580px;
+}
+
+@media (max-width: 1280px) {
+  .bg-banner-image {
+    aspect-ratio: 16 / 8.5;     /* Slightly taller on smaller desktop */
     padding-top: 100px;
   }
-  
-  @media (max-width: 768px) {
-    min-height: 237px;
-    padding-top: 80px;
-    margin-top: 80px;
+}
+
+@media (max-width: 1024px) {
+  .bg-banner-image {
+    margin-top: 70px;
+    padding-top: 90px;
+    padding-bottom: 60px;
+    aspect-ratio: 16 / 7;
+  }
+}
+
+@media (max-width: 768px) {
+  .bg-banner-image {
+    margin-top: 60px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+    aspect-ratio: 4 / 3;        /* More square for tablets */
+    min-height: 420px;
+  }
+}
+
+@media (max-width: 480px) {
+  .bg-banner-image {
+    margin-top: 50px;
+    padding-top: 60px;
+    padding-bottom: 40px;
+    aspect-ratio: 9 / 8;        /* Good for mobile */
+    min-height: 320px;
+  }
+}
+
+/* Extra large screens */
+@media (min-width: 1920px) {
+  .bg-banner-image {
+    aspect-ratio: 16 / 9.5;
+    min-height: 620px;
   }
 }
