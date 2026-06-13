@@ -179,7 +179,7 @@
     {
       "id": "1",
       "course": "Emergency Digital Health Kit ",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/dek.jpeg",
       "profession": "World's First card with Multi application using QR code, RFID & NFC Technologies. Preservation and presentation of your medical record.",
       "category": "dek"
     },
@@ -193,42 +193,42 @@
     {
       "id": "3",
       "course": "Express Medical Test",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/xmt.jpeg",
       "profession": "Get Express medical tests at your doorstep with LifeOnPlus-fast,easy,and reliable!",
       "category": "emt"
     },
     {
       "id": "4",
       "course": "Diagnostic Services",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/diagnosis.jpeg",
       "profession": "Accurate detection and analysis of health conditions through advanced invasive and non-invasive techniques.",
       "category": "diagnosis"
     },
     {
       "id": "5",
       "course": "Body Recharge Station",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/brs.jpeg",
       "profession": "Revitalize your body and mind with non-invasive therapies that recharge, detox, and restore your natural energy balance.",
       "category": "brs"
     },
     {
       "id": "6",
       "course": "Wearable Technologies",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/wh.jpeg",
       "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
       "category": "wt"
     },
     {
       "id": "7",
       "course": "Remote Patient Monitoring Tech",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/rpm.jpeg",
       "profession": "Connecting people to personalized healthcare anytime, anywhere—digitally and seamlessly.",
       "category": "rpmt"
     },
     {
       "id": "8",
       "course": "Scalar Energy Products",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/scp.jpeg",
       "profession": "Harness the power of scalar energy (holistic health and wellness products) to restore balance, boost vitality, and support overall wellness.",
       "category": "sep"
     },
@@ -242,21 +242,21 @@
     {
       "id": "10",
       "course": "Advanced Kiosk",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/kiosk.jpeg",
       "profession": "A self-service, interactive kiosk offering instant health assessments, diagnostics, and personalized wellness insights at your fingertips.",
       "category": "ak"
     },
     {
       "id": "11",
       "course": "AI in Healthcare",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/ai.jpeg",
       "profession": "Leveraging AI to deliver personalized health insights, predictive care, and real-time monitoring, ensuring smarter, more efficient healthcare.",
       "category": "aih"
     },
     {
       "id": "12",
       "course": "Food Supplements",
-      "imageSrc": "/images/courses/dehk.jpeg",
+      "imageSrc": "/images/services/ai.jpeg",
       "profession": "Enhance your health and vitality with scientifically-backed food supplements that fill nutritional gaps and support overall wellness.",
       "category": "fs"
     },
