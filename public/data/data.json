@@ -412,24 +412,20 @@
       "section": "Support",
       "links": [
         {
-          "label": "Help center",
-          "href": "/"
-        },
-        {
-          "label": "Terms of service",
-          "href": "/"
-        },
-        {
-          "label": "Legal",
-          "href": "/"
+          "label": "Terms & Conditions",
+          "href": "/terms"
         },
         {
           "label": "Privacy Policy",
-          "href": "/"
+          "href": "/privacy"
         },
         {
-          "label": "Status",
-          "href": "/"
+          "label": "Refund Policy",
+          "href": "/refund"
+        },
+        {
+          "label": "Return Policy",
+          "href": "/returns"
         }
       ]
     }
