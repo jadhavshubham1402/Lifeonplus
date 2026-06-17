@@ -23,8 +23,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
       onMouseLeave={handleMouseLeave}>
       <Link
         href={item.href}
-        className={`text-base flex font-medium hover:text-primary capitalized  ${
-          path === item.href ? 'text-primary ' : 'text-black'
+        className={`text-base flex font-medium hover:text-[#02BE0F] capitalized  ${
+          path === item.href ? 'text-[#02BE0F] ' : 'text-black'
         }`}>
         {item.label}
         {item.submenu && (
@@ -55,8 +55,8 @@ const HeaderLink: React.FC<{ item: HeaderItem }> = ({ item }) => {
               href={subItem.href}
               className={`block px-4 py-2   ${
                 path === subItem.href
-                  ? 'bg-primary text-white'
-                  : 'text-black dark:text-white hover:bg-primary'
+                  ? 'bg-[#02BE0F] text-white'
+                  : 'text-black dark:text-white hover:bg-[#02BE0F]'
               }`}>
               {subItem.label}
             </Link>

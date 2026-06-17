@@ -94,7 +94,7 @@ const Header: React.FC = () => {
                     </nav>
                     <div className='flex items-center gap-4'>
                         <button
-                            className='hidden lg:block bg-transparent text-primary border hover:bg-primary border-primary hover:text-white duration-300 px-6 py-2 rounded-lg hover:cursor-pointer'
+                            className='hidden lg:block bg-transparent text-[#02BE0F] border hover:bg-[#02BE0F] border-[#02BE0F] hover:text-white duration-300 px-6 py-2 rounded-lg hover:cursor-pointer'
                             onClick={() => {
                                 setIsSignInOpen(true)
                             }}>
@@ -113,7 +113,7 @@ const Header: React.FC = () => {
                                             icon='material-symbols:close-rounded'
                                             width={24}
                                             height={24}
-                                            className='text-black hover:text-primary inline-block hover:cursor-pointer'
+                                            className='text-black hover:text-[#02BE0F] inline-block hover:cursor-pointer'
                                         />
                                     </button>
                                     <Signin />
@@ -121,7 +121,7 @@ const Header: React.FC = () => {
                             </div>
                         )}
                         <button
-                            className='hidden lg:block bg-primary text-white text-base font-medium hover:bg-transparent duration-300 hover:text-primary border border-primary px-6 py-2 rounded-lg hover:cursor-pointer'
+                            className='hidden lg:block bg-[#02BE0F] text-white text-base font-medium hover:bg-transparent duration-300 hover:text-[#02BE0F] border border-[#02BE0F] px-6 py-2 rounded-lg hover:cursor-pointer'
                             onClick={() => {
                                 setIsSignUpOpen(true)
                             }}>
@@ -140,7 +140,7 @@ const Header: React.FC = () => {
                                             icon='material-symbols:close-rounded'
                                             width={24}
                                             height={24}
-                                            className='text-black hover:text-primary inline-block hover:cursor-pointer'
+                                            className='text-black hover:text-[#02BE0F] inline-block hover:cursor-pointer'
                                         />
                                     </button>
                                     <SignUp />
@@ -186,7 +186,7 @@ const Header: React.FC = () => {
                         ))}
                         <div className='mt-4 flex flex-col gap-4 w-full'>
                             <button
-                                className='bg-primary text-white px-4 py-2 rounded-lg border  border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
+                                className='bg-[#02BE0F] text-white px-4 py-2 rounded-lg border  border-[#02BE0F] hover:text-[#02BE0F] hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
                                 onClick={() => {
                                     setIsSignInOpen(true)
                                     setNavbarOpen(false)
@@ -194,7 +194,7 @@ const Header: React.FC = () => {
                                 Sign In
                             </button>
                             <button
-                                className='bg-primary text-white px-4 py-2 rounded-lg border  border-primary hover:text-primary hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
+                                className='bg-[#02BE0F] text-white px-4 py-2 rounded-lg border  border-[#02BE0F] hover:text-[#02BE0F] hover:bg-transparent hover:cursor-pointer transition duration-300 ease-in-out'
                                 onClick={() => {
                                     setIsSignUpOpen(true)
                                     setNavbarOpen(false)
