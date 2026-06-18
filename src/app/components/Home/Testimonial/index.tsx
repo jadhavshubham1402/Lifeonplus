@@ -8,8 +8,6 @@ import { TestimonialType } from "@/app/types/testimonial";
 import withBasePath from "@/utils/basePath";
 import TestimonialSkeleton from "../../Skeleton/Testimonial";
 
-// CAROUSEL SETTINGS
-
 const Testimonial = () => {
   const [testimonial, setTestimonial] = useState<TestimonialType[]>([]);
   const [loading, setLoading] = useState(true);
@@ -39,71 +37,109 @@ const Testimonial = () => {
     autoplay: false,
     cssEase: "linear",
     responsive: [
-      {
-        breakpoint: 1200,
-        settings: {
-          slidesToShow: 2,
-        },
-      },
-      {
-        breakpoint: 800,
-        settings: {
-          slidesToShow: 1,
-        },
-      },
+      { breakpoint: 1200, settings: { slidesToShow: 2 } },
+      { breakpoint: 800, settings: { slidesToShow: 1 } },
     ],
   };
+
   return (
-    <section id="testimonial-section" className="bg-cream">
-      <div className="container">
-        <div className="flex flex-col sm:flex-row gap-5 justify-between sm:items-center mb-6">
-          <h2 className="font-bold tracking-tight">Testimonial</h2>
-          <div>
-            <button className="bg-transparent cursor-pointer hover:bg-primary text-primary font-semibold hover:text-white py-3 px-4 border border-primary hover:border-transparent rounded-sm duration-300">
+    <>
+      {/* Custom Styles for Uniform Height */}
+      <style jsx global>{`
+        .testimonial-slider .slick-list {
+          height: auto !important;
+        }
+
+        .testimonial-slider .slick-track {
+          display: flex !important;
+          align-items: stretch;
+        }
+
+        .testimonial-slider .slick-slide {
+          height: 100% !important;
+          display: flex !important;
+        }
+
+        .testimonial-slider .slick-slide > div {
+          height: 100% !important;
+          width: 100% !important;
+        }
+
+        /* Optional: Equal height cards */
+        .testimonial-card {
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+        }
+      `}</style>
+
+      <section id="testimonial-section" className="bg-cream py-12 md:py-20">
+        <div className="container mx-auto px-4">
+          <div className="flex flex-col sm:flex-row gap-5 justify-between sm:items-center mb-6">
+            <h2 className="font-bold tracking-tight text-3xl md:text-4xl">
+              Testimonial
+            </h2>
+            <button className="bg-transparent cursor-pointer hover:bg-primary text-primary font-semibold hover:text-white py-3 px-6 border border-primary hover:border-transparent rounded-sm duration-300 whitespace-nowrap">
               Give Your Review
             </button>
           </div>
-        </div>
-        <p className="text-lg font-medium mb-6">
-          What others say about lifeonplus.
-        </p>
-        <Slider {...settings}>
-          {loading
-            ? Array.from({ length: 3 }).map((_, i) => (
-                <TestimonialSkeleton key={i} />
-              ))
-            : testimonial.map((items, i) => (
-                <div key={i}>
-                  <div className="bg-white m-4 pt-8 px-12 pb-10 text-center rounded-lg">
-                    <div
-                      className={`relative z-0 flex justify-center items-center before:absolute before:bg-[url('/images/testimonial/greenpic.svg')] before:h-6 before:w-6 before:bottom-0 before:z-10 before:left-54%`}
-                    >
-                      <Image
-                        src={withBasePath(items.imgSrc)}
-                        alt="gaby"
-                        width={64}
-                        height={64}
-                        className="inline-block rounded-full ring-2 ring-white relative"
-                      />
+
+          <p className="text-lg font-medium mb-10 max-w-2xl">
+            What others say about lifeonplus.
+          </p>
+
+          <div className="testimonial-slider">
+            <Slider {...settings}>
+              {loading
+                ? Array.from({ length: 3 }).map((_, i) => (
+                    <TestimonialSkeleton key={i} />
+                  ))
+                : testimonial.map((items, i) => (
+                    <div key={i} className="px-3 h-full">
+                      <div className="testimonial-card bg-white p-8 md:p-12 rounded-2xl shadow-sm flex flex-col min-h-[460px] md:min-h-[480px]">
+                        {/* Avatar */}
+                        <div className="flex justify-center mb-6">
+                          <div className="relative">
+                            <Image
+                              src={withBasePath(items.imgSrc)}
+                              alt={items.name}
+                              width={80}
+                              height={80}
+                              className="rounded-full ring-4 ring-white shadow-md"
+                            />
+                            <div className="absolute -bottom-1 -right-1 w-8 h-8 bg-[url('/images/testimonial/greenpic.svg')] bg-contain" />
+                          </div>
+                        </div>
+
+                        {/* Content */}
+                        <div className="flex-1 flex flex-col text-center">
+                          <p className="text-sm text-gray-500 mb-1">
+                            {items.profession}
+                          </p>
+                          <p className="text-2xl font-semibold mb-4">
+                            {items.name}
+                          </p>
+
+                          <Image
+                            src={withBasePath(items.starimg)}
+                            alt="stars"
+                            width={120}
+                            height={24}
+                            className="mx-auto mb-6"
+                          />
+
+                          <p className="text-lg leading-relaxed text-gray-700 flex-1">
+                            {items.detail}
+                          </p>
+                        </div>
+                      </div>
                     </div>
-                    <p className="text-sm pt-4 pb-2">{items.profession}</p>
-                    <p className="text-2xl font-semibold pb-3">{items.name}</p>
-                    <Image
-                      src={withBasePath(items.starimg)}
-                      alt="stars-img"
-                      className="m-auto pb-6 w-[30%]"
-                      width={32}
-                      height={32}
-                    />
-                    <p className="text-lg font-medium leading-7">
-                      {items.detail}
-                    </p>
-                  </div>
-                </div>
-              ))}
-        </Slider>
-      </div>
-    </section>
+                  ))}
+            </Slider>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
 
