@@ -51,161 +51,174 @@
   ],
   "Companiesdata": [
     {
-      "imgSrc": "/images/slickCompany/airbnb.svg"
+      "imgSrc": "/images/slickCompany/1a.png"
     },
     {
-      "imgSrc": "/images/slickCompany/hubspot.svg"
+      "imgSrc": "/images/slickCompany/1b.png"
     },
     {
-      "imgSrc": "/images/slickCompany/microsoft.svg"
+      "imgSrc": "/images/slickCompany/1c.png"
     },
     {
-      "imgSrc": "/images/slickCompany/google.svg"
+      "imgSrc": "/images/slickCompany/1d.png"
     },
     {
-      "imgSrc": "/images/slickCompany/walmart.svg"
+      "imgSrc": "/images/slickCompany/2.png"
     },
     {
-      "imgSrc": "/images/slickCompany/fedex.svg"
+      "imgSrc": "/images/slickCompany/3.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/4.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/5.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/6.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/7.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/8.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/9.png"
+    },
+    {
+      "imgSrc": "/images/slickCompany/10.png"
     }
   ],
   "CourseDetailData": [
     {
       "id": "1",
       "course": "Basic Plus",
-      "imageSrc": "/images/home-services/basicPlus.jpeg",
+      "imageSrc": "/images/services/dehk.jpeg",
       "price": "300",
       "category": "dek"
     },
     {
       "id": "2",
       "course": "Bronze",
-      "imageSrc": "/images/home-services/bronze.jpeg",
+      "imageSrc": "/images/services/dehk.jpeg",
       "price": "400",
       "category": "dek"
     },
     {
       "id": "3",
       "course": "Bronze Plus",
-      "imageSrc": "/images/home-services/bronzePlus.jpeg",
+      "imageSrc": "/images/services/dehk.jpeg",
       "price": "400",
       "category": "dek"
     },
     {
       "id": "4",
       "course": "Silver",
-      "imageSrc": "/images/home-services/silver.jpeg",
+      "imageSrc": "/images/services/dehk.jpeg",
       "price": "400",
       "category": "dek"
     },
     {
-      "id": "3",
-      "course": "Bronze",
-      "imageSrc": "/images/courses/coursesOne.svg",
-      "profession": "Learn React Native with Node.js",
-      "price": "600",
-      "category": "dmek"
-    },
-    {
-      "id": "4",
-      "course": "Bronze Plus",
-      "imageSrc": "/images/courses/coursesThree.svg",
-      "profession": "Learn Swift from Scratch",
-      "price": "1000",
-      "category": "dmek"
-    },
-    {
       "id": "5",
+      "course": "Basic",
+      "imageSrc": "/images/services/dpehk.jpeg",
+      "profession": "Learn React Native with Node.js",
+      "price": "300",
+      "category": "dmek"
+    },
+    {
+      "id": "6",
       "course": "Package 1",
-      "imageSrc": "/images/courses/coursesThree.svg",
+      "imageSrc": "/images/services/diagnosis.jpeg",
       "profession": "Learn TensorFlow with SQL",
       "price": "1500",
       "category": "diagnosis"
     },
     {
-      "id": "6",
+      "id": "7",
       "course": "Package 2",
-      "imageSrc": "/images/courses/coursesFour.svg",
+      "imageSrc": "/images/services/diagnosis.jpeg",
       "profession": "AWS Deep Learning AMI",
       "price": "2500",
       "category": "diagnosis"
     },
     {
-      "id": "7",
+      "id": "8",
       "course": "Advanced ECG",
-      "imageSrc": "/images/courses/coursesOne.svg",
+      "imageSrc": "/images/services/qhc.jpeg",
       "profession": "Learn Bokeh with Python",
       "price": "300",
       "category": "qhc"
     },
     {
-      "id": "7",
+      "id": "9",
       "course": "Vascular Age",
-      "imageSrc": "/images/courses/coursesOne.svg",
+      "imageSrc": "/images/services/vat.jpeg",
       "profession": "Learn Bokeh with Python",
       "price": "4000",
       "category": "qhc"
     },
     {
-      "id": "7",
+      "id": "10",
       "course": "Capilary Blood Shape",
-      "imageSrc": "/images/courses/coursesOne.svg",
+      "imageSrc": "/images/services/qhc.jpeg",
       "profession": "Learn Bokeh with Python",
       "price": "4000",
       "category": "qhc"
     },
     {
-      "id": "8",
+      "id": "11",
       "course": "Express Basic Plus - 12 Vital Tests",
-      "imageSrc": "/images/courses/ept.jpeg",
+      "imageSrc": "/images/services/xmt.jpeg",
       "profession": "Scikit with Python Development",
       "price": "1499",
       "category": "emt"
     },
     {
-      "id": "9",
+      "id": "12",
       "course": "Express Advanced - Lifeonline Package (32+ Vital Tests)",
-      "imageSrc": "/images/courses/coursesThree.svg",
+      "imageSrc": "/images/services/xmt.jpeg",
       "profession": "Infra-as-a-Service",
       "price": "2199",
       "category": "emt"
     },
     {
-      "id": "10",
+      "id": "13",
       "course": "Express Medical Tests - Basic 10 Vital Tests",
-      "imageSrc": "/images/courses/coursesFour.svg",
+      "imageSrc": "/images/services/xmt.jpeg",
       "profession": "Info-as-a-Service",
       "price": "999",
       "category": "emt"
     },
     {
-      "id": "11",
+      "id": "14",
       "course": "Acugraph Test",
-      "imageSrc": "/images/courses/coursesOne.svg",
+      "imageSrc": "/images/services/brs.jpeg",
       "profession": "Platform-as-a-Service",
       "price": "1800",
       "category": "brs"
     },
     {
-      "id": "12",
+      "id": "15",
       "course": "Power Foot Detox Theraphy",
-      "imageSrc": "/images/courses/coursesTwo.svg",
+      "imageSrc": "/images/services/brs.jpeg",
       "profession": "Software-as-a-Service",
       "price": "1500",
       "category": "brs"
     },
     {
-      "id": "13",
+      "id": "16",
       "course": "Power Recharge Therapy",
-      "imageSrc": "/images/courses/coursesTwo.svg",
+      "imageSrc": "/images/services/brs.jpeg",
       "profession": "Software-as-a-Service",
       "price": "1500",
       "category": "brs"
     },
     {
-      "id": "13",
+      "id": "17",
       "course": "MEOL",
-      "imageSrc": "/images/courses/coursesTwo.svg",
+      "imageSrc": "/images/services/brs.jpeg",
       "profession": "Software-as-a-Service",
       "price": "1500",
       "category": "brs"
@@ -302,27 +315,6 @@
       "imageSrc": "/images/courses/dehk.jpeg",
       "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
       "category": "md"
-    },
-    {
-      "id": "14",
-      "course": "Doctor Consulation",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "Expert doctor advice, anytime, anywhere.",
-      "category": "dc"
-    },
-    {
-      "id": "15",
-      "course": "Health Tech",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "LifeOnPlus offers comprehensive software and hardware solutions designed to streamline operations, improve patient care.",
-      "category": "ht"
-    },
-    {
-      "id": "16",
-      "course": "Accessing Emergency Services",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "In life’s most critical moments, every second matters. LifeOnPlus brings together essential emergency services—ambulance, air ambulance.",
-      "category": "aes"
     }
   ],
   "MentorData": [

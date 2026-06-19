@@ -89,12 +89,6 @@ const NamesList = () => {
               <p className="w-[60%] font-normal text-gray-900 break-words">
                 {name.course}
               </p>
-
-              <div className="w-[40%] flex justify-end">
-                <div className="text-center text-lg font-semibold text-success border-2 border-success rounded-md px-1 py-1">
-                  <p>₹ {name.price}</p>
-                </div>
-              </div>
             </div>
           </div>
           {/* <div className="flex justify-between border-solid border-2 rounded-md p-2">
