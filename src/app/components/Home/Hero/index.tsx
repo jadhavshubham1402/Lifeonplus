@@ -1,102 +1,62 @@
-import Link from "next/link";
-import Dropdownone from "./Dropdownone";
-import Dropdowntwo from "./Dropdowntwo";
+"use client";
 import Image from "next/image";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import withBasePath from "@/utils/basePath";
 
+const bannerSlides = [
+  {
+    id: 1,
+    image: "/images/banner/background1.png",
+    alt: "LifeOnPlus Banner 1",
+  },
+  {
+    id: 2,
+    image: "/images/banner/background2.png",
+    alt: "LifeOnPlus Banner 2",
+  },
+  {
+    id: 3,
+    image: "/images/banner/background3.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+  // Add more banner images here
+];
+
 const Banner = () => {
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 800,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    fade: true,
+    arrows: false,
+    pauseOnHover: true,
+  };
+
   return (
-    <section id="Home" className="bg-banner-image relative">
-      <div className="relative px-6 lg:px-8">
-        <div className="container mx-auto">
-          <div className="flex flex-col gap-4 text-center">
-            {/* <h1 className="leading-tight font-bold tracking-tight max-w-4xl mx-auto">
-              LifeOnPlus – Your Digital Health & Wellness Partner
-            </h1> */}
-            {/* <p className="text-lg leading-8 text-black">
-              Build skills with our courses and mentor from world-class
-              companies.
-            </p> */}
-            {/* <div className="backdrop-blur-md bg-white/30 border border-white/30 rounded-lg shadow-lg p-6 w-fit mx-auto">
-              <div className="flex items-center justify-center gap-8">
-                <div className="hidden sm:block -space-x-2 overflow-hidden">
-                  <Image
-                    className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1491528323818-fdd1faba62cc?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="img1"
-                    width={12}
-                    height={12}
-                  />
-
-                  <Image
-                    className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="img2"
-                    width={12}
-                    height={12}
-                  />
-                  <Image
-                    className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2.25&w=256&h=256&q=80"
-                    alt="img3"
-                    width={12}
-                    height={12}
-                  />
-                  <Image
-                    className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="img4"
-                    width={12}
-                    height={12}
-                  />
-                  <Image
-                    className="inline-block h-12 w-12 rounded-full ring-2 ring-white"
-                    src="https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-1.2.1&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80"
-                    alt="img5"
-                    width={12}
-                    height={12}
-                  />
-                </div>
-                <div>
-                  <div className="flex justify-center sm:justify-start">
-                    <h3 className="text-2xl font-semibold mr-2">4.6</h3>
-                    <Image
-                      src={withBasePath("/images/banner/Stars.svg")}
-                      alt="stars-icon"
-                      width={32}
-                      height={32}
-                      className="w-[60%]"
-                    />
-                  </div>
-                  <div>
-                    <h3 className="text-sm">Rated by 25k on google.</h3>
-                  </div>
-                </div>
-              </div>
-            </div> */}
-          </div>
-
-          {/* DROPDOWN BUTTONS */}
-
-          {/* <div className="mx-auto max-w-4xl mt-12 p-6 lg:max-w-4xl lg:px-8 bg-white rounded-lg boxshadow">
-            <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-8 xl:gap-x-8">
-              <div className="col-span-3">
-                <Dropdownone />
-              </div>
-              <div className="col-span-3">
-                <Dropdowntwo />
-              </div>
-              <div className="col-span-3 sm:col-span-2 mt-2">
-                <Link href={"/#courses-section"}>
-                  <button className="bg-primary w-full hover:bg-transparent hover:text-primary duration-300 border border-primary text-white font-bold py-4 px-3 rounded-sm hover:cursor-pointer">
-                    Start
-                  </button>
-                </Link>
-              </div>
+    <section id="Home" className="relative overflow-hidden">
+      {/* Full Height Banner Slider */}
+      {/* <div className="relative h-screen min-h-[640px]"> */}
+        <Slider {...settings} className="h-full">
+          {bannerSlides.map((slide) => (
+            <div key={slide.id} className="bg-banner-image">
+              <Image
+                src={withBasePath(slide.image)}
+                alt={slide.alt}
+                fill
+                priority
+                className="object-cover"
+                sizes="100vw"
+              />
             </div>
-          </div> */}
-        </div>
-      </div>
+          ))}
+        </Slider>
+      {/* </div> */}
     </section>
   );
 };

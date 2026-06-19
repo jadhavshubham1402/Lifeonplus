@@ -180,102 +180,147 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
         <div className="container mx-auto p-10">
           {/* TITLE */}
           <h1 className="text-3xl font-bold text-green-600 mb-4">
-            Express Medical Test – Quick & Convenient Health Check-ups
+            LifeOnPlus Xpress Medical Tests
           </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            12 Vital Health Tests in Just 10 Minutes
+          </p>
 
           {/* INTRO */}
-          <p className="text-gray-700 mb-6">
-            At LifeOnPlus, we understand the importance of timely health
-            assessments. Our Express Medical Test service provides quick,
-            hassle-free diagnostic tests at your convenience.
+          <p className="text-gray-700 mb-8 text-lg">
+            LifeOnPlus Xpress Medical Tests is a fast, technology-enabled health
+            screening solution that performs 12 essential health assessments
+            within 10 minutes. All tests are conducted using advanced digital
+            devices connected to a Mobile App and Tablet, providing instant
+            analysis and reports.
           </p>
 
           {/* KEY FEATURES */}
-          <h2 className="text-xl font-semibold mb-3">Key Features</h2>
-
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>
-              <b>Rapid Testing:</b> Get essential health parameters checked in
-              minutes
-            </li>
-            <li>
-              <b>Home & Office Visits:</b> Certified professionals collect
-              samples at your location
-            </li>
-            <li>
-              <b>Affordable & Reliable:</b> Cost-effective testing with accurate
-              results
-            </li>
-            <li>
-              <b>Smart Health Reports:</b> Digital reports accessible via
-              LifeOnPlus app
-            </li>
-            <li>
-              <b>Preventive Care:</b> Early detection for better health
-              management
-            </li>
-          </ul>
-
-          {/* CTA TEXT */}
-          <p className="text-gray-700 mb-2">
-            Stay proactive about your health with Express Medical Tests.
-          </p>
-
-          <p className="text-gray-700 mb-2">
-            Book your test today through the LifeOnPlus App!
-          </p>
-
-          <p className="text-gray-700 mb-6 font-medium">
-            Get tested anytime, anywhere.
-          </p>
-
-          {/* SERVICE CARDS SECTION */}
-          <h2 className="text-2xl font-bold text-green-600 mb-6">
-            Express Medical Test Services
-          </h2>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-10">
-            {[
-              {
-                title: "M-Kit",
-                desc: "As a Lifeonplus Digital Health Accessed with Advanced state-of-the-art technologies enabled Medical Devices & equipment brings a quick health screening of your body main vitals within 10 mins with instant results in your health card/prints to you at any location which gives a big relief in an affordable way",
-              },
-              {
-                title: "Emma",
-                desc: "Device with 40+ Tests with immediate result in Mobile App & results are stored in your account automatically.",
-              },
-              {
-                title: "Quick Health Check-up",
-                desc: "Your health deserves timely attention—not just when symptoms arise, but even before they appear. That’s where the Quick Health Check-up plays a vital role.",
-              },
-            ].map((item, i) => (
-              <div key={i} className="border rounded-lg p-5 shadow-sm">
-                <h3 className="font-semibold text-lg mb-2">{item.title}</h3>
-                <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
-            ))}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              Key Features
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                12 Vital Health Tests in 10 Minutes
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Instant Digital Reports
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Reports Available in Multiple Languages
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Mobile App & Tablet-Based Testing
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Quick, Convenient & User-Friendly
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Real-Time Health Analysis
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Secure Digital Record Storage
+              </li>
+              <li className="flex items-start gap-2">
+                <span className="text-green-600 font-bold">✅</span>
+                Ideal for Individuals, Corporates & Health Camps
+              </li>
+            </ul>
           </div>
 
-          {/* TESTS SECTION */}
-          <h2 className="text-2xl font-bold text-green-600 mb-6">
-            Book Express Medical Test
-          </h2>
+          {/* TESTS INCLUDED */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              Tests Included
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "🩺 Anthropometry (Height, Weight, BMI)",
+                "🩸 Blood Pressure",
+                "💓 Pulse Rate",
+                "🧪 Hemoglobin",
+                "❤️ ECG Screening",
+                "🌡️ Body Temperature",
+                "🫁 Oxygen Saturation (SpO₂)",
+                "💧 Drinking Water TDS Test",
+                "🍬 Blood Sugar Screening",
+                "👁️ Vision Test",
+                "🫀 Cardiovascular Risk Assessment",
+                "🔍 Astigmatism & Vision Analysis",
+              ].map((test, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
+                >
+                  {test}
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-sm text-gray-700 mb-10">
-            {[
-              "Anthropometry",
-              "Blood Pressure",
-              "Pulse",
-              "Hemoglobin",
-              "ECG",
-              "Temperature",
-              "Oxygen Saturation",
-              "Blood Sugar",
-            ].map((test, i) => (
-              <div key={i} className="border p-3 rounded text-center">
-                {test}
-              </div>
-            ))}
+          {/* HOW IT WORKS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              How It Works
+            </h2>
+            <div className="space-y-6">
+              {[
+                "1. Registration through Mobile App or Tablet",
+                "2. Vital Health Tests Conducted",
+                "3. Real-Time Data Capture",
+                "4. Instant AI-Assisted Analysis",
+                "5. Multi-Language Digital Report Generated",
+                "6. Secure Storage in LifeOnPlus Health Records",
+              ].map((step, i) => (
+                <div key={i} className="flex gap-4">
+                  <div className="w-8 h-8 rounded-full bg-green-100 text-green-700 font-semibold flex items-center justify-center flex-shrink-0">
+                    {i + 1}
+                  </div>
+                  <p className="text-gray-700 pt-1">{step}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              Benefits
+            </h2>
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              <li>Early Health Risk Identification</li>
+              <li>Fast & Accurate Screening</li>
+              <li>Preventive Healthcare Approach</li>
+              <li>Digital Health Record Creation</li>
+              <li>Convenient for Medical Camps, Corporates & Communities</li>
+              <li>Easy-to-Understand Reports in Multiple Languages</li>
+            </ul>
+          </div>
+
+          {/* TAGLINE */}
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center mb-10">
+            <p className="text-xl font-semibold text-green-700 italic">
+              "12 Vital Tests • 10 Minutes • Instant Multi-Language Reports"
+            </p>
+          </div>
+
+          {/* SHORT BROCHURE VERSION */}
+          <div className="text-gray-600 border-l-4 border-green-600 pl-6 py-1">
+            <p>
+              <strong>LifeOnPlus Xpress Medical Tests</strong> delivers 12
+              essential health screenings in just 10 minutes using advanced
+              mobile and tablet-based technology. Instant reports are generated
+              in multiple languages, helping individuals take proactive steps
+              toward better health and wellness.
+            </p>
           </div>
         </div>
       )}
@@ -383,196 +428,580 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       )}
 
       {service.category === "wt" && (
-        <div className="container mx-auto px-6 py-10">
-          <h1 className="text-4xl font-bold text-green-600 mb-6">
-            Wearable Technology
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            Wearable Technologies
           </h1>
-
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            What is Wearable Technology?
-          </h2>
-
-          <p className="text-gray-700 mb-6 leading-relaxed">
-            Wearable technology includes smart devices worn on the body that
-            track health, fitness, and wellness in real time. These include
-            smartwatches, fitness bands, health rings, ECG monitors, and more.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Smart Health Monitoring for a Better Life
           </p>
 
-          <h3 className="text-xl font-semibold mb-4">Why Should We Use It?</h3>
+          {/* WHAT IS WEARABLE TECHNOLOGY */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              What is Wearable Technology?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Wearable Technology includes smart devices and wellness products
+              designed to be worn on the body to monitor health, fitness,
+              comfort, and overall well-being in real time. These innovative
+              solutions help individuals stay informed, proactive, and connected
+              to their health.
+            </p>
+          </div>
 
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-8">
-            <li>
-              <strong>Track Your Health:</strong> Monitor heart rate, oxygen
-              levels, sleep quality, stress, and even ECG.
-            </li>
+          {/* WHY USE WEARABLE TECHNOLOGY */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Why Use Wearable Technology?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <span className="text-3xl">❤️</span>
+                <div>
+                  <p className="font-semibold">Monitor Your Health</p>
+                  <p className="text-gray-700">
+                    Track vital parameters such as heart rate, blood oxygen
+                    (SpO₂), sleep quality, stress levels, activity, and wellness
+                    indicators.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🛡️</span>
+                <div>
+                  <p className="font-semibold">Support Preventive Healthcare</p>
+                  <p className="text-gray-700">
+                    Receive early health insights and wellness alerts that help
+                    you take proactive steps toward better health.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🏃</span>
+                <div>
+                  <p className="font-semibold">Stay Active & Fit</p>
+                  <p className="text-gray-700">
+                    Monitor daily activity, steps, calories burned, exercise
+                    performance, and recovery progress.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">📱</span>
+                <div>
+                  <p className="font-semibold">Real-Time Monitoring</p>
+                  <p className="text-gray-700">
+                    Access health information anytime, anywhere and stay
+                    connected to your wellness journey.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 md:col-span-2">
+                <span className="text-3xl">👨‍👩‍👧‍👦</span>
+                <div>
+                  <p className="font-semibold">Family Wellness</p>
+                  <p className="text-gray-700">
+                    Support the health and safety of family members through
+                    continuous monitoring and wellness tracking.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-            <li>
-              <strong>Preventive Care:</strong> Get alerts before problems occur
-              with AI-powered health insights.
-            </li>
+          {/* WHO CAN BENEFIT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Who Can Benefit?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <p className="font-medium mb-2">👨‍💼 Busy Professionals</p>
+                <p className="text-gray-700">
+                  Stay on top of your health despite demanding work schedules.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium mb-2">👵 Senior Citizens</p>
+                <p className="text-gray-700">
+                  Easy-to-use solutions for wellness monitoring and daily
+                  support.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium mb-2">
+                  🏃 Fitness Enthusiasts & Athletes
+                </p>
+                <p className="text-gray-700">
+                  Track fitness performance, recovery, sleep quality, and
+                  activity levels.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium mb-2">
+                  ❤️ Individuals Managing Health Conditions
+                </p>
+                <p className="text-gray-700">
+                  Support regular monitoring and healthy lifestyle management.
+                </p>
+              </div>
+              <div>
+                <p className="font-medium mb-2">👦 Kids & Teens</p>
+                <p className="text-gray-700">
+                  Encourage healthy habits, activity tracking, and wellness
+                  awareness.
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <li>
-              <strong>Stay Fit:</strong> Stay motivated with step counters,
-              calorie trackers, and workout logs.
-            </li>
+          {/* PRODUCT RANGE */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              LifeOnPlus Wearable Product Range
+            </h2>
 
-            <li>
-              <strong>Real-Time Monitoring:</strong> Keep yourself and your
-              family safe with 24/7 health data.
-            </li>
-          </ul>
+            {/* Smart Devices */}
+            <div className="mb-10">
+              <h3 className="font-semibold text-lg mb-4">
+                Smart Health Devices
+              </h3>
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-3">⌚ Smart Watches</p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5">
+                    <li>Heart Rate Monitoring</li>
+                    <li>Blood Oxygen (SpO₂)</li>
+                    <li>ECG Monitoring</li>
+                    <li>Sleep Analysis</li>
+                    <li>Activity Tracking</li>
+                  </ul>
+                </div>
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-3">📿 Fitness Bands</p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5">
+                    <li>Step Tracking</li>
+                    <li>Calorie Monitoring</li>
+                    <li>Exercise Tracking</li>
+                    <li>Daily Activity Reports</li>
+                  </ul>
+                </div>
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-3">💍 Smart Health Rings</p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5">
+                    <li>Sleep Monitoring</li>
+                    <li>Stress Analysis</li>
+                    <li>Recovery Tracking</li>
+                    <li>Wellness Insights</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
 
-          <h3 className="text-xl font-semibold mb-4">
-            Who Should Use Wearable Tech?
-          </h3>
+            {/* Wellness Wearables */}
+            <div>
+              <h3 className="font-semibold text-lg mb-4">
+                Energia Wellness Wearables
+              </h3>
+              <div className="grid md:grid-cols-2 gap-6">
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-2">
+                    👕 Energia Wellness T-Shirt
+                  </p>
+                  <p className="text-sm text-gray-700">
+                    Relax. Recharge. Feel Comfortable.
+                  </p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5 mt-3">
+                    <li>Supports chest comfort</li>
+                    <li>Helps promote relaxation</li>
+                    <li>Ideal for daily use</li>
+                  </ul>
+                </div>
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-2">🧦 Energia Wellness Socks</p>
+                  <p className="text-sm text-gray-700">
+                    Comfort & Support for Active Living
+                  </p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5 mt-3">
+                    <li>Provides additional foot support</li>
+                    <li>Ideal for travel and daily activities</li>
+                    <li>Supports overall foot wellness</li>
+                  </ul>
+                </div>
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-2">🦴 Energia Wellness Corset</p>
+                  <p className="text-sm text-gray-700">
+                    Relax • Recharge • Rejuvenate
+                  </p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5 mt-3">
+                    <li>Supports posture and comfort</li>
+                    <li>Helps maintain daily mobility</li>
+                    <li>Designed for everyday wellness</li>
+                  </ul>
+                </div>
+                <div className="border rounded-xl p-5">
+                  <p className="font-medium mb-2">
+                    🧤 Additional Wellness Products
+                  </p>
+                  <ul className="text-sm text-gray-700 space-y-1 list-disc pl-5">
+                    <li>Caps • Gloves • Compression Supports</li>
+                    <li>Wellness Accessories</li>
+                    <li>Smart Health Devices</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-8">
-            <li>
-              <strong>Busy Professionals:</strong> Stay on top of your health
-              despite a hectic schedule.
-            </li>
+          {/* KEY BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              Key Benefits of LifeOnPlus Wearable Technologies
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
+              {[
+                "Real-Time Health Monitoring",
+                "Wellness & Lifestyle Tracking",
+                "Better Health Awareness",
+                "Fitness & Activity Insights",
+                "Family Wellness Support",
+                "Convenient & Easy to Use",
+                "Advanced Smart Technology",
+                "Supports Preventive Healthcare",
+              ].map((benefit, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✅</span> {benefit}
+                </li>
+              ))}
+            </ul>
+          </div>
 
-            <li>
-              <strong>Seniors:</strong> Easy-to-use devices for monitoring
-              vitals and fall detection.
-            </li>
+          {/* VISION & TAGLINE */}
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center">
+            <p className="text-gray-700 mb-4">
+              <strong>LifeOnPlus Vision:</strong> Combining Wearable Technology,
+              AI-Powered Insights, and Preventive Healthcare to help individuals
+              live healthier, safer, and more informed lives.
+            </p>
+            <p className="italic text-xl font-semibold text-green-700">
+              "Wear Smart. Live Healthy. Stay Connected." 🌿⌚💚
+            </p>
+          </div>
 
-            <li>
-              <strong>Fitness Enthusiasts:</strong> Get deeper insights into
-              workouts and recovery.
-            </li>
-
-            <li>
-              <strong>Chronic Patients:</strong> Regular updates on blood
-              pressure, sugar, and other health parameters.
-            </li>
-
-            <li>
-              <strong>Kids & Teens:</strong> Sleep tracking, safe zone alerts,
-              and screen time management.
-            </li>
-          </ul>
-
-          <h3 className="text-xl font-semibold mb-4">Available Products</h3>
-
-          <ul className="list-disc pl-6 space-y-3 text-gray-700 mb-8">
-            <li>Smartwatches with BP, SpO2 and ECG monitoring</li>
-            <li>Fitness bands for activity tracking and calorie monitoring</li>
-            <li>Health rings with sleep and stress analytics</li>
-            <li>Posture correction wearables</li>
-            <li>Fall detection and emergency alert devices</li>
-            <li>Kids smart trackers with GPS and health features</li>
-            <li>
-              Short Sleeve White T-Shirt for people suffering from insomnia,
-              providing comfort and relaxation.
-            </li>
-            <li>
-              Smart health socks offering enhanced support throughout the day.
-            </li>
-            <li>
-              Energia Corset for body aches — helps relax, recharge and
-              rejuvenate.
-            </li>
-            <li>And many more innovative wearable solutions.</li>
-          </ul>
-
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6 mb-8">
-            <h3 className="text-xl font-semibold text-green-700 mb-2">
+          {/* FINAL CTA */}
+          <div className="text-center mt-12">
+            <p className="text-xl font-semibold text-gray-700">
               Ready to Upgrade Your Health?
-            </h3>
-
-            <p className="text-gray-700">
-              Explore smart wearable technologies that help you monitor,
-              improve, and maintain your health anytime, anywhere.
+            </p>
+            <p className="text-green-600 mt-2">
+              Discover the future of preventive healthcare with LifeOnPlus
+              Wearable Technologies. 🚀🌍💚
             </p>
           </div>
         </div>
       )}
 
       {service.category === "rpmt" && (
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-green-600 mb-8">
-            Remote Patient Monitoring Technology
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            Remote Patient Monitoring (RPM) Technology
           </h1>
-
-          <p className="text-gray-700 mb-6">
-            Patient Monitoring Technology includes smart, connected devices and
-            AI-driven platforms that continuously track vital signs and health
-            metrics such as heart rate, blood pressure, oxygen levels, glucose,
-            ECG, and more in real time. This data is securely shared with
-            doctors, caregivers, or healthcare platforms for ongoing care and
-            early detection of risks.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Continuous Healthcare. Anytime. Anywhere.
           </p>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Benefits
-          </h2>
+          {/* WHAT IS RPM */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              What is Remote Patient Monitoring?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Remote Patient Monitoring (RPM) is an advanced healthcare
+              technology that uses smart connected devices, wearable sensors,
+              and AI-powered platforms to continuously monitor a person's health
+              in real time. Vital health data is securely transmitted to
+              healthcare professionals, caregivers, and family members, enabling
+              proactive health management and timely intervention.
+            </p>
+          </div>
 
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>24/7 Health Tracking</li>
-            <li>Early Detection of Complications</li>
-            <li>Peace of Mind for Families</li>
-            <li>Remote Monitoring by Doctors</li>
-            <li>Improved Treatment Accuracy</li>
-            <li>Reduces Emergency Hospital Visits</li>
-          </ul>
+          {/* WHAT CAN BE MONITORED */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              What Can Be Monitored?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "❤️ Heart Rate Monitoring",
+                "🩸 Blood Pressure Monitoring",
+                "🫁 Blood Oxygen (SpO₂) Monitoring",
+                "🍬 Blood Glucose Monitoring",
+                "📈 ECG Monitoring",
+                "🌡️ Body Temperature Monitoring",
+                "😴 Sleep & Recovery Tracking",
+                "🚶 Activity & Mobility Monitoring",
+                "⚕️ Chronic Disease Management",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 p-4 rounded-xl shadow-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Who Should Use It?
-          </h2>
+          {/* KEY BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Key Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <span className="text-3xl">⏰</span>
+                <div>
+                  <p className="font-semibold">24/7 Health Monitoring</p>
+                  <p className="text-gray-700">
+                    Continuous tracking of vital health parameters anytime,
+                    anywhere.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🚨</span>
+                <div>
+                  <p className="font-semibold">
+                    Early Detection of Health Risks
+                  </p>
+                  <p className="text-gray-700">
+                    Identify potential health issues before they become
+                    emergencies.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">👨‍👩‍👧</span>
+                <div>
+                  <p className="font-semibold">Peace of Mind for Families</p>
+                  <p className="text-gray-700">
+                    Family members can stay informed about their loved one's
+                    health status.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">👨‍⚕️</span>
+                <div>
+                  <p className="font-semibold">Remote Doctor Monitoring</p>
+                  <p className="text-gray-700">
+                    Doctors and healthcare professionals can review patient data
+                    remotely.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🎯</span>
+                <div>
+                  <p className="font-semibold">Better Treatment Outcomes</p>
+                  <p className="text-gray-700">
+                    Accurate health data supports informed healthcare decisions.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🏥</span>
+                <div>
+                  <p className="font-semibold">
+                    Fewer Emergency Hospital Visits
+                  </p>
+                  <p className="text-gray-700">
+                    Timely intervention helps reduce unnecessary hospital
+                    admissions.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4 md:col-span-2">
+                <span className="text-3xl">📱</span>
+                <div>
+                  <p className="font-semibold">Real-Time Alerts</p>
+                  <p className="text-gray-700">
+                    Instant notifications when abnormal readings are detected.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 mb-8">
-            <li>Chronic Patients: Diabetes, hypertension, heart conditions</li>
-            <li>
-              Elderly Individuals: To monitor vitals and avoid hospital
-              readmissions
-            </li>
-            <li>Post-Surgery Patients: For safe and informed recovery</li>
-            <li>
-              Busy Professionals: For proactive health checks without clinic
-              visits
-            </li>
-            <li>
-              Home-Based Caregivers: To track patient conditions from anywhere
-            </li>
-          </ol>
+          {/* WHO SHOULD USE */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Who Should Use Remote Patient Monitoring?
+            </h2>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            How It Works
-          </h2>
+            <div className="space-y-8">
+              <div>
+                <p className="font-medium mb-3">❤️ Chronic Disease Patients</p>
+                <ul className="grid md:grid-cols-2 gap-2 text-gray-700 text-sm pl-6 list-disc">
+                  <li>Diabetes</li>
+                  <li>Hypertension</li>
+                  <li>Heart Disease</li>
+                  <li>Respiratory Conditions</li>
+                </ul>
+              </div>
 
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 mb-8">
-            <li>
-              Wear or connect the monitoring device (e.g., wearable ECG, BP
-              monitor, glucose tracker).
-            </li>
-            <li>
-              The device syncs with the LifeOnPlus App using Bluetooth or Wi-Fi.
-            </li>
-            <li>
-              Data is securely stored and shared with your health coach or
-              doctor.
-            </li>
-            <li>Real-time alerts are sent in case of any abnormalities.</li>
-          </ol>
+              <div>
+                <p className="font-medium mb-3">👵 Senior Citizens</p>
+                <ul className="text-gray-700 text-sm pl-6 list-disc">
+                  <li>Regular vital monitoring</li>
+                  <li>Fall-risk management</li>
+                  <li>Improved independent living</li>
+                </ul>
+              </div>
 
-          <div className="bg-green-50 border border-green-200 rounded-lg p-6">
-            <h3 className="text-xl font-semibold text-green-700 mb-3">
-              Available at Your Nearest LifeOnPlus Franchise Outlet
-            </h3>
+              <div>
+                <p className="font-medium mb-3">🏥 Post-Surgery Patients</p>
+                <ul className="text-gray-700 text-sm pl-6 list-disc">
+                  <li>Recovery monitoring</li>
+                  <li>Progress tracking</li>
+                  <li>Reduced hospital visits</li>
+                </ul>
+              </div>
 
-            <p className="text-gray-700 mb-3">
-              Download and subscribe to the LifeOnPlus App.
+              <div>
+                <p className="font-medium mb-3">👨‍💼 Busy Professionals</p>
+                <ul className="text-gray-700 text-sm pl-6 list-disc">
+                  <li>Convenient health monitoring without clinic visits</li>
+                  <li>Preventive healthcare support</li>
+                </ul>
+              </div>
+
+              <div>
+                <p className="font-medium mb-3">👨‍👩‍👧 Home Caregivers</p>
+                <ul className="text-gray-700 text-sm pl-6 list-disc">
+                  <li>Monitor patient health remotely</li>
+                  <li>Receive alerts and updates instantly</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* HOW IT WORKS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              How It Works
+            </h2>
+            <div className="space-y-8">
+              {[
+                {
+                  step: "Step 1",
+                  title: "Wear or connect a smart monitoring device",
+                  items: [
+                    "Smart Watch",
+                    "ECG Monitor",
+                    "Blood Pressure Monitor",
+                    "Glucose Monitor",
+                    "Pulse Oximeter",
+                  ],
+                },
+                {
+                  step: "Step 2",
+                  title:
+                    "Device automatically syncs with the LifeOnPlus App through Bluetooth or Wi-Fi.",
+                },
+                {
+                  step: "Step 3",
+                  title:
+                    "Health data is securely stored in the LifeOnPlus Digital Health Platform.",
+                },
+                {
+                  step: "Step 4",
+                  title:
+                    "Doctors, Health Coaches, and Family Members can access authorized health information.",
+                },
+                {
+                  step: "Step 5",
+                  title:
+                    "Automatic alerts are generated when abnormal health readings are detected.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6">
+                  <div className="w-10 h-10 rounded-full bg-green-100 text-green-700 font-bold flex items-center justify-center flex-shrink-0 mt-1">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg">{item.step}</p>
+                    <p className="text-gray-700">{item.title}</p>
+                    {item.items && (
+                      <ul className="list-disc pl-5 text-sm text-gray-600 mt-2">
+                        {item.items.map((it, idx) => (
+                          <li key={idx}>{it}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* ECOSYSTEM */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              LifeOnPlus Remote Monitoring Ecosystem
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
+              {[
+                "✅ Mobile App Integration",
+                "✅ Global Digital Health Smart Card Integration",
+                "✅ Emergency Alert System",
+                "✅ One-Touch Doctor Consultation",
+                "✅ GPS-Enabled Emergency Support",
+                "✅ Health Records Management",
+                "✅ AI-Based Health Insights",
+                "✅ Multi-User Family Monitoring",
+              ].map((feature, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  {feature}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* AVAILABILITY & TAGLINE */}
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center">
+            <div className="mb-6">
+              <p className="font-medium">Available Through LifeOnPlus</p>
+              <p className="text-gray-700 mt-2">
+                🏥 At your nearest LifeOnPlus Franchise Outlet
+                <br />
+                📱 Download the LifeOnPlus App
+              </p>
+              <p className="text-sm text-gray-600 mt-1">
+                Available on Google Play Store &amp; Apple App Store
+              </p>
+            </div>
+
+            <p className="italic text-xl font-semibold text-green-700 mb-6">
+              "Monitor Today. Prevent Tomorrow. Stay Connected with LifeOnPlus."
+              💚📱🏥🌍
             </p>
 
-            <p className="text-gray-700">
-              Available now on <strong>Google Play Store</strong> and{" "}
-              <strong>Apple App Store</strong>.
-            </p>
-
-            <p className="mt-3 text-green-600 font-medium">
-              Visit: www.lifeonplus.com
-            </p>
+            <div className="text-left max-w-2xl mx-auto border-l-4 border-green-600 pl-6">
+              <p className="text-gray-600">
+                <strong>Short Brochure Version:</strong>
+                <br />
+                LifeOnPlus Remote Patient Monitoring Technology enables
+                continuous 24/7 tracking of vital health parameters through
+                smart connected devices and the LifeOnPlus App. Real-time
+                monitoring, instant alerts, AI-powered insights, and remote
+                doctor access help improve health outcomes while supporting
+                preventive and personalized healthcare.
+              </p>
+            </div>
           </div>
         </div>
       )}
@@ -674,83 +1103,228 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       )}
 
       {service.category === "ak" && (
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-green-600 mb-8">
-            Advanced KIOSK
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Advanced Health Kiosk
           </h1>
-
-          <p className="text-gray-700 mb-8">
-            An Advanced Kiosk is a self-service digital station equipped with
-            integrated hardware and software to deliver health services,
-            information, and interactive features. LifeOnPlus kiosks can serve
-            as mini health stations offering express check-ups, health reports,
-            and wellness product access.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Smart Self-Service Healthcare Station
           </p>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Features of LifeOnPlus Advanced Kiosks
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Touchscreen interface for easy navigation</li>
-            <li>
-              Smart health monitoring tools: BP, sugar, BMI, temperature, SPO2
-            </li>
-            <li>
-              Non-invasive body scan tech (like skin carotenoids, stress levels,
-              etc.)
-            </li>
-            <li>Health Smart Card integration</li>
-            <li>QR code scan &amp; app sync</li>
-            <li>Voice assistance &amp; multilingual support</li>
-            <li>Thermal printer for instant reports</li>
-          </ul>
+          {/* WHAT IS ADVANCED KIOSK */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              What is a LifeOnPlus Advanced Kiosk?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              The LifeOnPlus Advanced Kiosk is an AI-enabled self-service health
+              screening station that combines digital healthcare, preventive
+              diagnostics, and health record management in one easy-to-use
+              platform. Users can perform quick health assessments, access
+              reports, and connect with healthcare services through a
+              touchscreen interface.
+            </p>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Benefits of Using Advanced Kiosks
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Quick access to basic health screenings</li>
-            <li>No doctor visit needed for routine checks</li>
-            <li>
-              Affordable, accessible, 24/7 in public or franchise locations
-            </li>
-            <li>Helps in early detection and preventive care</li>
-            <li>
-              Syncs with the LifeOnPlus app for continuous health tracking
-            </li>
-          </ul>
+          {/* KEY FEATURES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Key Features
+            </h2>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            How to Avail This Service?
-          </h2>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 mb-8">
-            <li>Visit the nearest LifeOnPlus Franchise Outlet</li>
-            <li>
-              Locate a kiosk via the LifeOnPlus app (Download from Google Play
-              Store / Apple Store)
-            </li>
-            <li>Use your mobile number or scan QR to begin</li>
-            <li>
-              Get instant report and health suggestions on-screen and on your
-              phone
-            </li>
-          </ol>
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Smart Digital Interface */}
+              <div>
+                <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  📱 Smart Digital Interface
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>User-friendly touchscreen</li>
+                  <li>Multi-language support</li>
+                  <li>Voice-assisted navigation</li>
+                </ul>
+              </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            User Precautions at the Kiosk
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>
-              Use sanitizer before and after touching the screen or sensors
-            </li>
-            <li>Follow on-screen instructions carefully</li>
-            <li>Sit/stand still while scanning for accurate readings</li>
-            <li>
-              Avoid use if you have open wounds on fingers or are extremely
-              sweaty
-            </li>
-            <li>Seek doctor consultation if readings show abnormalities</li>
-          </ul>
+              {/* Health Screening */}
+              <div>
+                <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  🩺 Health Screening & Monitoring
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Blood Pressure Monitoring</li>
+                  <li>Blood Sugar Screening</li>
+                  <li>Pulse Rate Monitoring</li>
+                  <li>Oxygen Saturation (SpO₂)</li>
+                  <li>Body Temperature</li>
+                  <li>BMI & Weight Analysis</li>
+                  <li>Quick Health Risk Assessment</li>
+                </ul>
+              </div>
+
+              {/* Advanced Technologies */}
+              <div>
+                <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  🤖 Advanced Technologies
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>AI-Powered Health Insights</li>
+                  <li>Non-Invasive Health Screening</li>
+                  <li>Digital Health Smart Card Integration</li>
+                  <li>QR Code & Mobile App Connectivity</li>
+                  <li>Cloud-Based Health Record Storage</li>
+                </ul>
+              </div>
+
+              {/* Instant Reporting */}
+              <div>
+                <p className="font-semibold text-lg mb-3 flex items-center gap-2">
+                  🖨️ Instant Reporting
+                </p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Real-time report generation</li>
+                  <li>Thermal printer support</li>
+                  <li>Mobile App report access</li>
+                  <li>Multi-language digital reports</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* HOW IT WORKS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              How It Works
+            </h2>
+            <div className="space-y-8">
+              {[
+                {
+                  step: "Step 1",
+                  title: "Register using:",
+                  items: ["Mobile Number", "QR Code", "LifeOnPlus Smart Card"],
+                },
+                {
+                  step: "Step 2",
+                  title: "Complete health screening using integrated devices.",
+                },
+                {
+                  step: "Step 3",
+                  title:
+                    "Data is analyzed instantly through the LifeOnPlus platform.",
+                },
+                {
+                  step: "Step 4",
+                  title: "Receive instant reports and health recommendations.",
+                },
+                {
+                  step: "Step 5",
+                  title:
+                    "Reports are securely stored in your LifeOnPlus Digital Health Record.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6">
+                  <div className="w-10 h-10 rounded-full bg-green-100 text-green-700 font-bold flex items-center justify-center flex-shrink-0 mt-1">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p className="font-semibold text-lg">{item.step}</p>
+                    <p className="text-gray-700">{item.title}</p>
+                    {item.items && (
+                      <ul className="list-disc pl-5 text-sm text-gray-600 mt-2 space-y-1">
+                        {item.items.map((it, idx) => (
+                          <li key={idx}>{it}</li>
+                        ))}
+                      </ul>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4">
+              {[
+                "✅ Quick & Convenient Health Screening",
+                "✅ No Appointment Required",
+                "✅ Affordable Preventive Healthcare",
+                "✅ Early Risk Detection",
+                "✅ Digital Health Record Creation",
+                "✅ AI-Based Health Insights",
+                "✅ Available 24×7",
+                "✅ Supports Community & Corporate Wellness Programs",
+              ].map((benefit, i) => (
+                <div key={i} className="text-gray-700">
+                  {benefit}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* SETUP REQUIREMENTS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              Setup Requirements
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
+              <li>🏢 Indoor Installation</li>
+              <li>⚡ Power Supply Required</li>
+              <li>🌐 Internet Connectivity</li>
+              <li>📏 Minimum 3 ft × 3 ft Floor Space</li>
+              <li>🛠️ Installation & Maintenance by LifeOnPlus</li>
+            </ul>
+          </div>
+
+          {/* WHO CAN USE IT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Who Can Use It?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              <div>👨‍💼 Corporate Employees</div>
+              <div>👵 Senior Citizens</div>
+              <div>🏃 Fitness Enthusiasts</div>
+              <div>👨‍👩‍👧 Families</div>
+              <div>🏥 Clinics & Hospitals</div>
+              <div>🏭 Industries & Factories</div>
+              <div>🏫 Educational Institutions</div>
+              <div>🌍 Community Health Programs</div>
+            </div>
+          </div>
+
+          {/* INTEGRATED ECOSYSTEM */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Integrated with LifeOnPlus Ecosystem
+            </h2>
+            <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+              {[
+                "💳 Global Digital Health Smart Card",
+                "📱 LifeOnPlus Mobile App",
+                "🚑 Emergency Health Services",
+                "👨‍⚕️ Doctor Consultation",
+                "📂 Digital Medical Records",
+                "🔔 Health Alerts & Reminders",
+              ].map((item, i) => (
+                <div key={i}>{item}</div>
+              ))}
+            </div>
+          </div>
+
+          {/* FINAL HIGHLIGHT */}
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center">
+            <p className="italic text-xl font-semibold text-green-700">
+              Smart Self-Service Healthcare at Your Fingertips
+            </p>
+            <p className="text-gray-600 mt-4">
+              Experience the future of preventive health with LifeOnPlus
+              Advanced Health Kiosk.
+            </p>
+          </div>
         </div>
       )}
       {service.category === "aih" && (
@@ -931,78 +1505,128 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       )}
 
       {service.category === "fs" && (
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-green-600 mb-8">
-            Food Supplements
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Food Supplements
           </h1>
-
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Brief on Food Supplements
-          </h2>
-          <p className="text-gray-700 mb-8">
-            Food supplements, also known as dietary or nutritional supplements,
-            are products designed to add essential nutrients to your diet. They
-            come in various forms such as tablets, capsules, powders, or
-            liquids, and typically contain vitamins, minerals, amino acids,
-            enzymes, herbs, or other botanicals.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Complete Nutrition for a Healthier Life
           </p>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Why Food Supplements Are Necessary?
-          </h2>
-          <ol className="list-decimal pl-6 space-y-3 text-gray-700 mb-8">
-            <li>
-              <strong>Nutrient Gaps:</strong> Modern diets often lack essential
-              nutrients due to processed foods, poor eating habits, or limited
-              food variety.
-            </li>
-            <li>
-              <strong>Soil Depletion:</strong> Modern farming can strip the soil
-              of minerals, reducing the nutrient content in fruits and
-              vegetables.
-            </li>
-            <li>
-              <strong>Busy Lifestyles:</strong> People may skip meals or rely on
-              fast food, missing out on vital nutrients.
-            </li>
-            <li>
-              <strong>Medical Conditions:</strong> Certain health issues or
-              medications can impair nutrient absorption.
-            </li>
-            <li>
-              <strong>Age & Life Stages:</strong> Children, pregnant women, and
-              the elderly may have higher or specific nutrient needs.
-            </li>
-            <li>
-              <strong>Boosting Immunity:</strong> Supplements can help
-              strengthen the immune system and improve overall well-being.
-            </li>
-          </ol>
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed">
+              Food Supplements are nutritional products designed to provide
+              essential vitamins, minerals, proteins, herbs, and other nutrients
+              that may be missing from your daily diet. Available as tablets,
+              capsules, powders, and liquids, they help support overall health,
+              wellness, and active living.
+            </p>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Common Food Supplements
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>
-              Multivitamins – Combination of essential vitamins and minerals.
-            </li>
-            <li>Vitamin D – Supports bone health and immune function.</li>
-            <li>
-              Omega-3 Fatty Acids (Fish Oil) – Good for heart and brain health.
-            </li>
-            <li>Calcium – Important for bones and teeth.</li>
-            <li>Iron – Essential for blood health, especially for women.</li>
-            <li>Probiotics – Help maintain gut health.</li>
-            <li>Protein Powders – Aid muscle repair and growth.</li>
-            <li>
-              Magnesium – Supports muscle and nerve function, reduces stress.
-            </li>
-            <li>B-Complex Vitamins – Boost energy and metabolism.</li>
-            <li>
-              Herbal Supplements – Like ashwagandha, turmeric, or ginseng for
-              specific health benefits.
-            </li>
-          </ul>
+          {/* WHY ARE FOOD SUPPLEMENTS IMPORTANT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Why Are Food Supplements Important?
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "Help bridge nutritional gaps in modern diets",
+                "Support immunity and overall wellness",
+                "Compensate for nutrient loss due to soil depletion and food processing",
+                "Assist people with busy lifestyles and irregular eating habits",
+                "Support specific nutritional needs during childhood, pregnancy, and aging",
+                "Aid recovery, energy, and healthy body functions",
+              ].map((item, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✅</span> {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* COMMON SUPPLEMENTS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Common LifeOnPlus Food Supplements
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "🔹 Multivitamins – Daily nutritional support",
+                "🔹 Vitamin D3 – Bone & immune health",
+                "🔹 Omega-3 Fish Oil – Heart & brain wellness",
+                "🔹 Calcium – Strong bones & teeth",
+                "🔹 Iron – Healthy blood formation",
+                "🔹 Probiotics – Digestive & gut health",
+                "🔹 Protein Supplements – Muscle support & recovery",
+                "🔹 Magnesium – Muscle, nerve & stress support",
+                "🔹 B-Complex Vitamins – Energy & metabolism support",
+                "🔹 Herbal Supplements – Ashwagandha, Turmeric, Curcumin and more",
+              ].map((supplement, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"
+                >
+                  {supplement}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* WHO CAN BENEFIT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Who Can Benefit?
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              <div>👨‍💼 Busy Professionals</div>
+              <div>👵 Senior Citizens</div>
+              <div>🏃 Fitness Enthusiasts & Athletes</div>
+              <div>👩 Women & Pregnant Mothers</div>
+              <div>👨‍👩‍👧 Families Seeking Better Nutrition</div>
+              <div>🧒 Growing Children & Teenagers</div>
+            </div>
+          </div>
+
+          {/* LIFEONPLUS ADVANTAGE */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              LifeOnPlus Advantage
+            </h2>
+            <ul className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✔ Quality Nutritional Products",
+                "✔ Preventive Wellness Focus",
+                "✔ Supports Daily Health & Vitality",
+                "✔ Easy to Use & Affordable",
+                "✔ Complements a Healthy Lifestyle",
+              ].map((advantage, i) => (
+                <li key={i} className="flex items-start gap-2">
+                  {advantage}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* TAGLINE & VISION */}
+          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center mb-10">
+            <p className="text-xl font-semibold text-green-700 italic">
+              Healthy Nutrition. Strong Immunity. Better Living.
+            </p>
+            <p className="text-gray-700 mt-3">
+              LifeOnPlus – Your Partner in Preventive Healthcare &amp; Wellness.
+            </p>
+          </div>
+
+          {/* DISCLAIMER */}
+          <div className="text-xs text-gray-500 border-l-4 border-gray-300 pl-4">
+            <strong>Disclaimer:</strong> Food supplements are intended to
+            support general nutrition and wellness. They are not intended to
+            diagnose, treat, cure, or prevent any disease. Consult a healthcare
+            professional before use if you have medical conditions, are
+            pregnant, or are taking medication.
+          </div>
         </div>
       )}
 
@@ -1567,83 +2191,229 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
           <p className="text-gray-700 mb-6">
             The Body Recharge Station is a revolutionary wellness solution
             designed to restore energy, enhance vitality, and promote overall
-            well-being through non-invasive wellness technologies.
+            well-being through advanced non-invasive German technologies.
           </p>
 
-          {/* WHAT IS BRS */}
-          <h2 className="text-2xl font-semibold mb-4">
-            What is a Body Recharge Station?
-          </h2>
+          {/* AcuGraph Section */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-3">
+              A) AcuGraph Energy Analysis
+            </h2>
+            <p className="text-gray-700 mb-4">
+              AcuGraph Energy Health Screening is a non-invasive assessment that
+              measures the energy balance of the body's acupuncture meridians.
+              It helps identify energy imbalances that may affect overall health
+              and wellness.
+            </p>
 
-          <p className="text-gray-700 mb-8">
-            The Body Recharge Station helps recharge your body's energy levels,
-            detoxify, and rejuvenate using advanced bioenergetic wellness
-            technologies. It integrates modern scientific advancements with
-            traditional wellness methodologies to optimize your body's natural
-            energy flow.
-          </p>
-
-          {/* HOW IT WORKS */}
-          <h2 className="text-2xl font-semibold mb-4">How It Works</h2>
-
-          <div className="space-y-5 text-gray-700 mb-10">
-            <div>
-              <h3 className="font-semibold">AcuGraph Energy Analysis</h3>
-              <p>
-                Scans your body's energy meridians to identify imbalances and
-                support wellness assessment.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Power Detox Therapy</h3>
-              <p>
-                Uses bio-electromagnetic technology to support detoxification
-                and toxin removal.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Power Recharge Therapy</h3>
-              <p>
-                Helps restore and recharge your body's natural energy levels.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">Power Eye Recharge Therapy</h3>
-              <p>
-                Supports relaxation and wellness through impulse-based
-                technology.
-              </p>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <h3 className="font-semibold mb-2">Key Benefits:</h3>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Assesses energy flow across major body meridians</li>
+                  <li>Detects imbalances before symptoms become serious</li>
+                  <li>
+                    Supports preventive healthcare and wellness management
+                  </li>
+                  <li>Helps monitor the effectiveness of treatments</li>
+                  <li>
+                    Provides personalized insights for better health decisions
+                  </li>
+                  <li>
+                    Useful during stress, lifestyle changes, and environmental
+                    challenges
+                  </li>
+                  <li>
+                    Promotes improved energy, vitality, and overall well-being
+                  </li>
+                </ul>
+              </div>
+              <div className="flex flex-col justify-center">
+                <p className="italic text-green-600 font-medium">
+                  "Know Your Energy. Balance Your Health. Live Better." 🌿💚
+                </p>
+                <p className="text-sm text-gray-600 mt-4">
+                  AcuGraph Energy Analysis is a safe, non-invasive screening
+                  that evaluates the body's energy flow through 12 meridians,
+                  helping detect imbalances early and supporting proactive
+                  health and wellness management.
+                </p>
+              </div>
             </div>
           </div>
 
-          {/* BENEFITS */}
-          <h2 className="text-2xl font-semibold mb-4">
-            Benefits of the Body Recharge Station
-          </h2>
+          {/* Power Detox Section */}
+          <div className="mb-12 border-t border-gray-100 pt-10">
+            <h2 className="text-2xl font-semibold text-green-700 mb-3">
+              B) Power Detox Therapy (German Technology – Advanced Foot Detox)
+            </h2>
+            <p className="text-gray-700 mb-4">
+              Power Detox Therapy is a non-invasive wellness treatment that uses
+              advanced iontophoresis and electrolysis technology to support the
+              body's natural detoxification process. By helping improve
+              circulation and cellular function, it promotes relaxation, energy,
+              and overall well-being.
+            </p>
 
-          <ul className="list-disc pl-5 text-gray-700 space-y-2 mb-10">
-            <li>Boosts energy levels and daily performance.</li>
-            <li>Supports detoxification and toxin removal.</li>
-            <li>Strengthens overall wellness and vitality.</li>
-            <li>Reduces stress, fatigue, and mental exhaustion.</li>
-            <li>
-              Promotes holistic physical, emotional, and mental well-being.
-            </li>
-          </ul>
+            <h3 className="font-semibold mb-2">Key Benefits:</h3>
+            <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-4">
+              <li>Supports natural detoxification</li>
+              <li>Helps improve blood and lymphatic circulation</li>
+              <li>Enhances energy and vitality</li>
+              <li>Promotes relaxation and stress relief</li>
+              <li>Supports immune system function</li>
+              <li>May help reduce muscle and joint discomfort</li>
+              <li>Improves overall wellness and rejuvenation</li>
+              <li>Helps maintain healthy body balance</li>
+            </ul>
 
-          {/* WHO CAN BENEFIT */}
-          <h2 className="text-2xl font-semibold mb-4">Who Can Benefit?</h2>
+            <div className="bg-green-50 p-5 rounded-xl mb-4">
+              <p className="font-medium mb-1">How It Works</p>
+              <p className="text-gray-700">
+                The therapy uses ionized water technology to stimulate the
+                body's natural detox pathways, supporting the removal of waste
+                products while promoting circulation and relaxation.
+              </p>
+            </div>
 
-          <ul className="list-disc pl-5 text-gray-700 space-y-2">
-            <li>Individuals experiencing chronic fatigue or stress.</li>
-            <li>Professionals looking to enhance productivity and focus.</li>
-            <li>Fitness enthusiasts seeking faster recovery.</li>
-            <li>People interested in preventive healthcare and wellness.</li>
-            <li>Anyone seeking a natural way to recharge and rejuvenate.</li>
-          </ul>
+            <div className="flex items-center gap-4 text-lg">
+              <span className="font-semibold">Package:</span>
+              <span>Power Detox Therapy Session</span>
+              <span className="font-bold text-green-600">
+                ₹1,500 + Applicable Taxes
+              </span>
+            </div>
+
+            <p className="italic text-green-600 mt-4">
+              "Detox. Recharge. Rejuvenate." 🌿
+            </p>
+
+            <p className="text-xs text-gray-500 mt-6">
+              <strong>Disclaimer:</strong> Power Detox Therapy is a wellness
+              service designed to support relaxation and overall well-being.
+              Individual experiences may vary. It is not intended to diagnose,
+              treat, cure, or prevent any disease and should not replace
+              professional medical advice or treatment.
+            </p>
+          </div>
+
+          {/* Energia Power Recharge Section */}
+          <div className="mb-12 border-t border-gray-100 pt-10">
+            <h2 className="text-2xl font-semibold text-green-700 mb-3">
+              C) Energia Power Recharge Therapy
+            </h2>
+            <p className="text-amber-600 font-medium mb-1">
+              Powered by Advanced German Technology
+            </p>
+            <p className="text-gray-700 mb-4">
+              Energia Power Recharge Therapy combines Cell Therapy, Light
+              Therapy, and Sound Therapy to support relaxation, energy
+              enhancement, and overall wellness. This non-invasive wellness
+              experience helps promote physical rejuvenation, mental relaxation,
+              and healthy lifestyle support.
+            </p>
+
+            <h3 className="font-semibold mb-2">Key Benefits:</h3>
+            <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-6">
+              <li>Enhances energy and vitality</li>
+              <li>Promotes relaxation and stress management</li>
+              <li>Supports restful sleep and recovery</li>
+              <li>Encourages mental focus and concentration</li>
+              <li>Helps improve overall wellness and balance</li>
+              <li>Non-invasive and comfortable therapy</li>
+            </ul>
+
+            <h3 className="font-semibold mb-3">Who Can Benefit?</h3>
+
+            <div className="grid md:grid-cols-2 gap-6">
+              <div>
+                <p className="font-medium mb-2">👨‍💼 Business Professionals</p>
+                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                  <li>Supports focus and productivity</li>
+                  <li>Helps manage daily stress</li>
+                  <li>Encourages mental relaxation</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-2">
+                  🏃 Athletes & Fitness Enthusiasts
+                </p>
+                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                  <li>Supports pre- and post-workout recovery</li>
+                  <li>Promotes relaxation and well-being</li>
+                  <li>Helps maintain active lifestyles</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-2">👵 Older Adults</p>
+                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                  <li>Supports mobility and flexibility</li>
+                  <li>Encourages vitality and wellness</li>
+                  <li>Promotes relaxation and comfort</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-2">🌿 General Wellness</p>
+                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
+                  <li>Supports energy balance</li>
+                  <li>Encourages relaxation</li>
+                  <li>Promotes healthy lifestyle habits</li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="flex items-center gap-4 text-lg mt-8">
+              <span className="font-semibold">Therapy Package:</span>
+              <span>Energia Power Recharge Therapy Session</span>
+              <span className="font-bold text-green-600">
+                ₹1,500 + Applicable Taxes
+              </span>
+            </div>
+
+            <p className="italic text-green-600 mt-4">
+              "Recharge Your Body. Relax Your Mind. Revitalize Your Life." 🌿⚡
+            </p>
+
+            <p className="text-sm text-gray-600 mt-4">
+              Energia Power Recharge Therapy integrates Cell Therapy, Light
+              Therapy, and Sound Therapy to support relaxation, energy
+              enhancement, stress management, restful sleep, and overall
+              wellness through advanced non-invasive technology.
+            </p>
+
+            <p className="text-xs text-gray-500 mt-6">
+              <strong>Disclaimer:</strong> Energia Power Recharge Therapy is a
+              wellness service intended to support relaxation and general
+              well-being. Individual experiences may vary. It is not intended to
+              diagnose, treat, cure, or prevent any disease and should not
+              replace professional medical advice or treatment.
+            </p>
+          </div>
+
+          {/* Overall Benefits & Who Can Benefit */}
+          <div className="border-t border-gray-100 pt-10">
+            <h2 className="text-2xl font-semibold mb-4">
+              Benefits of the Body Recharge Station
+            </h2>
+            <ul className="list-disc pl-5 text-gray-700 space-y-2 mb-10">
+              <li>Boosts energy levels and daily performance</li>
+              <li>Supports natural detoxification and toxin removal</li>
+              <li>Strengthens overall wellness and vitality</li>
+              <li>Reduces stress, fatigue, and mental exhaustion</li>
+              <li>
+                Promotes holistic physical, emotional, and mental well-being
+              </li>
+            </ul>
+
+            <h2 className="text-2xl font-semibold mb-4">Who Can Benefit?</h2>
+            <ul className="list-disc pl-5 text-gray-700 space-y-2">
+              <li>Individuals experiencing chronic fatigue or stress</li>
+              <li>Professionals looking to enhance productivity and focus</li>
+              <li>Fitness enthusiasts seeking faster recovery</li>
+              <li>People interested in preventive healthcare and wellness</li>
+              <li>Anyone seeking a natural way to recharge and rejuvenate</li>
+            </ul>
+          </div>
         </div>
       )}
       {service.category === "qhc" && (

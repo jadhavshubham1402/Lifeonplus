@@ -72,17 +72,29 @@
   "CourseDetailData": [
     {
       "id": "1",
-      "course": "Basic",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "HTML, CSS, Javascript Development",
+      "course": "Basic Plus",
+      "imageSrc": "/images/home-services/basicPlus.jpeg",
       "price": "300",
       "category": "dek"
     },
     {
       "id": "2",
-      "course": "Basic Plus",
-      "imageSrc": "/images/courses/coursesTwo.svg",
-      "profession": "Backend with Node.js and Express.js",
+      "course": "Bronze",
+      "imageSrc": "/images/home-services/bronze.jpeg",
+      "price": "400",
+      "category": "dek"
+    },
+    {
+      "id": "3",
+      "course": "Bronze Plus",
+      "imageSrc": "/images/home-services/bronzePlus.jpeg",
+      "price": "400",
+      "category": "dek"
+    },
+    {
+      "id": "4",
+      "course": "Silver",
+      "imageSrc": "/images/home-services/silver.jpeg",
       "price": "400",
       "category": "dek"
     },
@@ -120,47 +132,63 @@
     },
     {
       "id": "7",
-      "course": "Package 1",
+      "course": "Advanced ECG",
       "imageSrc": "/images/courses/coursesOne.svg",
       "profession": "Learn Bokeh with Python",
-      "price": "2000",
+      "price": "300",
+      "category": "qhc"
+    },
+    {
+      "id": "7",
+      "course": "Vascular Age",
+      "imageSrc": "/images/courses/coursesOne.svg",
+      "profession": "Learn Bokeh with Python",
+      "price": "4000",
+      "category": "qhc"
+    },
+    {
+      "id": "7",
+      "course": "Capilary Blood Shape",
+      "imageSrc": "/images/courses/coursesOne.svg",
+      "profession": "Learn Bokeh with Python",
+      "price": "4000",
       "category": "qhc"
     },
     {
       "id": "8",
-      "course": "Package 1",
+      "course": "Express Basic Plus - 12 Vital Tests",
       "imageSrc": "/images/courses/ept.jpeg",
       "profession": "Scikit with Python Development",
-      "price": "999",
-      "category": "emt"
-    },
-    {
-      "id": "9",
-      "course": "Package 2",
-      "imageSrc": "/images/courses/coursesThree.svg",
-      "profession": "Infra-as-a-Service",
       "price": "1499",
       "category": "emt"
     },
     {
-      "id": "10",
-      "course": "Package 3",
-      "imageSrc": "/images/courses/coursesFour.svg",
-      "profession": "Info-as-a-Service",
+      "id": "9",
+      "course": "Express Advanced - Lifeonline Package (32+ Vital Tests)",
+      "imageSrc": "/images/courses/coursesThree.svg",
+      "profession": "Infra-as-a-Service",
       "price": "2199",
       "category": "emt"
     },
     {
+      "id": "10",
+      "course": "Express Medical Tests - Basic 10 Vital Tests",
+      "imageSrc": "/images/courses/coursesFour.svg",
+      "profession": "Info-as-a-Service",
+      "price": "999",
+      "category": "emt"
+    },
+    {
       "id": "11",
-      "course": "Package 1",
+      "course": "Acugraph Test",
       "imageSrc": "/images/courses/coursesOne.svg",
       "profession": "Platform-as-a-Service",
-      "price": "1500",
+      "price": "1800",
       "category": "brs"
     },
     {
       "id": "12",
-      "course": "Package 2",
+      "course": "Power Foot Detox Theraphy",
       "imageSrc": "/images/courses/coursesTwo.svg",
       "profession": "Software-as-a-Service",
       "price": "1500",
@@ -168,7 +196,15 @@
     },
     {
       "id": "13",
-      "course": "Package 3",
+      "course": "Power Recharge Therapy",
+      "imageSrc": "/images/courses/coursesTwo.svg",
+      "profession": "Software-as-a-Service",
+      "price": "1500",
+      "category": "brs"
+    },
+    {
+      "id": "13",
+      "course": "MEOL",
       "imageSrc": "/images/courses/coursesTwo.svg",
       "profession": "Software-as-a-Service",
       "price": "1500",
@@ -179,7 +215,7 @@
     {
       "id": "1",
       "course": "Emergency Digital Health Kit ",
-      "imageSrc": "/images/services/dek.jpeg",
+      "imageSrc": "/images/services/dehk.jpeg",
       "profession": "World's First card with Multi application using QR code, RFID & NFC Technologies. Preservation and presentation of your medical record.",
       "category": "dek"
     },
