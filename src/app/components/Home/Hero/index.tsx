@@ -18,7 +18,42 @@ const bannerSlides = [
   },
   {
     id: 3,
-    image: "/images/banner/banner23.jpeg",
+    image: "/images/services/dehk.jpeg",
+    alt: "LifeOnPlus Banner 3",
+  },
+  {
+    id: 5,
+    image: "/images/services/dmek.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+  {
+    id: 6,
+    image: "/images/services/diagnosis1.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+    {
+    id: 7,
+    image: "/images/services/ai2.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+    {
+    id: 8,
+    image: "/images/services/brs1.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+    {
+    id: 6,
+    image: "/images/services/brs2.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+    {
+    id: 6,
+    image: "/images/services/brs3.png",
+    alt: "LifeOnPlus Banner 3",
+  },
+    {
+    id: 6,
+    image: "/images/services/brs4.jpeg",
     alt: "LifeOnPlus Banner 3",
   },
   // Add more banner images here

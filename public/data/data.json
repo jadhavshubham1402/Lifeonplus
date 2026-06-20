@@ -108,9 +108,9 @@
       "category": "dek"
     },
     {
-      "id": "2",
+      "id": "15",
       "course": "Digital & Physical Emergency Health Kit",
-      "imageSrc": "/images/services/dpehk.jpeg",
+      "imageSrc": "/images/services/dmek.png",
       "profession": "Learn React Native with Node.js",
       "price": "300",
       "category": "dmek"
@@ -118,7 +118,7 @@
     {
       "id": "4",
       "course": "Diagnosis",
-      "imageSrc": "/images/services/diagnosis.jpeg",
+      "imageSrc": "/images/services/diagnosis1.png",
       "profession": "Learn TensorFlow with SQL",
       "price": "1500",
       "category": "diagnosis"
@@ -126,7 +126,7 @@
     {
       "id": "14",
       "course": "Quick Health Checkup",
-      "imageSrc": "/images/services/qhc.jpeg",
+      "imageSrc": "/images/services/qhc1.jpeg",
       "profession": "Learn Bokeh with Python",
       "price": "300",
       "category": "qhc"
@@ -134,7 +134,7 @@
     {
       "id": "3",
       "course": "Express Medical Test",
-      "imageSrc": "/images/services/xmt.jpeg",
+      "imageSrc": "/images/services/emt2.png",
       "profession": "Scikit with Python Development",
       "price": "1499",
       "category": "emt"
@@ -157,6 +157,13 @@
       "category": "dek"
     },
     {
+      "id": "15",
+      "course": "Digital And Medical Emergency Kit ",
+      "imageSrc": "/images/services/dmek.png",
+      "profession": "The LifeOnPlus Medical Emergency First Aid Kit is a compact and essential emergency care kit designed to provide immediate first aid support during accidents, injuries, medical emergencies, and unexpected situations before professional medical help arrives",
+      "category": "dmek"
+    },
+    {
       "id": "2",
       "course": "Pharmacy ",
       "imageSrc": "/images/courses/dehk.jpeg",
@@ -164,16 +171,23 @@
       "category": "pharmacy"
     },
     {
+      "id": "14",
+      "course": "Quick Health Checkup",
+      "imageSrc": "/images/services/qhc1.jpeg",
+      "profession": "Identify early signs of heart disease, stroke risk, and vascular aging in minutes with advanced non-invasive technology",
+      "category": "qhc"
+    },
+    {
       "id": "3",
       "course": "Express Medical Test",
-      "imageSrc": "/images/services/xmt.jpeg",
+      "imageSrc": "/images/services/emt2.png",
       "profession": "Get Express medical tests at your doorstep with LifeOnPlus-fast,easy,and reliable!",
       "category": "emt"
     },
     {
       "id": "4",
       "course": "Diagnostic Services",
-      "imageSrc": "/images/services/diagnosis.jpeg",
+      "imageSrc": "/images/services/diagnosis1.png",
       "profession": "Accurate detection and analysis of health conditions through advanced invasive and non-invasive techniques.",
       "category": "diagnosis"
     },
@@ -222,7 +236,7 @@
     {
       "id": "11",
       "course": "AI in Healthcare",
-      "imageSrc": "/images/services/ai.jpeg",
+      "imageSrc": "/images/services/ai2.png",
       "profession": "Leveraging AI to deliver personalized health insights, predictive care, and real-time monitoring, ensuring smarter, more efficient healthcare.",
       "category": "aih"
     },
@@ -239,13 +253,6 @@
       "imageSrc": "/images/courses/dehk.jpeg",
       "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
       "category": "md"
-    },
-    {
-      "id": "14",
-      "course": "Quick Health Checkup",
-      "imageSrc": "/images/services/qhc.jpeg",
-      "profession": "Learn Bokeh with Python",
-      "category": "qhc"
     }
   ],
   "MentorData": [

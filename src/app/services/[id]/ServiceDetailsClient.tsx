@@ -275,6 +275,193 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
           </div>
         </div>
       )}
+      {service.category === "dmek" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Medical Emergency First Aid Kit
+          </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Be Prepared. Be Protected. Be Safe.
+          </p>
+
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              The LifeOnPlus Medical Emergency First Aid Kit is a compact and
+              essential emergency care kit designed to provide immediate first
+              aid support during accidents, injuries, medical emergencies, and
+              unexpected situations before professional medical help arrives.
+            </p>
+            <p className="text-gray-700 mt-4">
+              It is ideal for homes, offices, schools, vehicles, industries,
+              travel, and outdoor activities.
+            </p>
+          </div>
+
+          {/* WHAT'S INSIDE */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              📦 What's Inside?
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "✅ Adhesive Bandages",
+                "✅ Sterile Gauze Pads",
+                "✅ Crepe Bandages",
+                "✅ Medical Tape",
+                "✅ Antiseptic Solution",
+                "✅ Alcohol Swabs",
+                "✅ Cotton Rolls",
+                "✅ Scissors & Tweezers",
+                "✅ Disposable Gloves",
+                "✅ Digital Thermometer",
+                "✅ Emergency Care Guide",
+              ].map((item, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm"
+                >
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* KEY BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌟 Key Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <span className="text-3xl">🚑</span>
+                <div>
+                  <p className="font-semibold">Immediate Emergency Care</p>
+                  <p className="text-gray-700">
+                    Provides quick first aid support during accidents and
+                    injuries.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">❤️</span>
+                <div>
+                  <p className="font-semibold">Saves Critical Time</p>
+                  <p className="text-gray-700">
+                    Helps stabilize patients until professional medical
+                    assistance arrives.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🛡️</span>
+                <div>
+                  <p className="font-semibold">Prevents Infection</p>
+                  <p className="text-gray-700">
+                    Sterile supplies help reduce the risk of wound contamination
+                    and infection.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🏠</span>
+                <div>
+                  <p className="font-semibold">Essential for Every Family</p>
+                  <p className="text-gray-700">
+                    Keeps your loved ones prepared for unexpected emergencies.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🚗</span>
+                <div>
+                  <p className="font-semibold">Travel Safety Companion</p>
+                  <p className="text-gray-700">
+                    Perfect for cars, travel, camping, and outdoor activities.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">⚡</span>
+                <div>
+                  <p className="font-semibold">Quick Response</p>
+                  <p className="text-gray-700">
+                    Enables faster action during emergencies when every second
+                    matters.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              ✅ Advantages
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✔ Portable & Easy to Carry",
+                "✔ User-Friendly – Easy-to-use supplies suitable for all age groups",
+                "✔ Multi-Purpose Usage – For cuts, burns, sprains, bleeding & more",
+                "✔ Workplace & Home Safety",
+                "✔ Cost-Effective Protection",
+                "✔ Reliable Emergency Support",
+                "✔ Suitable for Everyone – Families, children, seniors, travelers & students",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* IDEAL FOR */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🎯 Ideal For
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+              {[
+                "🏠 Homes",
+                "🏢 Offices",
+                "🏫 Schools & Colleges",
+                "🏭 Factories & Industries",
+                "🚗 Vehicles",
+                "✈️ Travelers",
+                "🏕️ Outdoor Activities",
+                "🏥 Healthcare Camps",
+              ].map((place, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 text-center py-4 rounded-xl shadow-sm"
+                >
+                  {place}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* FINAL CTA */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <h3 className="text-2xl font-semibold text-green-700 mb-4">
+              Be Prepared for Any Emergency
+            </h3>
+            <p className="text-gray-700 max-w-xl mx-auto">
+              Don’t wait for an emergency to happen. Equip your home, office,
+              and vehicle with the LifeOnPlus Medical Emergency First Aid Kit
+              today.
+            </p>
+            <button className="mt-8 bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-10 py-4 rounded-2xl transition-colors shadow-lg">
+              🛒 Get Your Kit Now
+            </button>
+            <p className="text-green-600 font-medium mt-6">
+              Your Safety. One Kit at a Time.
+            </p>
+          </div>
+        </div>
+      )}
       {service.category === "pharmacy" && (
         <div className="container mx-auto px-6 py-10">
           <h1 className="text-4xl font-bold text-green-600 mb-6">Pharmacy</h1>
@@ -372,147 +559,184 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       {service.category === "emt" && (
         <div className="container mx-auto p-10">
           {/* TITLE */}
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
-            LifeOnPlus Xpress Medical Tests
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Xpress Medical Test
           </h1>
           <p className="text-2xl font-semibold text-gray-700 mb-8">
-            12 Vital Health Tests in Just 10 Minutes
+            10 Tests • 10 Minutes • Instant Multi-Language Report
           </p>
 
-          {/* INTRO */}
-          <p className="text-gray-700 mb-8 text-lg">
-            LifeOnPlus Xpress Medical Tests is a fast, technology-enabled health
-            screening solution that performs 12 essential health assessments
-            within 10 minutes. All tests are conducted using advanced digital
-            devices connected to a Mobile App and Tablet, providing instant
-            analysis and reports.
-          </p>
-
-          {/* KEY FEATURES */}
+          {/* INTRODUCTION */}
           <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-green-700 mb-4">
-              Key Features
-            </h2>
-            <ul className="grid md:grid-cols-2 gap-3 text-gray-700">
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                12 Vital Health Tests in 10 Minutes
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Instant Digital Reports
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Reports Available in Multiple Languages
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Mobile App & Tablet-Based Testing
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Quick, Convenient & User-Friendly
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Real-Time Health Analysis
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Secure Digital Record Storage
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-green-600 font-bold">✅</span>
-                Ideal for Individuals, Corporates & Health Camps
-              </li>
-            </ul>
-          </div>
-
-          {/* TESTS INCLUDED */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-green-700 mb-4">
-              Tests Included
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {[
-                "🩺 Anthropometry (Height, Weight, BMI)",
-                "🩸 Blood Pressure",
-                "💓 Pulse Rate",
-                "🧪 Hemoglobin",
-                "❤️ ECG Screening",
-                "🌡️ Body Temperature",
-                "🫁 Oxygen Saturation (SpO₂)",
-                "💧 Drinking Water TDS Test",
-                "🍬 Blood Sugar Screening",
-                "👁️ Vision Test",
-                "🫀 Cardiovascular Risk Assessment",
-                "🔍 Astigmatism & Vision Analysis",
-              ].map((test, i) => (
-                <div
-                  key={i}
-                  className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm hover:shadow-md transition-shadow"
-                >
-                  {test}
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* HOW IT WORKS */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-green-700 mb-6">
-              How It Works
-            </h2>
-            <div className="space-y-6">
-              {[
-                "1. Registration through Mobile App or Tablet",
-                "2. Vital Health Tests Conducted",
-                "3. Real-Time Data Capture",
-                "4. Instant AI-Assisted Analysis",
-                "5. Multi-Language Digital Report Generated",
-                "6. Secure Storage in LifeOnPlus Health Records",
-              ].map((step, i) => (
-                <div key={i} className="flex gap-4">
-                  <div className="w-8 h-8 rounded-full bg-green-100 text-green-700 font-semibold flex items-center justify-center flex-shrink-0">
-                    {i + 1}
-                  </div>
-                  <p className="text-gray-700 pt-1">{step}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* BENEFITS */}
-          <div className="mb-12">
-            <h2 className="text-2xl font-semibold text-green-700 mb-4">
-              Benefits
-            </h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li>Early Health Risk Identification</li>
-              <li>Fast & Accurate Screening</li>
-              <li>Preventive Healthcare Approach</li>
-              <li>Digital Health Record Creation</li>
-              <li>Convenient for Medical Camps, Corporates & Communities</li>
-              <li>Easy-to-Understand Reports in Multiple Languages</li>
-            </ul>
-          </div>
-
-          {/* TAGLINE */}
-          <div className="bg-green-50 border border-green-100 rounded-2xl p-8 text-center mb-10">
-            <p className="text-xl font-semibold text-green-700 italic">
-              "12 Vital Tests • 10 Minutes • Instant Multi-Language Reports"
+            <p className="text-gray-700 leading-relaxed text-lg">
+              The LifeOnPlus Xpress Medical Test is an innovative preventive
+              healthcare screening solution that delivers 10 essential health
+              tests in just 10 minutes using advanced digital technology,
+              dedicated mobile software, and tablet-enabled diagnostic systems.
+            </p>
+            <p className="text-gray-700 mt-4">
+              Designed for individuals, families, corporates, schools,
+              healthcare camps, and communities.
             </p>
           </div>
 
-          {/* SHORT BROCHURE VERSION */}
-          <div className="text-gray-600 border-l-4 border-green-600 pl-6 py-1">
-            <p>
-              <strong>LifeOnPlus Xpress Medical Tests</strong> delivers 12
-              essential health screenings in just 10 minutes using advanced
-              mobile and tablet-based technology. Instant reports are generated
-              in multiple languages, helping individuals take proactive steps
-              toward better health and wellness.
+          {/* 10 TESTS COVERED */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🩺 10 Tests Covered
+            </h2>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+              {[
+                "❤️ Blood Pressure",
+                "💓 Pulse Rate",
+                "🩸 Blood Sugar",
+                "🌡️ Body Temperature",
+                "🫁 Oxygen Saturation (SpO₂)",
+                "🧬 Hemoglobin",
+                "⚖️ BMI / Body Composition",
+                "📈 Advanced ECG",
+                "❤️‍🩹 Vascular Age Test",
+                "👁️ Vision Screening",
+              ].map((test, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 rounded-xl p-4 shadow-sm flex items-start gap-3"
+                >
+                  <span className="text-green-600 text-xl mt-0.5">•</span>
+                  <span className="text-gray-700">{test}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* TECHNOLOGY USED */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              📱 Technology Used
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Smart Mobile Software Enabled Through Tablets
+            </p>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Dedicated Health Screening Software",
+                "✅ Tablet-Based Operation",
+                "✅ Smart Diagnostic Sensors",
+                "✅ Cloud-Based Data Management",
+                "✅ AI-Assisted Health Analysis",
+                "✅ Instant Report Generation",
+                "✅ Multi-Language Reporting System",
+              ].map((tech, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* INSTANT REPORTS */}
+          <div className="mb-12 bg-green-50 border border-green-100 rounded-2xl p-8">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              📄 Instant Multi-Language Reports
+            </h2>
+            <p className="text-gray-700">
+              Reports are generated instantly and can be provided in multiple
+              languages, making healthcare more accessible and understandable
+              for diverse populations.
+            </p>
+            <div className="mt-6 grid md:grid-cols-2 gap-4 text-sm">
+              <div>✅ Easy to Understand</div>
+              <div>✅ Language-Friendly</div>
+              <div>✅ Digital & Paperless</div>
+              <div>✅ Instant Availability</div>
+            </div>
+          </div>
+
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌟 Advantages of Xpress Medical Test
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              {[
+                "⚡ Fast Screening – 10 parameters in only 10 minutes",
+                "🎯 Early Risk Detection – Before symptoms appear",
+                "🩺 Preventive Healthcare – Proactive health management",
+                "📱 Digital Technology – Speed, accuracy & convenience",
+                "🌍 Portable & Scalable – Ideal for camps, workplaces & communities",
+                "💰 Cost Effective – Affordable screening for large groups",
+                "👨‍👩‍👧‍👦 Family Health Monitoring – For all age groups",
+              ].map((advantage, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  {advantage}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS TO INDIVIDUALS & COMMUNITIES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              💚 Benefits to Individuals & Communities
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "Early Detection of Health Risks",
+                "Improved Health Awareness",
+                "Better Lifestyle Decisions",
+                "Reduced Healthcare Costs",
+                "Timely Medical Intervention",
+                "Enhanced Quality of Life",
+                "Reduced Risk of NCDs",
+                "Better Long-Term Health Outcomes",
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  <span className="text-green-600 mt-1">✔</span> {benefit}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* LIFEONPLUS IMPACT */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌍 How LifeOnPlus is Helping the World
+            </h2>
+            <div className="grid md:grid-cols-3 gap-8 text-left max-w-4xl mx-auto">
+              <div>
+                <strong>Accessible</strong>
+                <br />
+                Bringing screening closer to people
+              </div>
+              <div>
+                <strong>Affordable</strong>
+                <br />
+                Reducing cost barriers
+              </div>
+              <div>
+                <strong>Scalable</strong>
+                <br />
+                Large-scale community programs
+              </div>
+              <div>
+                <strong>Digital</strong>
+                <br />
+                Instant reports & smart insights
+              </div>
+              <div>
+                <strong>Preventive</strong>
+                <br />
+                Early detection and action
+              </div>
+              <div>
+                <strong>Inclusive</strong>
+                <br />
+                Multi-language support
+              </div>
+            </div>
+
+            <p className="text-green-600 font-medium mt-10 text-lg">
+              Know Today. Protect Tomorrow.
             </p>
           </div>
         </div>
@@ -520,102 +744,216 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       {service.category === "diagnosis" && (
         <div className="container mx-auto p-10">
           {/* TITLE */}
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
-            Diagnostic Services
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            Preventive Healthcare & NCD Awareness
           </h1>
-
-          {/* INTRO */}
-          <p className="text-gray-700 mb-6">
-            LifeOnPlus aims to integrate diagnostics & quick health check-ups as
-            part of its digital health initiative. These services are designed
-            for preventive healthcare and early disease detection.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Why Prevention is Better Than Cure
           </p>
 
-          {/* WHO SHOULD BUY */}
-          <h2 className="text-2xl font-semibold mb-4">
-            Who Should Buy LifeOnPlus Diagnostics?
-          </h2>
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              Most serious diseases develop silently. By the time symptoms
+              appear, the condition may have already progressed. LifeOnPlus
+              empowers you with early detection, regular monitoring, and
+              proactive care to prevent major health crises.
+            </p>
+          </div>
 
-          <div className="space-y-5 text-gray-700">
-            <div>
-              <h3 className="font-semibold">
-                1. People Looking for Lifestyle Change
-              </h3>
-              <ul className="list-disc pl-5">
-                <li>Individuals aiming for healthier lifestyle</li>
-                <li>People tracking health parameters</li>
-                <li>Fitness & wellness seekers</li>
-              </ul>
-            </div>
+          {/* WHY PREVENTIVE HEALTHCARE IS REQUIRED */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Why Preventive Healthcare Is Required
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Many health conditions do not show symptoms in their early stages.
+              Early detection through regular screening can save lives and
+              reduce complications.
+            </p>
 
-            <div>
-              <h3 className="font-semibold">
-                2. Family History of Chronic Diseases
-              </h3>
-              <ul className="list-disc pl-5">
-                <li>Diabetes monitoring & control</li>
-                <li>Hypertension management</li>
-                <li>Cholesterol tracking</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">3. Existing Health Concerns</h3>
-              <ul className="list-disc pl-5">
-                <li>Fatigue, stress or low immunity</li>
-                <li>Obesity or metabolic disorders</li>
-                <li>Post illness recovery monitoring</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">4. Corporate Employees</h3>
-              <ul className="list-disc pl-5">
-                <li>Sedentary lifestyle users</li>
-                <li>Corporate wellness programs</li>
-                <li>Preventive checkups</li>
-              </ul>
-            </div>
-
-            <div>
-              <h3 className="font-semibold">5. Senior Citizens</h3>
-              <ul className="list-disc pl-5">
-                <li>Regular health monitoring</li>
-                <li>Non-invasive diagnostics</li>
-                <li>AI-based health tracking</li>
-              </ul>
+            <h3 className="font-semibold mb-4">Common Silent Diseases</h3>
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 text-gray-700">
+              {[
+                "❤️ Heart Disease",
+                "🩸 High Blood Pressure",
+                "🍬 Diabetes",
+                "🧠 Stroke Risk",
+                "🫁 Respiratory Diseases",
+                "🎗️ Cancer",
+                "🧬 Kidney Disease",
+                "🩺 Cholesterol Disorders",
+              ].map((disease, i) => (
+                <div
+                  key={i}
+                  className="bg-white border border-gray-100 rounded-xl p-4 text-center"
+                >
+                  {disease}
+                </div>
+              ))}
             </div>
           </div>
 
-          {/* PROBLEM SECTION */}
-          <h2 className="text-2xl font-semibold mt-10 mb-4">The Problem</h2>
-
-          <p className="text-gray-700 mb-6">
-            Many people ignore early symptoms which leads to serious chronic
-            diseases. Regular screening helps in early detection and prevention.
-          </p>
-
-          {/* SIMPLE STATS SECTION */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center mb-10">
-            <div className="border p-4 rounded">
-              <p className="text-2xl font-bold text-green-600">70%</p>
-              <p className="text-sm">Lifestyle diseases</p>
+          {/* WHY PREVENTION IS BETTER */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Why Prevention Is Better Than Cure
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              {[
+                "✅ Early Detection Saves Lives",
+                "✅ Reduces Healthcare Costs",
+                "✅ Prevents Complications",
+                "✅ Improves Quality of Life",
+                "✅ Increases Life Expectancy",
+                "✅ Protects Families",
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3 text-gray-700">
+                  <span className="text-green-600 text-xl">•</span>
+                  <span>{benefit}</span>
+                </div>
+              ))}
             </div>
+          </div>
 
-            <div className="border p-4 rounded">
-              <p className="text-2xl font-bold text-green-600">6M</p>
-              <p className="text-sm">Deaths annually</p>
+          {/* HOW LIFEONPLUS SUPPORTS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              How LifeOnPlus Supports Preventive Healthcare
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="space-y-6">
+                <div>
+                  <p className="font-medium">🩺 Regular Health Screening</p>
+                  <p className="text-gray-700">
+                    Early identification of health risks
+                  </p>
+                </div>
+                <div>
+                  <p className="font-medium">
+                    ❤️ Vascular Age & Heart Health Assessment
+                  </p>
+                  <p className="text-gray-700">
+                    Detect cardiovascular risks early
+                  </p>
+                </div>
+                <div>
+                  <p className="font-medium">🤖 AI-Based Health Monitoring</p>
+                  <p className="text-gray-700">Smart alerts and insights</p>
+                </div>
+              </div>
+              <div className="space-y-6">
+                <div>
+                  <p className="font-medium">📊 Digital Health Records</p>
+                  <p className="text-gray-700">
+                    Secure lifelong health profile
+                  </p>
+                </div>
+                <div>
+                  <p className="font-medium">⏰ Smart Health Reminders</p>
+                  <p className="text-gray-700">
+                    Medicine, check-up & vaccination alerts
+                  </p>
+                </div>
+                <div>
+                  <p className="font-medium">🚨 Emergency Preparedness</p>
+                  <p className="text-gray-700">
+                    One-touch panic, rescue & ambulance support
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
 
-            <div className="border p-4 rounded">
-              <p className="text-2xl font-bold text-green-600">60%</p>
-              <p className="text-sm">Preventable cases</p>
-            </div>
+          {/* WHAT ARE NCDS */}
+          <div className="mb-12 border-t border-gray-100 pt-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              What is NCD (Non-Communicable Disease)?
+            </h2>
+            <p className="text-gray-700 mb-8">
+              Non-Communicable Diseases are chronic conditions not transmitted
+              from person to person. They develop slowly and are largely
+              preventable through lifestyle and early screening.
+            </p>
 
-            <div className="border p-4 rounded">
-              <p className="text-2xl font-bold text-green-600">50%</p>
-              <p className="text-sm">Unaware patients</p>
+            <h3 className="font-semibold mb-4">Major Types of NCDs</h3>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              <div>
+                ❤️ Cardiovascular Diseases (Heart Attack, Stroke, Hypertension)
+              </div>
+              <div>🍬 Diabetes</div>
+              <div>🎗️ Cancer</div>
+              <div>🫁 Chronic Respiratory Diseases (Asthma, COPD)</div>
+              <div>🧠 Neurological Disorders (Dementia, Parkinson’s)</div>
+              <div>🩺 Chronic Kidney Disease</div>
             </div>
+          </div>
+
+          {/* GLOBAL & INDIA IMPACT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              NCD Impact – Global & India
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div className="bg-white border border-gray-100 rounded-2xl p-6">
+                <p className="font-medium mb-3">🌍 Global Facts (WHO)</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• 41 million deaths every year</li>
+                  <li>• 74% of all global deaths</li>
+                  <li>• 17 million premature deaths (before age 70)</li>
+                </ul>
+              </div>
+              <div className="bg-white border border-gray-100 rounded-2xl p-6">
+                <p className="font-medium mb-3">🇮🇳 India Situation</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  <li>• Responsible for nearly 2/3 of all deaths</li>
+                  <li>• Over 100 million people with diabetes</li>
+                  <li>• Rising cases in 30s & 40s age group</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* PREVENTION */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              How NCDs Can Be Prevented
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="font-medium mb-3">Early Screening</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Blood Pressure, Blood Sugar, Cholesterol</li>
+                  <li>Kidney & Liver Function Tests</li>
+                  <li>Vascular Age Test</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-3">Healthy Lifestyle</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Balanced Diet & Regular Exercise</li>
+                  <li>Good Sleep & Stress Management</li>
+                  <li>No Tobacco, Limited Alcohol</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* LIFEONPLUS MESSAGE */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <p className="italic text-2xl font-semibold text-green-700 mb-4">
+              "Prevention Today Is Protection Tomorrow."
+            </p>
+            <p className="text-gray-700 mb-6">
+              Most diseases don’t start with symptoms. They start silently.
+            </p>
+            <p className="text-green-600 font-medium text-lg">
+              Know Your Numbers. Monitor Your Health. Prevent NCDs Before They
+              Become Life-Threatening.
+            </p>
+            <p className="text-green-700 mt-8 font-semibold">
+              💚 Know Today. Protect Tomorrow. Live Better with LifeOnPlus.
+            </p>
           </div>
         </div>
       )}
@@ -1508,179 +1846,196 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
         </div>
       )}
       {service.category === "aih" && (
-        <div className="max-w-6xl mx-auto px-6 py-12">
-          <h1 className="text-4xl font-bold text-green-600 mb-8">
-            Artificial Intelligence (AI)
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            AI Camera-Based Body Screening Technology
           </h1>
-
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            What is AI in Healthcare?
-          </h2>
-          <p className="text-gray-700 mb-8">
-            Artificial Intelligence (AI) in healthcare refers to the use of
-            machine learning algorithms, data analysis, and smart automation to
-            support diagnosis, treatment, patient care, and operational
-            efficiency in the medical field.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Non-Invasive • Contactless • AI-Powered Health Assessment
           </p>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            How is AI Being Applied?
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>
-              Diagnostics: AI detects diseases from imaging (X-rays, MRIs, CT
-              scans).
-            </li>
-            <li>
-              Predictive Analytics: Forecasts disease risks (like diabetes,
-              heart issues) using patient history.
-            </li>
-            <li>
-              Virtual Assistants: AI chatbots answer health queries or schedule
-              appointments.
-            </li>
-            <li>
-              Robot-Assisted Surgeries: Enhances precision during complex
-              procedures.
-            </li>
-            <li>
-              Drug Discovery: Speeds up the identification of potential new
-              medicines.
-            </li>
-            <li>
-              Remote Patient Monitoring: AI tracks patient vitals and alerts
-              healthcare providers.
-            </li>
-            <li>
-              Health Record Management: Smart systems organize and retrieve
-              medical data faster.
-            </li>
-          </ul>
+          {/* WHAT IS IT */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              What is AI Camera-Based Body Screening Technology?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              AI Camera-Based Body Screening Technology is an advanced health
+              assessment solution that uses Artificial Intelligence (AI),
+              Computer Vision, Machine Learning, and Optical Signal Processing
+              to evaluate multiple health and wellness parameters without
+              touching the body.
+            </p>
+            <p className="text-gray-700 mt-4">
+              This completely contactless and non-invasive system analyzes
+              subtle physiological signals from the face and body, making it
+              fast, convenient, and ideal for homes, clinics, corporates,
+              schools, and community health programs.
+            </p>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Countries Actively Using AI in Healthcare
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>
-              United States: Leading in AI-based diagnostics and robotic
-              surgeries.
-            </li>
-            <li>United Kingdom: NHS using AI for triage and diagnostics.</li>
-            <li>
-              India: Growing adoption in diagnostics, telemedicine, and rural
-              outreach.
-            </li>
-            <li>
-              China: Major investments in AI hospitals and smart health tools.
-            </li>
-            <li>
-              Canada, Germany, UAE, South Korea: Emerging adoption in
-              diagnostics, research, and wellness apps.
-            </li>
-          </ul>
+          {/* HOW IT WORKS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌟 How the Technology Works
+            </h2>
+            <div className="space-y-8">
+              {[
+                {
+                  step: "Step 1",
+                  title: "Camera-Based Scan",
+                  desc: "The individual stands or sits in front of the AI screening system.",
+                },
+                {
+                  step: "Step 2",
+                  title: "AI Analysis",
+                  desc: "The camera captures subtle physiological patterns and visual signals.",
+                },
+                {
+                  step: "Step 3",
+                  title: "Advanced Algorithms",
+                  desc: "Artificial Intelligence and Computer Vision analyze multiple health indicators.",
+                },
+                {
+                  step: "Step 4",
+                  title: "Instant Report Generation",
+                  desc: "The system generates an easy-to-understand digital wellness report within minutes.",
+                },
+              ].map((item, i) => (
+                <div key={i} className="flex gap-6">
+                  <div className="w-10 h-10 rounded-full bg-green-100 text-green-700 font-bold flex items-center justify-center flex-shrink-0 mt-1">
+                    {i + 1}
+                  </div>
+                  <div>
+                    <p className="font-semibold">
+                      {item.step} — {item.title}
+                    </p>
+                    <p className="text-gray-700">{item.desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Benefits of AI in Healthcare
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Early and accurate diagnosis</li>
-            <li>Personalized treatment plans</li>
-            <li>Faster and more efficient services</li>
-            <li>Cost reduction in healthcare delivery</li>
-            <li>Bridging the rural-urban healthcare divide</li>
-            <li>24/7 virtual care and assistance</li>
-          </ul>
+          {/* HEALTH PARAMETERS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🩺 Health Parameters (6 to 30+ Vitals)
+            </h2>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            Who Can Use AI in Healthcare?
-          </h2>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Doctors and Hospitals</li>
-            <li>Diagnostic Labs and Pharmacies</li>
-            <li>Health-Tech Startups</li>
-            <li>Government Health Systems</li>
-            <li>Patients and Caregivers</li>
-            <li>Insurance Companies</li>
-          </ul>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="font-medium mb-3">❤️ Cardiovascular Parameters</p>
+                <ul className="text-gray-700 space-y-1 list-disc pl-5">
+                  <li>Heart Rate</li>
+                  <li>Heart Rate Variability (HRV)</li>
+                  <li>Pulse Analysis</li>
+                  <li>Blood Pressure Trends</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-3">🫁 Respiratory Parameters</p>
+                <ul className="text-gray-700 space-y-1 list-disc pl-5">
+                  <li>Respiratory Rate</li>
+                  <li>Breathing Patterns</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-3">🩸 Oxygen & Circulation</p>
+                <ul className="text-gray-700 space-y-1 list-disc pl-5">
+                  <li>Blood Oxygen Saturation Trends (SpO₂)</li>
+                  <li>Circulatory Wellness Indicators</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-3">🌡️ General & Mental Wellness</p>
+                <ul className="text-gray-700 space-y-1 list-disc pl-5">
+                  <li>Body Temperature Trends</li>
+                  <li>Stress Level & Relaxation Status</li>
+                  <li>Fatigue & Recovery Indicators</li>
+                  <li>Energy Level & Wellness Score</li>
+                </ul>
+              </div>
+            </div>
+            <p className="text-sm text-gray-600 mt-6">
+              Plus 20+ additional parameters depending on the platform and
+              configuration.
+            </p>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            How End Users Can Use AI in Healthcare (via LifeOnPlus)
-          </h2>
-          <ol className="list-decimal pl-6 space-y-4 text-gray-700 mb-8">
-            <li>
-              <strong>1. Personalized Health Insights</strong>
-              <br />
-              AI algorithms in the app analyze your health data (from wearables,
-              tests, or answers to health surveys). You receive customized
-              alerts, diet tips, and lifestyle advice.
-            </li>
-            <li>
-              <strong>2. Virtual Health Assistants</strong>
-              <br />
-              In-app AI chatbots help answer medical questions, guide symptoms,
-              and recommend next steps. Works 24/7 — ideal for first-line
-              guidance before you see a doctor.
-            </li>
-            <li>
-              <strong>3. Predictive Health Alerts</strong>
-              <br />
-              AI tracks data over time (vitals, test reports, lifestyle input).
-              Flags potential future risks like high BP, diabetes, or cardiac
-              issues — before symptoms show up.
-            </li>
-            <li>
-              <strong>4. AI-Based Remote Monitoring</strong>
-              <br />
-              If you’re subscribed to patient monitoring services, AI watches
-              over your vitals. Care team or family receives alerts in case of
-              abnormal activity.
-            </li>
-          </ol>
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              💚 Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              {[
+                "Early Health Awareness & Preventive Care",
+                "Quick & Convenient (Few Minutes)",
+                "Completely Contactless Experience",
+                "No Needles, Sensors or Blood Samples",
+                "Instant Digital Reports",
+                "Scalable for Clinics, Corporates & Camps",
+                "Suitable for All Age Groups",
+                "Improved Accessibility & User Comfort",
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-3">
+                  <span className="text-green-600">✅</span> {benefit}
+                </div>
+              ))}
+            </div>
+          </div>
 
-          <h2 className="text-2xl font-semibold text-green-600 mb-4">
-            LifeOnPlus AI-Powered Health Analysis
-          </h2>
-          <p className="text-gray-700 mb-4">
-            LifeOnPlus offers powerful AI-based health analysis through
-            non-invasive tests to help you understand and manage your wellness.
-          </p>
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              ⭐ Advantages
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Completely Non-Invasive",
+                "✅ Fully Contactless",
+                "✅ Fast Screening Process",
+                "✅ User-Friendly",
+                "✅ Suitable for All Age Groups",
+                "✅ Digital Health Integration",
+                "✅ Cost-Effective & Scalable",
+                "✅ Supports Remote & Telehealth Programs",
+              ].map((adv, i) => (
+                <div key={i}>{adv}</div>
+              ))}
+            </div>
+          </div>
 
-          <h3 className="text-xl font-semibold text-green-600 mb-3">
-            Our AI Tests Include:
-          </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Vital Signs: Real-time monitoring of key body functions</li>
-            <li>Heart Rate &amp; Variability</li>
-            <li>Breathing Rate</li>
-            <li>Blood Pressure</li>
-            <li>Parasympathetic Activity %</li>
-            <li>Stress Index</li>
-            <li>Cardiac Workload</li>
-            <li>Body Mass Index (BMI)</li>
-          </ul>
+          {/* LIFEONPLUS VISION */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              🌍 How LifeOnPlus is Helping the World
+            </h2>
+            <p className="text-gray-700 max-w-3xl mx-auto mb-8">
+              LifeOnPlus is introducing advanced AI-powered, non-invasive, and
+              contactless healthcare technologies to make preventive healthcare
+              more accessible and affordable for everyone.
+            </p>
 
-          <h3 className="text-xl font-semibold text-green-600 mb-3">
-            Health Indices
-          </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Vascular Age &amp; Wellness Score</li>
-            <li>Waist-to-Height Ratio</li>
-            <li>Basal Metabolic Range</li>
-            <li>Body Shape, Fat %, and Roundness Index</li>
-            <li>Daily Energy Expenditure</li>
-            <li>Conicity Index</li>
-          </ul>
+            <p className="italic text-xl font-semibold text-green-700 mb-8">
+              "Screen Early. Act Early. Live Better."
+            </p>
 
-          <h3 className="text-xl font-semibold text-green-600 mb-3">
-            Health Risks
-          </h3>
-          <ul className="list-disc pl-6 space-y-2 text-gray-700 mb-8">
-            <li>Cardiovascular Risk &amp; Event Score</li>
-            <li>Atherosclerotic Disease Risk</li>
-            <li>Coronary Death Risk</li>
-            <li>Peripheral Vascular Risk</li>
-            <li>Stroke &amp; Diabetes Risk</li>
-          </ul>
+            <p className="text-green-600 font-medium text-lg">
+              Smarter Screening. Better Wellness. Healthier Lives. 💚🌍
+            </p>
+          </div>
+
+          {/* DISCLAIMER */}
+          <div className="mt-12 text-xs text-gray-500 border-l-4 border-gray-300 pl-4">
+            <strong>Important Note:</strong> AI camera-based screening tools are
+            wellness and screening technologies. They are not a replacement for
+            medical diagnosis, treatment, or professional healthcare evaluation.
+            Any health findings should be confirmed by qualified healthcare
+            professionals.
+          </div>
         </div>
       )}
 
@@ -2599,115 +2954,84 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       {service.category === "qhc" && (
         <div className="container mx-auto p-10">
           {/* TITLE */}
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
-            Quick Health Check-up – A Smarter Step Toward Preventive Wellness
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            QUICK HEALTH CHECK-UP
           </h1>
-
-          {/* INTRO */}
-          <p className="text-gray-700 mb-6">
-            Your health deserves timely attention — not just when symptoms
-            arise, but even before they appear. Quick Health Check-up plays a
-            vital role in preventive wellness.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Early Detection Today. Better Health Tomorrow.
           </p>
 
-          {/* WHAT IS SECTION */}
-          <h2 className="text-2xl font-semibold mb-3">
-            What is a Quick Health Check-up?
-          </h2>
+          {/* SHORT DESCRIPTION */}
+          <div className="mb-12 max-w-3xl">
+            <p className="text-gray-700 text-lg leading-relaxed">
+              Identify early signs of heart disease, stroke risk, and vascular
+              aging in minutes with advanced non-invasive technology.
+            </p>
+          </div>
 
-          <p className="text-gray-700 mb-4">
-            A quick health check-up is a fast, non-invasive screening that gives
-            an overview of your general health status and key parameters.
-          </p>
-
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Blood pressure</li>
-            <li>Pulse rate</li>
-            <li>Blood sugar (random)</li>
-            <li>BMI (Body Mass Index)</li>
-            <li>Oxygen saturation (SpO2)</li>
-            <li>Temperature</li>
-            <li>Basic vital screening</li>
-          </ul>
+          {/* 3 MAIN FEATURES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Key Features
+            </h2>
+            <div className="grid md:grid-cols-3 gap-6">
+              <div className="text-center bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="text-4xl mb-3">❤️</div>
+                <p className="font-semibold">Vascular Age Test</p>
+              </div>
+              <div className="text-center bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="text-4xl mb-3">📈</div>
+                <p className="font-semibold">Advanced Handheld ECG</p>
+              </div>
+              <div className="text-center bg-white border border-gray-100 rounded-2xl p-6 shadow-sm">
+                <div className="text-4xl mb-3">📄</div>
+                <p className="font-semibold">Instant Digital Health Report</p>
+              </div>
+            </div>
+          </div>
 
           {/* BENEFITS */}
-          <h2 className="text-2xl font-semibold mb-3">
-            Benefits of Quick Health Check-up
-          </h2>
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 text-xl">✅</span>
+                Early Risk Detection
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 text-xl">✅</span>
+                Fast & Non-Invasive
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 text-xl">✅</span>
+                Accurate Health Insights
+              </div>
+              <div className="flex items-start gap-3">
+                <span className="text-green-600 text-xl">✅</span>
+                Better Preventive Healthcare
+              </div>
+            </div>
+          </div>
 
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Early detection of diseases</li>
-            <li>Time-saving & convenient</li>
-            <li>Affordable preventive care</li>
-            <li>Encourages healthy lifestyle habits</li>
-            <li>Quick and reliable health insights</li>
-          </ul>
+          {/* LIFEONPLUS SECTION */}
+          <div className="mb-12 bg-green-50 border border-green-100 rounded-2xl p-8">
+            <p className="text-gray-700 text-lg text-center">
+              LifeOnPlus helps you stay ahead of health risks through smart
+              screening, early detection, and preventive healthcare solutions.
+            </p>
+          </div>
 
-          {/* WHO SHOULD USE */}
-          <h2 className="text-2xl font-semibold mb-3">Who Should Use This?</h2>
-
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Working professionals</li>
-            <li>Elderly individuals</li>
-            <li>Students</li>
-            <li>Corporate employees</li>
-            <li>Anyone focused on preventive health</li>
-          </ul>
-
-          {/* PROCESS */}
-          <h2 className="text-2xl font-semibold mb-3">How the Process Works</h2>
-
-          <ol className="list-decimal pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Register via LifeOnPlus app</li>
-            <li>Visit or schedule health camp</li>
-            <li>Basic screening is done</li>
-            <li>Get instant digital report</li>
-            <li>Doctor consultation if needed</li>
-          </ol>
-
-          {/* SERVICES */}
-          <h2 className="text-2xl font-semibold mb-3">Included Services</h2>
-
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Health & wellness camps</li>
-            <li>Screening at clinics / camps</li>
-            <li>Community health programs</li>
-          </ul>
-
-          {/* CORE CHECKUP */}
-          <h2 className="text-2xl font-semibold mb-3">
-            Quick Health Check-up Components
-          </h2>
-
-          <ul className="list-disc pl-5 space-y-2 text-gray-700 mb-6">
-            <li>Non-invasive testing</li>
-            <li>Fast results (within minutes)</li>
-            <li>Digital report generation</li>
-          </ul>
-
-          {/* SUB SECTIONS */}
-          <h3 className="text-xl font-semibold mb-2">Advanced ECG</h3>
-
-          <p className="text-gray-700 mb-4">
-            Detects heart rhythm abnormalities and cardiovascular risk
-            indicators.
-          </p>
-
-          <h3 className="text-xl font-semibold mb-2">
-            Vascular & Biological Age
-          </h3>
-
-          <p className="text-gray-700 mb-4">
-            Helps evaluate arterial health and biological aging patterns.
-          </p>
-
-          <h3 className="text-xl font-semibold mb-2">
-            Blood Capillary & Circulation
-          </h3>
-
-          <p className="text-gray-700 mb-6">
-            Evaluates blood flow, oxygen delivery, and circulation efficiency.
-          </p>
+          {/* CALL TO ACTION */}
+          <div className="text-center">
+            <p className="italic text-2xl font-semibold text-green-700 mb-6">
+              Know Today. Protect Tomorrow.
+            </p>
+            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-12 py-4 rounded-2xl transition-colors shadow-lg">
+              Book Your Health Check-Up Today
+            </button>
+          </div>
         </div>
       )}
       <img
