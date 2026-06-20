@@ -37,49 +37,242 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
       <h1 className="text-3xl font-bold">{service.course}</h1>
       {service.category === "dek" && (
         <div className="container mx-auto p-10">
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
-            Digital Emergency Kit
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Digital Emergency Health Kit
           </h1>
-
-          <p className="mb-6 text-gray-700">
-            Digital Emergency Kit powered by LifeOnPlus – Your Health Anytime,
-            Anywhere.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Your Health. Your Safety. One Touch Away.
           </p>
 
-          <h2 className="text-xl font-semibold mb-2">Overview</h2>
-          <p className="text-gray-700 mb-4">
-            Every second counts in a medical emergency. Yet, most people lack
-            readily available medical records — causing delays in diagnosis and
-            even avoidable loss of life. LifeOnPlus introduces the Global
-            Digital Emergency Kit — a game-changing, universally compatible card
-            that securely stores and provides instant access to your health data
-            anytime, anywhere.
-          </p>
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              The LifeOnPlus Digital Emergency Health Kit is a comprehensive
+              healthcare, safety, and emergency response solution that combines
+              a Global Digital Health Smart Card, Mobile App, Emergency Medical
+              Records, Smart Health Reminders, and One-Touch Emergency Services
+              to help protect you and your family 24×7.
+            </p>
+            <p className="text-gray-700 mt-4">
+              Whether you are at home, traveling, working, or living alone,
+              LifeOnPlus ensures that your health information, emergency
+              support, and healthcare services are always available at the touch
+              of a button.
+            </p>
+          </div>
 
-          <h2 className="text-xl font-semibold mb-2">Key Benefits</h2>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700 mb-4">
-            <li>Instant medical record access</li>
-            <li>Emergency assistance support</li>
-            <li>Secure cloud-based health data</li>
-            <li>QR-based health identity</li>
-            <li>24/7 availability anywhere</li>
-          </ul>
+          {/* GLOBAL DIGITAL HEALTH SMART CARD */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              💳 Global Digital Health Smart Card
+            </h2>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <p className="font-medium mb-3">Card Features</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Photo ID</li>
+                  <li>QR Code &amp; NFC Enabled</li>
+                  <li>Blood Group Information</li>
+                  <li>Emergency Contact Details</li>
+                  <li>Health Profile Summary</li>
+                  <li>Digital Emergency Medical Records Access</li>
+                  <li>Global Accessibility</li>
+                </ul>
+              </div>
+              <div>
+                <p className="font-medium mb-3">Benefits</p>
+                <ul className="list-disc pl-5 text-gray-700 space-y-1">
+                  <li>Instant patient identification</li>
+                  <li>Quick access to medical information</li>
+                  <li>Faster emergency response</li>
+                  <li>Easy sharing with doctors and hospitals</li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
-          <h2 className="text-xl font-semibold mb-2">What Makes It Unique?</h2>
-          <ul className="list-disc pl-5 space-y-1 text-gray-700 mb-4">
-            <li>One QR for complete medical profile</li>
-            <li>Hospital & doctor integration</li>
-            <li>Emergency SOS system</li>
-            <li>Fast access in critical situations</li>
-          </ul>
+          {/* ONE TOUCH PANIC BUTTON */}
+          <div className="mb-12 border-t border-gray-100 pt-10">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              🚨 One Touch Panic Button
+            </h2>
+            <p className="text-gray-700 mb-4">
+              For medical emergencies such as Heart Attack, Stroke, Accident,
+              Breathing Difficulty, Unconsciousness, etc.
+            </p>
 
-          <h2 className="text-xl font-semibold mb-2">How to Get Your Card</h2>
-          <ol className="list-decimal pl-5 space-y-1 text-gray-700 mb-6">
-            <li>Register on LifeOnPlus platform</li>
-            <li>Fill personal details</li>
-            <li>Verify information</li>
-            <li>Get your digital card instantly</li>
-          </ol>
+            <div className="bg-red-50 border border-red-100 rounded-xl p-6 mb-6">
+              <p className="font-medium mb-3">Automatically Activates:</p>
+              <ul className="grid md:grid-cols-2 gap-2 text-gray-700 text-sm">
+                <li>✅ Emergency SMS alerts to family</li>
+                <li>✅ Live GPS location sharing</li>
+                <li>✅ Automatic emergency phone calls</li>
+                <li>✅ Real-time location tracking</li>
+                <li>✅ Access to Emergency Medical Records</li>
+              </ul>
+            </div>
+            <p className="font-medium text-green-700">
+              Benefits: Immediate response • Faster medical intervention •
+              Real-time family awareness • Improved survival chances
+            </p>
+          </div>
+
+          {/* ONE TOUCH RESCUE BUTTON */}
+          <div className="mb-12 border-t border-gray-100 pt-10">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              🛡️ One Touch Rescue Button
+            </h2>
+            <p className="text-gray-700 mb-4">
+              For personal safety emergencies — Threat situations, Women safety,
+              Travel emergencies, etc.
+            </p>
+
+            <div className="bg-amber-50 border border-amber-100 rounded-xl p-6 mb-6">
+              <p className="font-medium mb-3">Automatically Activates:</p>
+              <ul className="grid md:grid-cols-2 gap-2 text-gray-700 text-sm">
+                <li>✅ Emergency SMS alerts</li>
+                <li>✅ Live GPS location sharing</li>
+                <li>✅ Automatic call to nearest police/emergency services</li>
+                <li>✅ Continuous location updates</li>
+                <li>✅ Alerts family and contacts</li>
+              </ul>
+            </div>
+            <p className="font-medium text-green-700">
+              Benefits: Enhanced personal safety • Faster rescue response •
+              Real-time tracking
+            </p>
+          </div>
+
+          {/* ONE TOUCH AMBULANCE & DOCTOR */}
+          <div className="grid md:grid-cols-2 gap-10 mb-12 border-t border-gray-100 pt-10">
+            <div>
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
+                🚑 One Touch GPS Enabled Ambulance Tracking
+              </h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>✅ Locate nearest ambulance</li>
+                <li>✅ Real-time GPS tracking</li>
+                <li>✅ Live ETA monitoring</li>
+                <li>✅ Family tracking support</li>
+              </ul>
+              <p className="text-green-700 mt-4 font-medium">
+                Reduced waiting time • Faster patient transport
+              </p>
+            </div>
+            <div>
+              <h3 className="text-xl font-semibold text-green-700 mb-4">
+                👨‍⚕️ One Touch Doctor Consultation
+              </h3>
+              <ul className="text-gray-700 space-y-2">
+                <li>✅ Video Consultation</li>
+                <li>✅ Audio Consultation</li>
+                <li>✅ Online Medical Advice</li>
+              </ul>
+              <p className="text-green-700 mt-4 font-medium">
+                Medical guidance anytime • Faster treatment decisions
+              </p>
+            </div>
+          </div>
+
+          {/* EMR & REMINDERS */}
+          <div className="grid md:grid-cols-2 gap-10 mb-12">
+            <div className="border rounded-2xl p-6">
+              <h3 className="font-semibold text-lg mb-4">
+                📄 Emergency Medical Records (EMR)
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Stores critical information: Blood Group, Allergies,
+                Medications, Medical History, Chronic Diseases, Insurance,
+                Emergency Contacts, etc.
+              </p>
+              <p className="text-green-700 font-medium">
+                Faster diagnosis • Reduced medical errors • Better emergency
+                outcomes
+              </p>
+            </div>
+            <div className="border rounded-2xl p-6">
+              <h3 className="font-semibold text-lg mb-4">
+                ⏰ Smart Health Reminders
+              </h3>
+              <p className="text-gray-700 mb-4">
+                Medicine, pill, refill, and health check-up reminders with
+                family notifications.
+              </p>
+              <p className="text-green-700 font-medium">
+                Improved medication compliance • Better chronic disease
+                management
+              </p>
+            </div>
+          </div>
+
+          {/* SMART VITAL MONITORING */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              ❤️ Smart Vital Health Status Monitoring
+            </h2>
+            <p className="text-gray-700 mb-6">
+              Reminders and smart alerts for Blood Pressure, Blood Sugar, SpO₂,
+              Heart Rate, Weight, and Annual Check-ups.
+            </p>
+            <p className="text-green-700 font-medium">
+              Early disease detection • Preventive healthcare • Improved quality
+              of life
+            </p>
+          </div>
+
+          {/* KEY ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌟 Key Advantages of LifeOnPlus
+            </h2>
+            <div className="grid md:grid-cols-2 gap-3 text-gray-700">
+              {[
+                "✅ One Touch Emergency Assistance",
+                "✅ One Touch Rescue Support",
+                "✅ One Touch Doctor Consultation",
+                "✅ One Touch Ambulance Tracking",
+                "✅ One Touch Medical Records",
+                "✅ Smart Medicine Reminders",
+                "✅ Smart Vital Monitoring",
+                "✅ GPS Location Sharing",
+                "✅ Auto SMS & Auto Calling",
+                "✅ Family Safety Network",
+                "✅ QR & NFC Enabled Smart Card",
+                "✅ Secure Cloud-Based Health Records",
+                "✅ 24×7 Healthcare Support",
+              ].map((item, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {item}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* PROMISE & BUY NOW */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <p className="italic text-2xl font-semibold text-green-700 mb-6">
+              "Know Today. Protect Tomorrow. Save Lives."
+            </p>
+
+            <div className="flex flex-wrap justify-center gap-4 text-green-600 font-medium mb-8">
+              <span>💚 One Touch for Health</span>
+              <span>💚 One Touch for Safety</span>
+              <span>💚 One Touch for Life</span>
+            </div>
+
+            <button className="bg-green-600 hover:bg-green-700 text-white font-semibold text-lg px-10 py-4 rounded-2xl transition-colors shadow-lg">
+              🛒 BUY NOW
+            </button>
+
+            <p className="text-gray-600 mt-8">
+              Protect Yourself and Your Loved Ones with the LifeOnPlus Digital
+              Emergency Health Kit
+            </p>
+            <p className="text-green-600 font-medium mt-2">
+              Your Health. Your Safety. One Touch Away.
+            </p>
+          </div>
         </div>
       )}
       {service.category === "pharmacy" && (
@@ -989,19 +1182,6 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
               "Monitor Today. Prevent Tomorrow. Stay Connected with LifeOnPlus."
               💚📱🏥🌍
             </p>
-
-            <div className="text-left max-w-2xl mx-auto border-l-4 border-green-600 pl-6">
-              <p className="text-gray-600">
-                <strong>Short Brochure Version:</strong>
-                <br />
-                LifeOnPlus Remote Patient Monitoring Technology enables
-                continuous 24/7 tracking of vital health parameters through
-                smart connected devices and the LifeOnPlus App. Real-time
-                monitoring, instant alerts, AI-powered insights, and remote
-                doctor access help improve health outcomes while supporting
-                preventive and personalized healthcare.
-              </p>
-            </div>
           </div>
         </div>
       )}

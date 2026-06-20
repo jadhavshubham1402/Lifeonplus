@@ -103,6 +103,69 @@ const Header: React.FC = () => {
     }
   }, [isSignInOpen, isSignUpOpen, navbarOpen]);
 
+  const handleTypeClick = (type: any, action: any) => {
+    if (action === "login") {
+      if (type === "channelpartner") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/partnerlogin",
+          "_blank",
+        );
+      } else if (type === "channelpartnerplus") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/partnerpluslogin",
+          "_blank",
+        );
+      } else if (type === "corporate") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/corporatelogin",
+          "_blank",
+        );
+      } else if (type === "director") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/directorlogin",
+          "_blank",
+        );
+      } else if (type === "franchise") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/franchiselogin",
+          "_blank",
+        );
+      } else if (type === "vendor") {
+        window.open(
+          "https://lifeonplus.in/dashboardPanel/vendorlogin",
+          "_blank",
+        );
+      } else if (type === "member") {
+        window.open("https://lifeonplus.in/signin/member", "_blank");
+      } else if (type === "endUser") {
+        window.open("https://lifeonplus.in/signin/enduser", "_blank");
+      }
+    }
+
+    if (action === "register") {
+      if (type === "channelpartner") {
+        window.open("https://lifeonplus.in/signup/channelpartner", "_blank");
+      } else if (type === "channelpartnerplus") {
+        window.open(
+          "https://lifeonplus.in/signup/channelpartnerplus",
+          "_blank",
+        );
+      } else if (type === "corporate") {
+        window.open("https://lifeonplus.in/signup/corporate", "_blank");
+      } else if (type === "director") {
+        window.open("https://lifeonplus.in/signup/director", "_blank");
+      } else if (type === "franchise") {
+        window.open("https://lifeonplus.in/signup/franchise", "_blank");
+      } else if (type === "vendor") {
+        window.open("https://lifeonplus.in/signup/vendor", "_blank");
+      } else if (type === "member") {
+        window.open("https://lifeonplus.in/signup/member", "_blank");
+      } else if (type === "endUser") {
+        window.open("https://lifeonplus.in/signup/enduser", "_blank");
+      }
+    }
+  };
+
   return (
     <header
       className={`fixed top-0 z-40 w-full transition-all duration-300 ${
@@ -275,17 +338,17 @@ const Header: React.FC = () => {
                               {" "}
                               <button
                                 className="flex justify-center items-center w-[100px] h-[35px]  bg-[#02BE0F] text-white rounded  hover:bg-[#029e0c] transition duration-200"
-                                // onClick={() =>
-                                //   handleTypeClick(item.type, "register")
-                                // }
+                                onClick={() =>
+                                  handleTypeClick(item.type, "register")
+                                }
                               >
                                 Register
                               </button>
                               <button
                                 className="flex justify-center items-center w-[100px] h-[35px] border border-[#02BE0F] text-[#02BE0F] bg-white rounded"
-                                // onClick={() =>
-                                //   handleTypeClick(item?.type, "login")
-                                // }
+                                onClick={() =>
+                                  handleTypeClick(item?.type, "login")
+                                }
                               >
                                 Login
                               </button>
