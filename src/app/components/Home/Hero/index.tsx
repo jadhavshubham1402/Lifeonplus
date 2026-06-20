@@ -8,17 +8,17 @@ import withBasePath from "@/utils/basePath";
 const bannerSlides = [
   {
     id: 1,
-    image: "/images/banner/background1.png",
+    image: "/images/banner/banner21.jpeg",
     alt: "LifeOnPlus Banner 1",
   },
   {
     id: 2,
-    image: "/images/banner/background2.png",
+    image: "/images/banner/banner22.jpeg",
     alt: "LifeOnPlus Banner 2",
   },
   {
     id: 3,
-    image: "/images/banner/background3.png",
+    image: "/images/banner/banner23.jpeg",
     alt: "LifeOnPlus Banner 3",
   },
   // Add more banner images here
@@ -42,20 +42,15 @@ const Banner = () => {
     <section id="Home" className="relative overflow-hidden">
       {/* Full Height Banner Slider */}
       {/* <div className="relative h-screen min-h-[640px]"> */}
-        <Slider {...settings} className="h-full">
-          {bannerSlides.map((slide) => (
-            <div key={slide.id} className="bg-banner-image">
-              <Image
-                src={withBasePath(slide.image)}
-                alt={slide.alt}
-                fill
-                priority
-                className="object-cover"
-                sizes="100vw"
-              />
+      <Slider {...settings} className="h-full mt-14">
+        {bannerSlides.map((slide) => (
+          <div key={slide.id}>
+            <div className="border-[3px] border-[#35A93E] h-full">
+              <img src={slide.image} className="w-full h-full object-contain" />
             </div>
-          ))}
-        </Slider>
+          </div>
+        ))}
+      </Slider>
       {/* </div> */}
     </section>
   );
