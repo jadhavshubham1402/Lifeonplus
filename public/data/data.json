@@ -118,7 +118,7 @@
     {
       "id": "4",
       "course": "Diagnosis",
-      "imageSrc": "/images/services/diagnosis1.png",
+      "imageSrc": "/images/services/diagnosis.jpeg",
       "profession": "Learn TensorFlow with SQL",
       "price": "1500",
       "category": "diagnosis"
@@ -187,7 +187,7 @@
     {
       "id": "4",
       "course": "Diagnostic Services",
-      "imageSrc": "/images/services/diagnosis1.png",
+      "imageSrc": "/images/services/diagnosis.jpeg",
       "profession": "Accurate detection and analysis of health conditions through advanced invasive and non-invasive techniques.",
       "category": "diagnosis"
     },
