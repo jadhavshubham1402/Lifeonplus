@@ -142,7 +142,7 @@ const NamesList = () => {
     }
   `}
           >
-            Digital Emergency Kit
+            Digital Emergency Health Kit
           </button>
           <button
             onClick={() => setSelectedButton("dmek")}
@@ -154,7 +154,7 @@ const NamesList = () => {
     }
   `}
           >
-            Digital and Medical Emergency Kit
+            Digital and Medical Emergency Health Kit
           </button>
 
           <button
@@ -167,7 +167,7 @@ const NamesList = () => {
     }
   `}
           >
-            Diagnosis
+            Diagnosis Services
           </button>
           <button
             onClick={() => setSelectedButton("qhc")}
