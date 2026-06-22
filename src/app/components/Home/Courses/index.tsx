@@ -69,7 +69,7 @@ const NamesList = () => {
 
   const nameElements = selectedNames.map((name, index) => (
     <div id="Courses" key={index} className="shadow-lg rounded-xl group flex">
-      <div className="py-5 lg:py-0 flex flex-col">
+      {/* <div className="py-5 lg:py-0 flex flex-col"> */}
         <Link href={`/services/${name.id}`} className="cursor-pointer">
           <div className="overflow-hidden rounded-lg bg-gray-100">
             <Image
@@ -113,7 +113,7 @@ const NamesList = () => {
           </div> */}
           </div>
         </Link>
-      </div>
+      {/* </div> */}
     </div>
   ));
 
@@ -154,7 +154,7 @@ const NamesList = () => {
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
             }
           >
-            Digital and medical emergency Kit
+            Digital and Medical Emergency Kit
           </button>
 
           <button
@@ -191,7 +191,7 @@ const NamesList = () => {
               " pb-2 text-lg hidden sm:block hover:cursor-pointer"
             }
           >
-            Express Medical test
+            Express Medical Test
           </button>
           <button
             onClick={() => setSelectedButton("brs")}
@@ -274,7 +274,7 @@ const NamesList = () => {
           />
         </div>
         <div>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-1 gap-8">
             {loading ? (
               Array.from({ length: 4 }).map((_, i) => (
                 <CourseDetailSkeleton key={i} />
