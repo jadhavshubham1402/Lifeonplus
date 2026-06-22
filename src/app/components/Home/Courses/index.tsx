@@ -81,13 +81,13 @@ const NamesList = () => {
           />
         </div>
         <div className="p-4 flex flex-col justify-between gap-5 flex-1">
-          <div className="flex flex-col gap-3">
+          {/* <div className="flex flex-col gap-3">
             <div className="flex items-center justify-between">
               <p className="w-[60%] font-normal text-gray-900 break-words">
                 {name.course}
               </p>
             </div>
-          </div>
+          </div> */}
           {/* <div className="flex justify-between border-solid border-2 rounded-md p-2">
             <p>12 Classes</p>
             <div className="flex flex-row space-x-4">
