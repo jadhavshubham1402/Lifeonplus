@@ -163,19 +163,20 @@
       "profession": "The LifeOnPlus Medical Emergency First Aid Kit is a compact and essential emergency care kit designed to provide immediate first aid support during accidents, injuries, medical emergencies, and unexpected situations before professional medical help arrives",
       "category": "dmek"
     },
-    {
-      "id": "2",
-      "course": "Pharmacy ",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "Order trusted medicines anytime,anywhere-right from your LifeOnPlus app!",
-      "category": "pharmacy"
-    },
+
     {
       "id": "14",
       "course": "Quick Health Checkup",
       "imageSrc": "/images/services/qhc1.jpeg",
       "profession": "Identify early signs of heart disease, stroke risk, and vascular aging in minutes with advanced non-invasive technology",
       "category": "qhc"
+    },
+    {
+      "id": "5",
+      "course": "Body Recharge Station",
+      "imageSrc": "/images/services/brs.jpeg",
+      "profession": "Revitalize your body and mind with non-invasive therapies that recharge, detox, and restore your natural energy balance.",
+      "category": "brs"
     },
     {
       "id": "3",
@@ -191,13 +192,7 @@
       "profession": "Accurate detection and analysis of health conditions through advanced invasive and non-invasive techniques.",
       "category": "diagnosis"
     },
-    {
-      "id": "5",
-      "course": "Body Recharge Station",
-      "imageSrc": "/images/services/brs.jpeg",
-      "profession": "Revitalize your body and mind with non-invasive therapies that recharge, detox, and restore your natural energy balance.",
-      "category": "brs"
-    },
+
     {
       "id": "6",
       "course": "Wearable Technologies",
@@ -219,13 +214,7 @@
       "profession": "Harness the power of scalar energy (holistic health and wellness products) to restore balance, boost vitality, and support overall wellness.",
       "category": "sep"
     },
-    {
-      "id": "9",
-      "course": "Skin Caroteniod Test",
-      "imageSrc": "/images/courses/dehk.jpeg",
-      "profession": "A simple, non-invasive test that measures your skin’s carotenoid levels to assess overall health and antioxidant status.",
-      "category": "sct"
-    },
+
     {
       "id": "10",
       "course": "Advanced Kiosk",
@@ -248,11 +237,57 @@
       "category": "fs"
     },
     {
+      "id": "9",
+      "course": "Skin Caroteniod Test",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "A simple, non-invasive test that measures your skin’s carotenoid levels to assess overall health and antioxidant status.",
+      "category": "sct"
+    },
+    {
+      "id": "2",
+      "course": "Pharmacy ",
+      "imageSrc": "/images/courses/dehk.jpeg",
+      "profession": "Order trusted medicines anytime,anywhere-right from your LifeOnPlus app!",
+      "category": "pharmacy"
+    },
+    {
       "id": "13",
       "course": "Medical Devices",
       "imageSrc": "/images/courses/dehk.jpeg",
       "profession": "Smart devices that track, monitor, and optimize your health in real time—anytime, anywhere.",
       "category": "md"
+    },
+    {
+      "id": "21",
+      "course": "AcuGraph Body Screening",
+      "imageSrc": "/images/services/brs1.png",
+      "profession": "AcuGraph is a non-invasive meridian and energy balance assessment system that evaluates the body's energetic pathways based on Traditional Chinese Medicine (TCM) principles.",
+      "category": "brs",
+      "subCategory": "abs"
+    },
+    {
+      "id": "22",
+      "course": "Power Foot Detox",
+      "imageSrc": "/images/services/brs2.png",
+      "profession": "The LifeOnPlus Power Foot Detox is a wellness technology designed to provide a relaxing foot spa experience while promoting overall well-being. During the session, feet are immersed in warm water with a specialized detox device, creating a soothing and rejuvenating experience.",
+      "category": "brs",
+      "subCategory": "pfd"
+    },
+    {
+      "id": "23",
+      "course": "MEOL (Miracle Energy Of Life) Wellness Technology",
+      "imageSrc": "/images/services/brs4.jpeg",
+      "profession": "MEOL (Miracle Energy Oscillation Loop) is a non-invasive wellness technology designed to provide a relaxing and rejuvenating experience through gentle energy-based stimulation. Users simply sit on the device during a session, making it a comfortable and easy-to-use wellness solution.",
+      "category": "brs",
+      "subCategory": "meol"
+    },
+    {
+      "id": "24",
+      "course": "IMRS",
+      "imageSrc": "/images/services/brs3.png",
+      "profession": "LifeOnPlus – Bringing Advanced Non-Invasive Wellness Technologies to Everyone.",
+      "category": "brs",
+      "subCategory": "imrs"
     }
   ],
   "MentorData": [

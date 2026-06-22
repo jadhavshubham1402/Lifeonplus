@@ -1,6 +1,5 @@
 "use client";
 import withBasePath from "@/utils/basePath";
-import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 // Add this function for static export
 type Service = any; // You can define a proper interface later
@@ -9,7 +8,6 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
   // -------------------------------------------------------------
   const [courseDetail, setCourseDetail] = useState<Service>([]);
   const [loading, setLoading] = useState(true);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -34,7 +32,7 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
 
   return (
     <div className="container mx-auto p-10 mt-16">
-      <h1 className="text-3xl font-bold">{service.course}</h1>
+      {/* <h1 className="text-3xl font-bold">{service.course}</h1> */}
       {service.category === "dek" && (
         <div className="container mx-auto p-10">
           {/* TITLE */}
@@ -2715,24 +2713,75 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
           </div>
         </div>
       )}
-      {service.category === "brs" && (
-        <div className="container mx-auto p-10">
+
+      {service.course === "Body Recharge Station" && (
+        <div className="container mx-auto">
           {/* TITLE */}
-          <h1 className="text-3xl font-bold text-green-600 mb-4">
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
             Body Recharge Station
           </h1>
-
-          {/* INTRO */}
-          <p className="text-gray-700 mb-6">
-            The Body Recharge Station is a revolutionary wellness solution
-            designed to restore energy, enhance vitality, and promote overall
-            well-being through advanced non-invasive German technologies.
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Advanced Non-Invasive Wellness Technologies
           </p>
 
+          {/* INTRO */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              The Body Recharge Station is a revolutionary wellness solution
+              designed to restore energy, enhance vitality, and promote overall
+              well-being through advanced non-invasive German technologies.
+            </p>
+          </div>
+
+          {/* SUBCATEGORY GRID */}
+          {/* SUBCATEGORY GRID WITH IMAGES */}
+          <div className="mb-16">
+            <h2 className="text-2xl font-semibold text-green-700 mb-8 text-center">
+              Our Wellness Technologies
+            </h2>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-2">
+              {courseDetail
+                .filter(
+                  (item: any) =>
+                    item.category === "brs" && item.subCategory !== undefined,
+                )
+                .map((sub: any) => (
+                  <div
+                    key={sub.id}
+                    className="bg-white border border-gray-100 rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 group cursor-pointer"
+                    onClick={() => {
+                      window.location.href = `/services/${sub.id}`;
+                    }}
+                  >
+                    <div className="h-52 bg-gray-200 relative overflow-hidden">
+                      <img
+                        src={sub.imageSrc}
+                        alt={sub.course}
+                        className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      />
+                    </div>
+                    <div className="p-6">
+                      <h3 className="font-semibold text-lg text-green-700 mb-3">
+                        {sub.course}
+                      </h3>
+                      <p className="text-gray-600 text-sm leading-relaxed line-clamp-4">
+                        {sub.profession}
+                      </p>
+                      <div className="mt-5 text-green-600 text-sm font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                        Know More →
+                      </div>
+                    </div>
+                  </div>
+                ))}
+            </div>
+          </div>
+
+          {/* DETAILED SECTIONS - AcuGraph, Power Detox, Energia */}
           {/* AcuGraph Section */}
           <div className="mb-12">
             <h2 className="text-2xl font-semibold text-green-700 mb-3">
-              A) AcuGraph Energy Analysis
+              (A) AcuGraph Energy Analysis
             </h2>
             <p className="text-gray-700 mb-4">
               AcuGraph Energy Health Screening is a non-invasive assessment that
@@ -2780,14 +2829,12 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
           {/* Power Detox Section */}
           <div className="mb-12 border-t border-gray-100 pt-10">
             <h2 className="text-2xl font-semibold text-green-700 mb-3">
-              B) Power Detox Therapy (German Technology – Advanced Foot Detox)
+              (B) Power Detox Therapy (German Technology – Advanced Foot Detox)
             </h2>
             <p className="text-gray-700 mb-4">
               Power Detox Therapy is a non-invasive wellness treatment that uses
               advanced iontophoresis and electrolysis technology to support the
-              body's natural detoxification process. By helping improve
-              circulation and cellular function, it promotes relaxation, energy,
-              and overall well-being.
+              body's natural detoxification process.
             </p>
 
             <h3 className="font-semibold mb-2">Key Benefits:</h3>
@@ -2806,8 +2853,7 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
               <p className="font-medium mb-1">How It Works</p>
               <p className="text-gray-700">
                 The therapy uses ionized water technology to stimulate the
-                body's natural detox pathways, supporting the removal of waste
-                products while promoting circulation and relaxation.
+                body's natural detox pathways.
               </p>
             </div>
 
@@ -2822,20 +2868,12 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
             <p className="italic text-green-600 mt-4">
               "Detox. Recharge. Rejuvenate." 🌿
             </p>
-
-            <p className="text-xs text-gray-500 mt-6">
-              <strong>Disclaimer:</strong> Power Detox Therapy is a wellness
-              service designed to support relaxation and overall well-being.
-              Individual experiences may vary. It is not intended to diagnose,
-              treat, cure, or prevent any disease and should not replace
-              professional medical advice or treatment.
-            </p>
           </div>
 
           {/* Energia Power Recharge Section */}
           <div className="mb-12 border-t border-gray-100 pt-10">
             <h2 className="text-2xl font-semibold text-green-700 mb-3">
-              C) Energia Power Recharge Therapy
+              (C) Energia Power Recharge Therapy
             </h2>
             <p className="text-amber-600 font-medium mb-1">
               Powered by Advanced German Technology
@@ -2843,11 +2881,10 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
             <p className="text-gray-700 mb-4">
               Energia Power Recharge Therapy combines Cell Therapy, Light
               Therapy, and Sound Therapy to support relaxation, energy
-              enhancement, and overall wellness. This non-invasive wellness
-              experience helps promote physical rejuvenation, mental relaxation,
-              and healthy lifestyle support.
+              enhancement, and overall wellness.
             </p>
 
+            {/* Rest of Energia content remains same */}
             <h3 className="font-semibold mb-2">Key Benefits:</h3>
             <ul className="list-disc pl-5 text-gray-700 space-y-1 mb-6">
               <li>Enhances energy and vitality</li>
@@ -2857,45 +2894,6 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
               <li>Helps improve overall wellness and balance</li>
               <li>Non-invasive and comfortable therapy</li>
             </ul>
-
-            <h3 className="font-semibold mb-3">Who Can Benefit?</h3>
-
-            <div className="grid md:grid-cols-2 gap-6">
-              <div>
-                <p className="font-medium mb-2">👨‍💼 Business Professionals</p>
-                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                  <li>Supports focus and productivity</li>
-                  <li>Helps manage daily stress</li>
-                  <li>Encourages mental relaxation</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-medium mb-2">
-                  🏃 Athletes & Fitness Enthusiasts
-                </p>
-                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                  <li>Supports pre- and post-workout recovery</li>
-                  <li>Promotes relaxation and well-being</li>
-                  <li>Helps maintain active lifestyles</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-medium mb-2">👵 Older Adults</p>
-                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                  <li>Supports mobility and flexibility</li>
-                  <li>Encourages vitality and wellness</li>
-                  <li>Promotes relaxation and comfort</li>
-                </ul>
-              </div>
-              <div>
-                <p className="font-medium mb-2">🌿 General Wellness</p>
-                <ul className="list-disc pl-5 text-sm text-gray-600 space-y-1">
-                  <li>Supports energy balance</li>
-                  <li>Encourages relaxation</li>
-                  <li>Promotes healthy lifestyle habits</li>
-                </ul>
-              </div>
-            </div>
 
             <div className="flex items-center gap-4 text-lg mt-8">
               <span className="font-semibold">Therapy Package:</span>
@@ -2908,24 +2906,9 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
             <p className="italic text-green-600 mt-4">
               "Recharge Your Body. Relax Your Mind. Revitalize Your Life." 🌿⚡
             </p>
-
-            <p className="text-sm text-gray-600 mt-4">
-              Energia Power Recharge Therapy integrates Cell Therapy, Light
-              Therapy, and Sound Therapy to support relaxation, energy
-              enhancement, stress management, restful sleep, and overall
-              wellness through advanced non-invasive technology.
-            </p>
-
-            <p className="text-xs text-gray-500 mt-6">
-              <strong>Disclaimer:</strong> Energia Power Recharge Therapy is a
-              wellness service intended to support relaxation and general
-              well-being. Individual experiences may vary. It is not intended to
-              diagnose, treat, cure, or prevent any disease and should not
-              replace professional medical advice or treatment.
-            </p>
           </div>
 
-          {/* Overall Benefits & Who Can Benefit */}
+          {/* Overall Benefits */}
           <div className="border-t border-gray-100 pt-10">
             <h2 className="text-2xl font-semibold mb-4">
               Benefits of the Body Recharge Station
@@ -2939,18 +2922,650 @@ export default function ServiceDetailsClient({ id }: { id: string }) {
                 Promotes holistic physical, emotional, and mental well-being
               </li>
             </ul>
-
-            <h2 className="text-2xl font-semibold mb-4">Who Can Benefit?</h2>
-            <ul className="list-disc pl-5 text-gray-700 space-y-2">
-              <li>Individuals experiencing chronic fatigue or stress</li>
-              <li>Professionals looking to enhance productivity and focus</li>
-              <li>Fitness enthusiasts seeking faster recovery</li>
-              <li>People interested in preventive healthcare and wellness</li>
-              <li>Anyone seeking a natural way to recharge and rejuvenate</li>
-            </ul>
           </div>
         </div>
       )}
+
+      {service.subCategory === "abs" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            AcuGraph Body Screening
+          </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Tests & Assessments
+          </p>
+
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              AcuGraph is a non-invasive meridian and energy balance assessment
+              system that evaluates the body's energetic pathways based on
+              Traditional Chinese Medicine (TCM) principles.
+            </p>
+          </div>
+
+          {/* WHAT DOES ACUGRAPH ASSESS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              What Does AcuGraph Assess?
+            </h2>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {/* Energy & Balance */}
+              <div>
+                <h3 className="font-semibold text-lg mb-4">
+                  ⚡ Energy Level Analysis
+                </h3>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• Overall body energy status</li>
+                  <li>• High, normal, or low energy levels</li>
+                </ul>
+
+                <h3 className="font-semibold text-lg mt-8 mb-4">
+                  ⚖️ Yin-Yang Balance
+                </h3>
+                <ul className="text-gray-700 space-y-2">
+                  <li>• Measures balance between Yin and Yang energy</li>
+                  <li>• Identifies energetic imbalances</li>
+                </ul>
+
+                <h3 className="font-semibold text-lg mt-8 mb-4">
+                  ⬆️⬇️ Upper-Lower Body Balance
+                </h3>
+                <p className="text-gray-700">
+                  Compares energy distribution between upper and lower body
+                </p>
+
+                <h3 className="font-semibold text-lg mt-8 mb-4">
+                  ⬅️➡️ Left-Right Body Balance
+                </h3>
+                <p className="text-gray-700">
+                  Detects imbalance between left and right sides of the body
+                </p>
+              </div>
+
+              {/* Organ Meridians */}
+              <div>
+                <h3 className="font-semibold text-lg mb-4">
+                  🫀 Organ Meridian Assessment
+                </h3>
+                <p className="text-gray-700 mb-3">
+                  Analysis of 12 major meridians:
+                </p>
+                <div className="grid grid-cols-2 gap-x-8 gap-y-1 text-sm text-gray-700">
+                  <div>Lung Meridian</div>
+                  <div>Large Intestine Meridian</div>
+                  <div>Stomach Meridian</div>
+                  <div>Spleen Meridian</div>
+                  <div>Heart Meridian</div>
+                  <div>Small Intestine Meridian</div>
+                  <div>Bladder Meridian</div>
+                  <div>Kidney Meridian</div>
+                  <div>Pericardium Meridian</div>
+                  <div>Triple Warmer Meridian</div>
+                  <div>Gallbladder Meridian</div>
+                  <div>Liver Meridian</div>
+                </div>
+              </div>
+            </div>
+
+            <div className="mt-10 bg-white border border-gray-100 rounded-2xl p-6">
+              <h3 className="font-semibold mb-3">📊 Meridian Energy Graph</h3>
+              <p className="text-gray-700">
+                Visual graphical representation that identifies excesses and
+                deficiencies in each meridian.
+              </p>
+            </div>
+          </div>
+
+          {/* STRESS & WELLNESS */}
+          <div className="mb-12">
+            <h3 className="font-semibold text-lg mb-3">
+              🎯 Stress & Wellness Assessment
+            </h3>
+            <p className="text-gray-700">
+              General wellness indication and energy stability assessment.
+            </p>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Quick Assessment (Approx. 10 Minutes)",
+                "✅ Non-Invasive & Painless",
+                "✅ No Blood Collection",
+                "✅ Instant Digital Report",
+                "✅ Helps Identify Energy Imbalances",
+                "✅ Supports Wellness Programs",
+                "✅ Easy-to-Understand Graphical Results",
+              ].map((benefit, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {benefit}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* LIFEONPLUS SECTION */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              LifeOnPlus Body Recharge Station
+            </h2>
+            <p className="text-gray-700 mb-6">
+              The LifeOnPlus Body Recharge Station combines:
+            </p>
+            <div className="flex flex-wrap justify-center gap-6 text-green-700 font-medium">
+              <div>🔹 AcuGraph Body Screening</div>
+              <div>🔹 Power Foot Detox</div>
+              <div>🔹 IMRS Wellness Technology</div>
+            </div>
+          </div>
+
+          {/* TAGLINE */}
+          <div className="text-center">
+            <p className="italic text-3xl font-semibold text-green-700 mb-6">
+              Know Your Body. Balance Your Energy. Recharge Your Life.
+            </p>
+            <p className="text-green-600 font-medium">
+              Only with LifeOnPlus Body Recharge Station. 💚⚡🌿
+            </p>
+          </div>
+        </div>
+      )}
+
+      {service.subCategory === "pfd" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            LifeOnPlus Power Foot Detox
+          </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Cleanse • Refresh • Recharge
+          </p>
+
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              The LifeOnPlus Power Foot Detox is a wellness technology designed
+              to provide a relaxing foot spa experience while promoting overall
+              well-being. During the session, feet are immersed in warm water
+              with a specialized detox device, creating a soothing and
+              rejuvenating experience.
+            </p>
+            <p className="text-gray-700 mt-4">
+              It is commonly used as part of wellness, relaxation, and lifestyle
+              improvement programs.
+            </p>
+          </div>
+
+          {/* KEY FEATURES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌿 Key Features
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Comfortable Foot Spa Session",
+                "✅ Approx. 10–30 Minute Treatment",
+                "✅ Non-Invasive Wellness Experience",
+                "✅ Easy and Relaxing Procedure",
+                "✅ Suitable for Men and Women",
+                "✅ Can Be Integrated with Wellness Programs",
+              ].map((feature, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {feature}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              💚 Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <span className="text-3xl">⚡</span>
+                <div>
+                  <p className="font-semibold">Promotes Relaxation</p>
+                  <p className="text-gray-700">
+                    Helps users unwind and feel refreshed after a busy day.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🦶</span>
+                <div>
+                  <p className="font-semibold">Revitalizes Tired Feet</p>
+                  <p className="text-gray-700">
+                    Provides a soothing experience for tired and stressed feet.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🌊</span>
+                <div>
+                  <p className="font-semibold">Supports Overall Wellness</p>
+                  <p className="text-gray-700">
+                    Can be incorporated into healthy lifestyle and wellness
+                    routines.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">😌</span>
+                <div>
+                  <p className="font-semibold">Stress Relief</p>
+                  <p className="text-gray-700">
+                    Creates a calming environment that may help reduce everyday
+                    stress.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🔄</span>
+                <div>
+                  <p className="font-semibold">Enhances Wellness Programs</p>
+                  <p className="text-gray-700">
+                    Complements wellness initiatives focused on relaxation and
+                    self-care.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🌿</span>
+                <div>
+                  <p className="font-semibold">Refreshing Experience</p>
+                  <p className="text-gray-700">
+                    Leaves users feeling rejuvenated and energized.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌟 Advantages
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Non-Invasive",
+                "✅ Comfortable & Easy to Use",
+                "✅ No Recovery Time Required",
+                "✅ Suitable for Wellness Centers",
+                "✅ Suitable for Corporate Wellness Programs",
+                "✅ Ideal for Health Camps & Lifestyle Clinics",
+                "✅ Quick Session Time",
+                "✅ Can Be Combined with Other Wellness Technologies",
+              ].map((adv, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {adv}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* LIFEONPLUS SECTION */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              How LifeOnPlus is Helping
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              LifeOnPlus combines wellness technologies with preventive
+              healthcare solutions to help people focus on:
+            </p>
+            <div className="flex flex-wrap justify-center gap-8 mt-8 text-green-700 font-medium">
+              <div>✔ Wellness Awareness</div>
+              <div>✔ Healthy Lifestyle Practices</div>
+              <div>✔ Stress Management</div>
+            </div>
+          </div>
+
+          {/* TAGLINE */}
+          <div className="text-center mt-12">
+            <p className="italic text-3xl font-semibold text-green-700">
+              Cleanse • Refresh • Recharge
+            </p>
+            <p className="text-green-600 font-medium mt-4">
+              Experience the Power of Wellness with LifeOnPlus.
+            </p>
+          </div>
+        </div>
+      )}
+
+      {service.subCategory === "meol" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            MEOL (Miracle Energy Of Life) Wellness Technology
+          </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Gentle Energy-Based Wellness Solution
+          </p>
+
+          {/* INTRODUCTION */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              MEOL (Miracle Energy Oscillation Loop) is a non-invasive wellness
+              technology designed to provide a relaxing and rejuvenating
+              experience through gentle energy-based stimulation. Users simply
+              sit on the device during a session, making it a comfortable and
+              easy-to-use wellness solution.
+            </p>
+            <p className="text-gray-700 mt-4">
+              The technology is intended to support relaxation, wellness
+              routines, and overall well-being without needles, medications, or
+              invasive procedures.
+            </p>
+          </div>
+
+          {/* KEY FEATURES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              🌿 Key Features
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Non-Invasive Technology",
+                "✅ Comfortable Sitting Session",
+                "✅ Pain-Free Experience",
+                "✅ Easy to Use",
+                "✅ Suitable for Daily Wellness Programs",
+                "✅ Can Be Integrated with Wellness & Lifestyle Management",
+              ].map((feature, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {feature}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              💚 Potential Wellness Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6">
+              <div className="flex gap-4">
+                <span className="text-3xl">😌</span>
+                <div>
+                  <p className="font-semibold">Promotes Relaxation</p>
+                  <p className="text-gray-700">
+                    Helps users feel calm, refreshed, and relaxed.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">😴</span>
+                <div>
+                  <p className="font-semibold">Supports Better Sleep Quality</p>
+                  <p className="text-gray-700">
+                    May help support healthy sleep habits as part of an overall
+                    wellness routine.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">⚡</span>
+                <div>
+                  <p className="font-semibold">Enhances Energy & Vitality</p>
+                  <p className="text-gray-700">
+                    Users often report feeling refreshed and energized after
+                    sessions.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">❤️</span>
+                <div>
+                  <p className="font-semibold">Supports Healthy Circulation</p>
+                  <p className="text-gray-700">
+                    Can be used as part of a wellness program focused on
+                    maintaining overall health.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🧘</span>
+                <div>
+                  <p className="font-semibold">Stress Management</p>
+                  <p className="text-gray-700">
+                    Provides a relaxing environment that may help reduce
+                    everyday stress.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🌿</span>
+                <div>
+                  <p className="font-semibold">Supports General Well-Being</p>
+                  <p className="text-gray-700">
+                    Encourages a proactive approach to wellness and self-care.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              ⭐ Advantages of Non-Invasive Wellness Technologies
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✔ No Needles or Injections",
+                "✔ No Recovery Time – Resume daily activities immediately",
+                "✔ Safe & Convenient",
+                "✔ Comfortable Sessions (while sitting)",
+                "✔ Suitable for Various Age Groups",
+                "✔ Complements Healthy Lifestyle Practices",
+              ].map((adv, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {adv}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* LIFEONPLUS SECTION */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              🌍 How People Benefit from Non-Invasive Technologies
+            </h2>
+            <p className="text-gray-700 max-w-2xl mx-auto">
+              Modern wellness technologies are becoming popular because they
+              encourage preventive wellness and support a balanced lifestyle.
+            </p>
+          </div>
+
+          {/* FINAL TAGLINE */}
+          <div className="text-center mt-12">
+            <p className="italic text-3xl font-semibold text-green-700">
+              Miracle Energy Of Life
+            </p>
+            <p className="text-green-600 font-medium mt-4">
+              Relax • Rejuvenate • Restore
+            </p>
+          </div>
+        </div>
+      )}
+
+      {service.subCategory === "imrs" && (
+        <div className="container mx-auto p-10">
+          {/* TITLE */}
+          <h1 className="text-3xl font-bold text-green-600 mb-2">
+            IMRS Wellness Technology
+          </h1>
+          <p className="text-2xl font-semibold text-gray-700 mb-8">
+            Intelligent Magnetic Resonance Stimulation
+          </p>
+
+          {/* MISSION / INTRO */}
+          <div className="mb-12">
+            <p className="text-gray-700 leading-relaxed text-lg">
+              LifeOnPlus – Bringing Advanced Non-Invasive Wellness Technologies
+              to Everyone.
+            </p>
+            <p className="text-gray-700 mt-4">
+              Our Mission: LifeOnPlus is committed to making innovative,
+              non-invasive wellness and preventive healthcare technologies
+              accessible, affordable, and easy to use.
+            </p>
+          </div>
+
+          {/* WHAT ARE NON-INVASIVE TECHNOLOGIES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-4">
+              What Are Non-Invasive Technologies?
+            </h2>
+            <p className="text-gray-700 leading-relaxed">
+              Non-invasive technologies are wellness and health assessment
+              solutions that do not require surgery, injections, needles, or
+              lengthy recovery periods. They are designed to provide a
+              comfortable and convenient experience while supporting wellness,
+              relaxation, health awareness, and preventive care.
+            </p>
+          </div>
+
+          {/* LIFEONPLUS WELLNESS TECHNOLOGIES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              LifeOnPlus Wellness Technologies
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "🌿 IMRS (Intelligent Magnetic Resonance Stimulation)",
+                "🌿 AcuGraph Body Screening",
+                "🌿 Power Foot Detox",
+                "🌿 Vascular Age Assessment",
+                "🌿 Advanced ECG Screening",
+                "🌿 AI-Based Health Screening Solutions",
+                "🌿 Digital Emergency Health Kit",
+                "🌿 Global Digital Health Smart Card",
+              ].map((tech, i) => (
+                <div
+                  key={i}
+                  className="flex items-start gap-3 bg-white border border-gray-100 rounded-xl p-4"
+                >
+                  {tech}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* BENEFITS */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Benefits
+            </h2>
+            <div className="grid md:grid-cols-2 gap-6 text-gray-700">
+              <div className="flex gap-4">
+                <span className="text-3xl">⚡</span>
+                <div>
+                  <p className="font-semibold">Early Health Awareness</p>
+                  <p>
+                    Helps people understand their wellness status and encourages
+                    timely action.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">❤️</span>
+                <div>
+                  <p className="font-semibold">Preventive Healthcare</p>
+                  <p>
+                    Promotes proactive health management before health issues
+                    become serious.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">😌</span>
+                <div>
+                  <p className="font-semibold">Stress Reduction & Relaxation</p>
+                  <p>
+                    Supports overall well-being through wellness-focused
+                    technologies.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">📱</span>
+                <div>
+                  <p className="font-semibold">Digital Health Integration</p>
+                  <p>
+                    Combines wellness services with smart digital health tools
+                    and records.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">🌍</span>
+                <div>
+                  <p className="font-semibold">Accessible Healthcare</p>
+                  <p>
+                    Makes wellness technologies available to individuals,
+                    families, corporates, and communities.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <span className="text-3xl">👨‍👩‍👧‍👦</span>
+                <div>
+                  <p className="font-semibold">Better Quality of Life</p>
+                  <p>
+                    Encourages healthier lifestyles and wellness-focused living.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* ADVANTAGES */}
+          <div className="mb-12">
+            <h2 className="text-2xl font-semibold text-green-700 mb-6">
+              Advantages
+            </h2>
+            <div className="grid md:grid-cols-2 gap-4 text-gray-700">
+              {[
+                "✅ Non-Invasive & Comfortable",
+                "✅ Easy to Use",
+                "✅ No Recovery Time",
+                "✅ Suitable for Various Age Groups",
+                "✅ Fast & Convenient Assessments",
+                "✅ Supports Wellness Programs",
+                "✅ Digital Reporting & Health Tracking",
+                "✅ Community & Corporate Wellness Friendly",
+              ].map((adv, i) => (
+                <div key={i} className="flex items-start gap-2">
+                  {adv}
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* FINAL MESSAGE */}
+          <div className="bg-green-50 border border-green-100 rounded-3xl p-10 text-center">
+            <p className="italic text-2xl font-semibold text-green-700 mb-6">
+              LifeOnPlus – Bringing Advanced Non-Invasive Wellness Technologies
+              to Everyone
+            </p>
+            <p className="text-green-600 font-medium text-lg">
+              Empowering Healthier Lives Through Innovation and Prevention 💚
+            </p>
+          </div>
+        </div>
+      )}
+
       {service.category === "qhc" && (
         <div className="container mx-auto p-10">
           {/* TITLE */}
