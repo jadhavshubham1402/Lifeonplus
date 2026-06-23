@@ -14,7 +14,16 @@
     },
     {
       "label": "Lifeonplus",
-      "href": "/#testimonial-section"
+      "href": "#",
+      "submenu": [
+        { "label": "About Us", "href": "/about-us" },
+        { "label": "News & Events", "href": "/news-events" },
+        { "label": "Gallery", "href": "/gallery" },
+        { "label": "Press Media", "href": "/press-media" },
+        { "label": "Careers", "href": "/careers" },
+        { "label": "Contact Us", "href": "/contact" },
+        { "label": "Blogs", "href": "/blogs" }
+      ]
     },
     {
       "label": "Download App",
