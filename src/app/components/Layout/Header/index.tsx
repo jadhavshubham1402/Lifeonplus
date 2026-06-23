@@ -190,7 +190,7 @@ const Header: React.FC = () => {
             {showAccountModal && (
               <div className="fixed inset-0 z-[999] flex items-center justify-center bg-black/60 p-4">
                 <div className="bg-white rounded-xl w-full max-w-6xl max-h-[90vh] overflow-y-auto">
-                  <div className="flex items-center justify-between p-5 border-b">
+                  <div className="flex items-center justify-between p-3 border-b">
                     <h2 className="text-xl font-semibold">
                       Choose Your Account Type
                     </h2>
@@ -203,8 +203,8 @@ const Header: React.FC = () => {
                     </button>
                   </div>
 
-                  <div className="p-5">
-                    <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+                  <div className="p-3">
+                    <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-3 gap-4">
                       {[
                         {
                           title: "Member",
@@ -295,16 +295,16 @@ const Header: React.FC = () => {
                               e.currentTarget.style.boxShadow = "";
                             }}
                           >
-                            <h5 className="mb-2 flex items-center gap-2 text-lg font-semibold">
+                            <h5 className="mb-2 flex items-center gap-2 text-base font-semibold">
                               {" "}
                               <div
                                 className="flex items-center justify-center rounded-full"
                                 style={{
-                                  width: "45px",
-                                  height: "45px",
+                                  width: "30px",
+                                  height: "30px",
                                   background: item.bg,
                                   color: item.color,
-                                  fontSize: "20px",
+                                  fontSize: "15px",
                                 }}
                               >
                                 {item.icon}
@@ -312,12 +312,12 @@ const Header: React.FC = () => {
                               {item.title}
                             </h5>
 
-                            <p className="text-gray-500 text-sm flex-grow mb-3">
+                            <p className="text-gray-500 text-xs flex-grow mb-3">
                               {" "}
                               {item.desc}
                             </p>
 
-                            {item.knowMore && (
+                            {/* {item.knowMore && (
                               <p
                                 className="text-blue-600 text-sm underline mb-2 cursor-pointer"
 
@@ -332,7 +332,7 @@ const Header: React.FC = () => {
                               >
                                 Click here to know more
                               </p>
-                            )}
+                            )} */}
 
                             <div className="flex gap-2 mt-auto">
                               {" "}
