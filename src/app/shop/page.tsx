@@ -10,11 +10,15 @@ const shopCategories = [
     products: [
       {
         id: 1,
-        title: "Advanced ECG",
+        title: "Advanced ECG Screening",
         price: "₹799",
         duration: "45 seconds",
-        description: "Digital ECG test using handheld device.",
-        features: ["Detects arrhythmias", "Instant results"],
+        description:
+          "A digital ECG test using a single handheld device with two leads that records your heart’s electrical activity in under 45 seconds.",
+        features: [
+          "Detects arrhythmias, heart rate abnormalities, early signs of ischemia, and cardiac stress",
+          "Instant results with graphical representation",
+        ],
         image: "/shop/advanced-ecg.jpg",
       },
       {
@@ -22,8 +26,13 @@ const shopCategories = [
         title: "Vascular Age Test",
         price: "₹699",
         duration: "30 seconds",
-        description: "Assesses arterial age and stiffness.",
-        features: ["Early cardiovascular insights"],
+        description:
+          "Measured using an advanced pulse oximeter. Shows how 'old' your arteries are by assessing pulse strength, SpO₂, and arterial stiffness.",
+        features: [
+          "Detects early signs of cardiovascular aging",
+          "Non-invasive assessment of arterial elasticity",
+          "Helps in preventive lifestyle changes",
+        ],
         image: "/shop/vascular-age.jpg",
       },
       {
@@ -31,12 +40,17 @@ const shopCategories = [
         title: "Capillary Blood Shape Analysis",
         price: "₹899",
         duration: "2 minutes",
-        description: "Microvascular health analysis.",
-        features: ["Detects circulation issues"],
+        description:
+          "Utilizes Blood Capillaroscopy to analyse shape, density, and flow in nailfold capillaries, reflecting microvascular health.",
+        features: [
+          "Helps detect poor circulation and metabolic issues early",
+          "Indicates overall microvascular function",
+        ],
         image: "/shop/capillary.jpg",
       },
     ],
   },
+
   {
     name: "Express Medical Tests",
     id: "express",
@@ -45,63 +59,98 @@ const shopCategories = [
         id: 4,
         title: "Express Basic – 10 Vital Tests",
         price: "₹999",
-        description: "Essential 10 vital parameters.",
-        features: ["BMI, BP, ECG, Vision"],
+        duration: "10 Minutes",
+        description:
+          "Essential 10 vital health checks using advanced digital devices. Perfect for quick preventive screening.",
+        features: [
+          "Anthropometric Measurements (BMI, Waist-Hip Ratio)",
+          "Blood Pressure, Pulse, SpO₂, Temperature",
+          "ECG, Hemoglobin, Vision Screening",
+          "Instant digital reports",
+        ],
         image: "/shop/basic-10.jpg",
       },
       {
         id: 5,
         title: "Express Basic Plus – 12 Vital Tests",
         price: "₹1,499",
-        description: "Executive package with Smart Card.",
-        features: ["Lipid Profile + Smart Card"],
+        duration: "10 Minutes",
+        description:
+          "Executive-grade preventive healthcare with Smart Health Card. Includes Lipid Profile for deeper insights.",
+        features: [
+          "All 10 Basic Tests + Lipid Profile",
+          "Smart Health Card Included",
+          "Instant Digital Results",
+          "Ideal for Corporate Executives",
+        ],
         image: "/shop/basic-plus.jpg",
       },
       {
         id: 6,
-        title: "Express Advanced – Lifeline Package",
+        title: "Express Advanced – Lifeline Package (32+ Tests)",
         price: "₹4,999",
-        description: "32+ vital tests.",
-        features: ["Comprehensive screening"],
+        duration: "10-15 Minutes",
+        description:
+          "Comprehensive Lifeline Package with 32+ vital parameters. The most complete preventive health screening.",
+        features: [
+          "All Basic + Advanced Tests",
+          "HbA1c, Full Lipid Profile",
+          "Smart RFID/NFC Health Card",
+          "Deep preventive health evaluation",
+        ],
         image: "/shop/lifeline.jpg",
       },
     ],
   },
+
   {
     name: "Body Recharge Station",
     id: "brs",
     products: [
       {
         id: 7,
-        title: "Acugraph Test",
+        title: "AcuGraph Energy Analysis",
         price: "₹1,500",
-        description: "Energy meridian analysis.",
-        features: ["Detect energy blockages"],
+        duration: "10 Minutes",
+        description:
+          "Non-invasive meridian and energy balance assessment based on Traditional Chinese Medicine principles.",
+        features: [
+          "12 Major Meridian Assessment",
+          "Yin-Yang Balance",
+          "Left-Right & Upper-Lower Balance",
+          "Instant Graphical Report",
+        ],
         image: "/shop/acugraph.jpg",
       },
       {
         id: 8,
         title: "Power Foot Detox Therapy",
         price: "₹1,500",
-        description: "Ionized foot detox.",
-        features: ["Deep detoxification"],
+        duration: "20-30 Minutes",
+        description:
+          "Advanced iontophoresis foot detox therapy using ionized water to support natural detoxification and relaxation.",
+        features: [
+          "Promotes relaxation and rejuvenation",
+          "Supports blood circulation",
+          "Helps relieve tired feet",
+          "Recommended 3 times/month",
+        ],
         image: "/shop/foot-detox.jpg",
       },
       {
         id: 9,
-        title: "Power Recharge Therapy (MEOUL)",
+        title: "Power Recharge Therapy (MEOL)",
         price: "₹1,500",
-        description: "Scalar energy recharge.",
-        features: ["Restores vital energy"],
+        duration: "30 Minutes",
+        description:
+          "Miracle Energy Oscillation Loop – Gentle energy-based stimulation while sitting for deep relaxation and vitality.",
+        features: [
+          "Restores vital life force",
+          "Supports better sleep",
+          "Enhances energy & immunity",
+          "Non-invasive & comfortable",
+        ],
         image: "/shop/power-recharge.jpg",
-      },
-      {
-        id: 10,
-        title: "Bio Energy Therapy",
-        price: "₹1,500",
-        description: "Biofield balancing therapy.",
-        features: ["Energy alignment"],
-        image: "/shop/bio-energy.jpg",
       },
     ],
   },
@@ -219,25 +268,25 @@ export default function ShopPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Hero */}
-      <div className="bg-green-700 text-white  py-10 mt-24">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6 text-white">
+      <div className="bg-green-700 text-white py-16 mt-20">
+        <div className="max-w-7xl mx-auto px-6 text-center">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Shop Our Services
           </h1>
-          <p className="text-xl text-green-100">
+          <p className="text-xl text-green-100 max-w-2xl mx-auto">
             Preventive Healthcare • Wellness Therapies • Quick Diagnostics
           </p>
         </div>
       </div>
 
-      {/* Search */}
-      <div className="max-w-7xl mx-auto px-4 mt-8 relative z-10 mb-12">
+      {/* Search Bar */}
+      <div className="max-w-7xl mx-auto px-6 mt-8 relative z-10 mb-12">
         <input
           type="text"
           placeholder="Search services..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full max-w-xl mx-auto block px-6 py-4 border border-gray-300 rounded-full text-lg focus:outline-none focus:border-green-600"
+          className="w-full max-w-2xl mx-auto block px-6 py-4 border border-gray-300 rounded-full text-lg focus:outline-none focus:border-green-600 shadow-lg"
         />
       </div>
 
@@ -254,8 +303,8 @@ export default function ShopPage() {
         if (filteredProducts.length === 0) return null;
 
         return (
-          <div key={category.id} className="max-w-7xl mx-auto px-4 mb-20">
-            <h2 className="text-4xl font-bold text-green-700 mb-10 border-b border-green-200 pb-4">
+          <div key={category.id} className="max-w-7xl mx-auto px-6 mb-20">
+            <h2 className="text-3xl font-bold text-green-700 mb-10 border-b border-green-200 pb-4">
               {category.name}
             </h2>
 
@@ -263,33 +312,37 @@ export default function ShopPage() {
               {filteredProducts.map((product: any) => (
                 <div
                   key={product.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all group"
+                  className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
-                  <div className="relative h-64 bg-gray-100">
+                  <div className="relative h-60 bg-gray-100">
                     <Image
                       src={product.image}
                       alt={product.title}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-green-700 text-white px-5 py-2 rounded-full font-bold text-lg">
+                    <div className="absolute top-4 right-4 bg-green-700 text-white px-4 py-1.5 rounded-full font-semibold text-base">
                       {product.price}
                     </div>
                   </div>
 
-                  <div className="p-7">
-                    <h3 className="text-2xl font-bold mb-3">{product.title}</h3>
+                  <div className="p-6">
+                    <h3 className="text-xl font-bold mb-2 text-gray-800">
+                      {product.title}
+                    </h3>
+
                     {product.duration && (
-                      <p className="text-green-600 font-medium mb-4">
+                      <p className="text-green-600 font-medium text-sm mb-4">
                         {product.duration}
                       </p>
                     )}
-                    <p className="text-gray-600 mb-6 line-clamp-3">
+
+                    <p className="text-gray-600 text-[15px] leading-relaxed mb-6 line-clamp-3">
                       {product.description}
                     </p>
 
-                    <ul className="space-y-2 mb-8 text-sm">
-                      {product.features.map((feature: any, i: any) => (
+                    <ul className="space-y-2 mb-8 text-sm text-gray-600">
+                      {product.features?.map((feature: any, i: number) => (
                         <li key={i} className="flex items-start gap-2">
                           <span className="text-green-600 mt-1">✔</span>
                           <span>{feature}</span>
@@ -297,7 +350,7 @@ export default function ShopPage() {
                       ))}
                     </ul>
 
-                    <button className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-4 rounded-2xl transition-all text-lg">
+                    <button className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3.5 rounded-2xl transition-all text-base">
                       Buy Now
                     </button>
                   </div>
