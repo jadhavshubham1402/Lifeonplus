@@ -46,7 +46,7 @@ const shopCategories = [
           "Helps detect poor circulation and metabolic issues early",
           "Indicates overall microvascular function",
         ],
-        image: "/shop/capillary.jpg",
+        image: "/images/shop/cbt.jpeg",
       },
     ],
   },
@@ -180,7 +180,7 @@ const shopCategories = [
         price: "₹899",
         description: "Polypropylene gloves with infrared & negative ions.",
         features: ["Hand warmth", "Joint comfort"],
-        image: "/shop/gloves.jpg",
+        image: "/images/shop/gloves.jpeg",
       },
       {
         id: 14,
@@ -188,7 +188,7 @@ const shopCategories = [
         price: "₹799",
         description: "Advanced wellness socks for foot comfort.",
         features: ["Warm feet", "Support for active lifestyle"],
-        image: "/shop/socks.jpg",
+        image: "/images/shop/socks.jpeg",
       },
       {
         id: 15,
