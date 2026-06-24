@@ -24,10 +24,6 @@
         { "label": "Contact Us", "href": "/contact" },
         { "label": "Blogs", "href": "/blogs" }
       ]
-    },
-    {
-      "label": "Download App",
-      "href": "/#join-section"
     }
   ],
   "CourseData": [
@@ -394,27 +390,23 @@
       "links": [
         {
           "label": "Home",
-          "href": "/#Home"
+          "href": "/"
         },
         {
-          "label": "Courses",
-          "href": "/#Courses"
+          "label": "Shop",
+          "href": "/shop"
         },
         {
-          "label": "Mentors",
-          "href": "/#mentors-section"
+          "label": "Services",
+          "href": "/services"
         },
         {
-          "label": "Testimonial",
-          "href": "/#testimonial-section"
-        },
-        {
-          "label": "Join",
-          "href": "/#join-section"
+          "label": "About Us",
+          "href": "/about-us"
         },
         {
           "label": "Contact Us",
-          "href": "/#contact"
+          "href": "/contact"
         }
       ]
     },

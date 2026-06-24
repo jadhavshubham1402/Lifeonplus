@@ -4,6 +4,7 @@ import Header from "@/app/components/Layout/Header";
 import Footer from "@/app/components/Layout/Footer";
 import ScrollToTop from "@/app/components/ScrollToTop";
 import Aoscompo from "@/utils/aos";
+import FirstVisitModal from "./components/FirstVisitModal";
 const font = Inter({ subsets: ["latin"] });
 
 export default function RootLayout({
@@ -20,6 +21,7 @@ export default function RootLayout({
                     {children}
                     <Footer />
                 </Aoscompo>
+                <FirstVisitModal />   {/* ← Added */}
                 <ScrollToTop />
             </body>
         </html>
