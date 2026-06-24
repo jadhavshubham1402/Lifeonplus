@@ -19,7 +19,7 @@ const shopCategories = [
           "Detects arrhythmias, heart rate abnormalities, early signs of ischemia, and cardiac stress",
           "Instant results with graphical representation",
         ],
-        image: "/shop/advanced-ecg.jpg",
+        image: "/images/shop/aet.jpeg",
       },
       {
         id: 2,
@@ -33,7 +33,7 @@ const shopCategories = [
           "Non-invasive assessment of arterial elasticity",
           "Helps in preventive lifestyle changes",
         ],
-        image: "/shop/vascular-age.jpg",
+        image: "/images/shop/vat.jpeg",
       },
       {
         id: 3,
@@ -68,7 +68,7 @@ const shopCategories = [
           "ECG, Hemoglobin, Vision Screening",
           "Instant digital reports",
         ],
-        image: "/shop/basic-10.jpg",
+        image: "/images/shop/xmt1.jpeg",
       },
       {
         id: 5,
@@ -83,7 +83,7 @@ const shopCategories = [
           "Instant Digital Results",
           "Ideal for Corporate Executives",
         ],
-        image: "/shop/basic-plus.jpg",
+        image: "/images/shop/xmt2.jpeg",
       },
       {
         id: 6,
@@ -120,7 +120,7 @@ const shopCategories = [
           "Left-Right & Upper-Lower Balance",
           "Instant Graphical Report",
         ],
-        image: "/shop/acugraph.jpg",
+        image: "/images/shop/act.jpeg",
       },
       {
         id: 8,
@@ -135,7 +135,7 @@ const shopCategories = [
           "Helps relieve tired feet",
           "Recommended 3 times/month",
         ],
-        image: "/shop/foot-detox.jpg",
+        image: "/images/shop/pfdt.jpeg",
       },
       {
         id: 9,
@@ -150,7 +150,7 @@ const shopCategories = [
           "Enhances energy & immunity",
           "Non-invasive & comfortable",
         ],
-        image: "/shop/power-recharge.jpg",
+        image: "/images/shop/prt.jpeg",
       },
     ],
   },
@@ -312,18 +312,15 @@ export default function ShopPage() {
               {filteredProducts.map((product: any) => (
                 <div
                   key={product.id}
-                  className="bg-white rounded-3xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
+                  className="bg-white rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
-                  <div className="relative h-60 bg-gray-100">
+                  <div className="relative border-2 border-green-500 rounded-sm h-96 bg-gray-100">
                     <Image
                       src={product.image}
                       alt={product.title}
                       fill
-                      className="object-cover group-hover:scale-105 transition-transform duration-500"
+                      className="object-contain group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute top-4 right-4 bg-green-700 text-white px-4 py-1.5 rounded-full font-semibold text-base">
-                      {product.price}
-                    </div>
                   </div>
 
                   <div className="p-6">
@@ -331,11 +328,17 @@ export default function ShopPage() {
                       {product.title}
                     </h3>
 
-                    {product.duration && (
-                      <p className="text-green-600 font-medium text-sm mb-4">
-                        {product.duration}
-                      </p>
-                    )}
+                    {/* Duration + Price in One Line */}
+                    <div className="flex items-center justify-between mb-5">
+                      {product.duration && (
+                        <p className="text-green-600 font-medium text-sm flex items-center gap-1">
+                          ⏱ {product.duration}
+                        </p>
+                      )}
+                      <div className="bg-green-700 text-white px-5 py-1.5 rounded-full font-semibold text-base shadow">
+                        {product.price}
+                      </div>
+                    </div>
 
                     <p className="text-gray-600 text-[15px] leading-relaxed mb-6 line-clamp-3">
                       {product.description}
