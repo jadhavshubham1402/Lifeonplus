@@ -6,7 +6,7 @@ export default function FirstVisitModal() {
   const [showModal, setShowModal] = useState(false);
 
   useEffect(() => {
-    const hasSeenModal = localStorage.getItem("hasSeenWelcomeModal");
+    const hasSeenModal = sessionStorage.getItem("hasSeenWelcomeModal");
 
     if (!hasSeenModal) {
       // Small delay for better UX
@@ -20,7 +20,7 @@ export default function FirstVisitModal() {
 
   const closeModal = () => {
     setShowModal(false);
-    localStorage.setItem("hasSeenWelcomeModal", "true");
+    sessionStorage.setItem("hasSeenWelcomeModal", "true");
   };
 
   if (!showModal) return null;
