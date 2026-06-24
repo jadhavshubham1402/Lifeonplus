@@ -47,11 +47,11 @@ export default function FirstVisitModal() {
             width="100%"
             height="100%"
             src="https://www.youtube.com/embed/WwSbh4Ft1Fs?si=nfBcaBiT-8IxT_Yn"
-            title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen
+            title="Welcome to LifeOnPlus"
+            frameBorder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowFullScreen
+            className="w-full h-full"
           ></iframe>
         </div>
       </div>
