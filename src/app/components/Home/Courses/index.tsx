@@ -77,7 +77,7 @@ const NamesList = () => {
             alt={name.course}
             width={700}
             height={700}
-            className="h-full w-full object-cover object-center group-hover:scale-125 transition duration-300 ease-in-out"
+            className="h-full w-full object-cover object-center"
           />
         </div>
         <div className="p-4 flex flex-col justify-between gap-5 flex-1">
