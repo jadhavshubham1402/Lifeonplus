@@ -164,7 +164,7 @@ const shopCategories = [
         price: "₹2,499",
         description: "Turn normal water into alkaline antioxidant water.",
         features: ["pH 8.5", "Antioxidant", "Micro-clustered"],
-        image: "/shop/alkaline-beads.jpg",
+        image: "/images/shop/akalb.jpeg",
       },
       {
         id: 12,
@@ -172,7 +172,7 @@ const shopCategories = [
         price: "₹1,299",
         description: "Tourmaline infused neck support with nanotechnology.",
         features: ["Better sleep", "Reduce jet lag", "Desk comfort"],
-        image: "/shop/neck-support.jpg",
+        image: "/images/shop/necks.jpeg",
       },
       {
         id: 13,
@@ -200,44 +200,44 @@ const shopCategories = [
       },
     ],
   },
-  {
-    name: "Food Supplements",
-    id: "supplements",
-    products: [
-      {
-        id: 16,
-        title: "Detox & Liver Support",
-        price: "₹1,299",
-        description: "NAC + Milk Thistle formula for liver health.",
-        features: ["Liver detox", "Energy support"],
-        image: "/shop/liver-detox.jpg",
-      },
-      {
-        id: 17,
-        title: "Weight Loss Supplements",
-        price: "₹1,499",
-        description: "Natural fat metabolism & appetite control.",
-        features: ["Burn fat", "Improve digestion"],
-        image: "/shop/weight-loss.jpg",
-      },
-      {
-        id: 18,
-        title: "Immunity Booster+",
-        price: "₹899",
-        description: "Vitamin C, Zinc, Amla & Ginger blend.",
-        features: ["Strong immunity", "Energy boost"],
-        image: "/shop/immunity.jpg",
-      },
-      {
-        id: 19,
-        title: "Olive Oil",
-        price: "₹699",
-        description: "Premium Mediterranean olive oil.",
-        features: ["Heart healthy", "Antioxidant rich"],
-        image: "/shop/olive-oil.jpg",
-      },
-    ],
-  },
+  // {
+  //   name: "Food Supplements",
+  //   id: "supplements",
+  //   products: [
+  //     {
+  //       id: 16,
+  //       title: "Detox & Liver Support",
+  //       price: "₹1,299",
+  //       description: "NAC + Milk Thistle formula for liver health.",
+  //       features: ["Liver detox", "Energy support"],
+  //       image: "/shop/liver-detox.jpg",
+  //     },
+  //     {
+  //       id: 17,
+  //       title: "Weight Loss Supplements",
+  //       price: "₹1,499",
+  //       description: "Natural fat metabolism & appetite control.",
+  //       features: ["Burn fat", "Improve digestion"],
+  //       image: "/shop/weight-loss.jpg",
+  //     },
+  //     {
+  //       id: 18,
+  //       title: "Immunity Booster+",
+  //       price: "₹899",
+  //       description: "Vitamin C, Zinc, Amla & Ginger blend.",
+  //       features: ["Strong immunity", "Energy boost"],
+  //       image: "/shop/immunity.jpg",
+  //     },
+  //     {
+  //       id: 19,
+  //       title: "Olive Oil",
+  //       price: "₹699",
+  //       description: "Premium Mediterranean olive oil.",
+  //       features: ["Heart healthy", "Antioxidant rich"],
+  //       image: "/shop/olive-oil.jpg",
+  //     },
+  //   ],
+  // },
   {
     name: "Scalar Products",
     id: "scalar",
@@ -303,18 +303,18 @@ export default function ShopPage() {
         if (filteredProducts.length === 0) return null;
 
         return (
-          <div key={category.id} className="max-w-7xl mx-auto px-6 mb-20">
-            <h2 className="text-3xl font-bold text-green-700 mb-10 border-b border-green-200 pb-4">
+          <div key={category.id} className="max-w-7xl mx-auto px-6 mb-16">
+            <h2 className="text-2xl font-bold text-green-700 mb-8 border-b border-green-200 pb-3">
               {category.name}
             </h2>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {filteredProducts.map((product: any) => (
                 <div
                   key={product.id}
                   className="bg-white rounded-sm overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-300 group"
                 >
-                  <div className="relative border-2 border-green-500 rounded-sm h-96 bg-gray-100">
+                  <div className="relative h-96 bg-gray-100 border-b border-gray-100">
                     <Image
                       src={product.image}
                       alt={product.title}
@@ -323,37 +323,37 @@ export default function ShopPage() {
                     />
                   </div>
 
-                  <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2 text-gray-800">
+                  <div className="p-3">
+                    <h3 className="text-lg font-bold mb-2 text-gray-800 line-clamp-2">
                       {product.title}
                     </h3>
 
                     {/* Duration + Price in One Line */}
-                    <div className="flex items-center justify-between mb-5">
+                    <div className="flex items-center justify-between mb-4">
                       {product.duration && (
                         <p className="text-green-600 font-medium text-sm flex items-center gap-1">
                           ⏱ {product.duration}
                         </p>
                       )}
-                      <div className="bg-green-700 text-white px-5 py-1.5 rounded-full font-semibold text-base shadow">
+                      <div className="bg-green-700 text-white px-4 py-0.5 rounded-full font-semibold text-md">
                         {product.price}
                       </div>
                     </div>
 
-                    <p className="text-gray-600 text-[15px] leading-relaxed mb-6 line-clamp-3">
+                    <p className="text-gray-600 text-sm leading-tight mb-5 line-clamp-3">
                       {product.description}
                     </p>
 
-                    <ul className="space-y-2 mb-8 text-sm text-gray-600">
+                    <ul className="space-y-1.5 mb-6 text-xs text-gray-600">
                       {product.features?.map((feature: any, i: number) => (
                         <li key={i} className="flex items-start gap-2">
-                          <span className="text-green-600 mt-1">✔</span>
+                          <span className="text-green-600 mt-0.5">✔</span>
                           <span>{feature}</span>
                         </li>
                       ))}
                     </ul>
 
-                    <button className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3.5 rounded-2xl transition-all text-base">
+                    <button className="w-full bg-green-700 hover:bg-green-800 text-white font-semibold py-3 rounded-2xl transition-all text-sm">
                       Buy Now
                     </button>
                   </div>
