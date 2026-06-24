@@ -196,7 +196,7 @@ const shopCategories = [
         price: "₹1,199",
         description: "Therapeutic T-shirt for chest & heart support.",
         features: ["Improve sleep", "Boost immunity"],
-        image: "/shop/tshirt.jpg",
+        image: "/images/shop/tshirt.jpeg",
       },
     ],
   },
@@ -238,28 +238,28 @@ const shopCategories = [
   //     },
   //   ],
   // },
-  {
-    name: "Scalar Products",
-    id: "scalar",
-    products: [
-      {
-        id: 20,
-        title: "Relax Activation Holographic Disc",
-        price: "₹1,999",
-        description: "Scalar energy disc for stress relief and better sleep.",
-        features: ["Deep relaxation", "Better sleep"],
-        image: "/shop/relax-disc.jpg",
-      },
-      {
-        id: 21,
-        title: "Power Holographic Disc",
-        price: "₹1,999",
-        description: "Scalar energy disc for stamina and vitality.",
-        features: ["Increase energy", "Physical endurance"],
-        image: "/shop/power-disc.jpg",
-      },
-    ],
-  },
+  // {
+  //   name: "Scalar Products",
+  //   id: "scalar",
+  //   products: [
+  //     {
+  //       id: 20,
+  //       title: "Relax Activation Holographic Disc",
+  //       price: "₹1,999",
+  //       description: "Scalar energy disc for stress relief and better sleep.",
+  //       features: ["Deep relaxation", "Better sleep"],
+  //       image: "/shop/relax-disc.jpg",
+  //     },
+  //     {
+  //       id: 21,
+  //       title: "Power Holographic Disc",
+  //       price: "₹1,999",
+  //       description: "Scalar energy disc for stamina and vitality.",
+  //       features: ["Increase energy", "Physical endurance"],
+  //       image: "/shop/power-disc.jpg",
+  //     },
+  //   ],
+  // },
 ];
 
 export default function ShopPage() {
@@ -335,7 +335,7 @@ export default function ShopPage() {
                           ⏱ {product.duration}
                         </p>
                       )}
-                      <div className="bg-green-700 text-white px-4 py-0.5 rounded-full font-semibold text-md">
+                      <div className="bg-green-700 text-white px-4 py-0.5 rounded-full font-semibold text-sm">
                         {product.price}
                       </div>
                     </div>
