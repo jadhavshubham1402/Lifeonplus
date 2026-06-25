@@ -268,25 +268,25 @@ export default function ShopPage() {
   return (
     <div className="min-h-screen bg-gray-50 pb-20">
       {/* Hero */}
-      <div className="bg-green-700 text-white py-16 mt-20">
+      <div className="bg-green-700 text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto px-6 text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-white">
+          <h1 className="text-3xl md:text-4xl font-bold mb-4 text-white">
             Shop Our Services
           </h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto">
+          <p className="text-lg text-green-100 max-w-2xl mx-auto">
             Preventive Healthcare • Wellness Therapies • Quick Diagnostics
           </p>
         </div>
       </div>
 
       {/* Search Bar */}
-      <div className="max-w-7xl mx-auto px-6 mt-8 relative z-10 mb-12">
+      <div className="max-w-7xl mx-auto px-6 my-8 relative z-10">
         <input
           type="text"
           placeholder="Search services..."
           value={searchTerm}
           onChange={(e) => setSearchTerm(e.target.value)}
-          className="w-full max-w-2xl mx-auto block px-6 py-4 border border-gray-300 rounded-full text-lg focus:outline-none focus:border-green-600 shadow-lg"
+          className="w-full max-w-2xl mx-auto block px-6 py-2 border border-gray-300 rounded-full text-lg focus:outline-none focus:border-green-600 shadow-lg"
         />
       </div>
 

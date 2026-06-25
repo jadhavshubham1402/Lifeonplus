@@ -96,7 +96,7 @@ const Testimonial = () => {
                   ))
                 : testimonial.map((items, i) => (
                     <div key={i} className="px-3 h-full">
-                      <div className="testimonial-card bg-white p-8 md:p-12 rounded-2xl shadow-sm flex flex-col min-h-[460px] md:min-h-[480px]">
+                      <div className="testimonial-card bg-white p-8 md:p-12 rounded-2xl shadow-sm flex flex-col min-h-[360px] md:min-h-[380px]">
                         {/* Avatar */}
                         <div className="flex justify-center mb-6">
                           <div className="relative">
@@ -116,19 +116,11 @@ const Testimonial = () => {
                           <p className="text-sm text-gray-500 mb-1">
                             {items.profession}
                           </p>
-                          <p className="text-2xl font-semibold mb-4">
+                          <p className="text-base font-semibold mb-4">
                             {items.name}
                           </p>
 
-                          <Image
-                            src={withBasePath(items.starimg)}
-                            alt="stars"
-                            width={120}
-                            height={24}
-                            className="mx-auto mb-6"
-                          />
-
-                          <p className="text-lg leading-relaxed text-gray-700 flex-1">
+                          <p className="text-md leading-relaxed text-gray-700 flex-1">
                             {items.detail}
                           </p>
                         </div>

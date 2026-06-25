@@ -1,66 +1,63 @@
 "use client";
-import React, { useState, useEffect } from "react";
+
+import React from "react";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import * as Yup from "yup";
+import { toast } from "react-toastify";
+
+const validationSchema = Yup.object({
+  name: Yup.string()
+    .min(2, "Name must be at least 2 characters")
+    .required("Name is required"),
+  email: Yup.string()
+    .email("Invalid email address")
+    .required("Email is required"),
+  state: Yup.string()
+    .min(2, "State must be at least 2 characters")
+    .required("State is required"),
+  district: Yup.string()
+    .min(2, "District must be at least 2 characters")
+    .required("District is required"),
+  city: Yup.string()
+    .min(2, "City must be at least 2 characters")
+    .required("City is required"),
+  phone: Yup.string()
+    .matches(/^[0-9]{10}$/, "Phone number must be exactly 10 digits")
+    .required("Phone number is required"),
+  message: Yup.string()
+    .min(10, "Message must be at least 10 characters")
+    .required("Message is required"),
+});
 
 const ContactForm = () => {
-  const [formData, setFormData] = useState({
-    firstname: "",
-    lastname: "",
+  const initialValues = {
+    name: "",
     email: "",
-    phnumber: "",
-    Message: "",
-  });
+    state: "",
+    district: "",
+    city: "",
+    phone: "",
+    message: "",
+  };
 
-  const [submitted, setSubmitted] = useState(false);
-  const [showThanks, setShowThanks] = useState(false);
-  const [loader, setLoader] = useState(false);
-  const [isFormValid, setIsFormValid] = useState(false);
-
-  // Validation
-  useEffect(() => {
-    const isValid = Object.values(formData).every(
-      (value) => value.trim() !== "",
-    );
-    setIsFormValid(isValid);
-  }, [formData]);
-
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+  const handleSubmit = async (
+    values: any,
+    { setSubmitting, resetForm }: any,
   ) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: value,
-    }));
-  };
-
-  const resetForm = () => {
-    setFormData({
-      firstname: "",
-      lastname: "",
-      email: "",
-      phnumber: "",
-      Message: "",
-    });
-  };
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (!isFormValid) return;
-
-    setLoader(true);
-
     try {
       const response = await fetch(
-        "https://formsubmit.co/ajax/bhainirav772@gmail.com",
+        "https://lifeonplus.in/api/contactForm",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({
-            Name: formData.firstname,
-            LastName: formData.lastname,
-            Email: formData.email,
-            PhoneNo: formData.phnumber,
-            Message: formData.Message,
+            Name: values.name,
+            Email: values.email,
+            State: values.state,
+            District: values.district,
+            City: values.city,
+            Phone: values.phone,
+            Message: values.message,
           }),
         },
       );
@@ -68,19 +65,19 @@ const ContactForm = () => {
       const data = await response.json();
 
       if (data.success) {
-        setSubmitted(true);
-        setShowThanks(true);
+        toast.success("Thank you! We will get back to you soon.", {
+          position: "top-right",
+          autoClose: 4000,
+        });
         resetForm();
-
-        setTimeout(() => {
-          setShowThanks(false);
-        }, 5000);
+      } else {
+        toast.error("Something went wrong. Please try again.");
       }
     } catch (error) {
       console.error("Form submission error:", error);
-      // Optionally show error message to user
+      toast.error("Failed to submit form. Please try again.");
     } finally {
-      setLoader(false);
+      setSubmitting(false);
     }
   };
 
@@ -92,127 +89,158 @@ const ContactForm = () => {
             Get in Touch
           </h2>
 
-          <form onSubmit={handleSubmit} className="space-y-6 md:space-y-8">
-            {/* Name Fields */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              <div>
-                <label
-                  htmlFor="fname"
-                  className="block pb-2 text-sm md:text-base font-medium"
-                >
-                  First Name
-                </label>
-                <input
-                  id="fname"
-                  type="text"
-                  name="firstname"
-                  value={formData.firstname}
-                  onChange={handleChange}
-                  placeholder="John"
-                  className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
-                />
-              </div>
+          <Formik
+            initialValues={initialValues}
+            validationSchema={validationSchema}
+            onSubmit={handleSubmit}
+          >
+            {({ isSubmitting }) => (
+              <Form className="space-y-6 md:space-y-8">
+                {/* Name */}
+                <div>
+                  <label className="block pb-2 text-sm md:text-base font-medium">
+                    Full Name
+                  </label>
+                  <Field
+                    type="text"
+                    name="name"
+                    className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                    placeholder="Enter your full name"
+                  />
+                  <ErrorMessage
+                    name="name"
+                    component="p"
+                    className="text-red-500 text-sm mt-1"
+                  />
+                </div>
 
-              <div>
-                <label
-                  htmlFor="lname"
-                  className="block pb-2 text-sm md:text-base font-medium"
-                >
-                  Last Name
-                </label>
-                <input
-                  id="lname"
-                  type="text"
-                  name="lastname"
-                  value={formData.lastname}
-                  onChange={handleChange}
-                  placeholder="Doe"
-                  className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
-                />
-              </div>
-            </div>
+                {/* Email & Phone */}
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
+                  <div>
+                    <label className="block pb-2 text-sm md:text-base font-medium">
+                      Email Address
+                    </label>
+                    <Field
+                      type="email"
+                      name="email"
+                      className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                      placeholder="john.doe@example.com"
+                    />
+                    <ErrorMessage
+                      name="email"
+                      component="p"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
 
-            {/* Email & Phone */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6">
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block pb-2 text-sm md:text-base font-medium"
-                >
-                  Email Address
-                </label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  placeholder="john.doe@example.com"
-                  className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
-                />
-              </div>
+                  <div>
+                    <label className="block pb-2 text-sm md:text-base font-medium">
+                      Phone Number
+                    </label>
+                    <Field
+                      type="tel"
+                      name="phone"
+                      className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                      placeholder="9876543210"
+                    />
+                    <ErrorMessage
+                      name="phone"
+                      component="p"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
+                </div>
 
-              <div>
-                <label
-                  htmlFor="phnumber"
-                  className="block pb-2 text-sm md:text-base font-medium"
-                >
-                  Phone Number
-                </label>
-                <input
-                  id="phnumber"
-                  type="tel"
-                  name="phnumber"
-                  value={formData.phnumber}
-                  onChange={handleChange}
-                  placeholder="+1234567890"
-                  className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
-                />
-              </div>
-            </div>
+                {/* State, District, City */}
+                <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6">
+                  <div>
+                    <label className="block pb-2 text-sm md:text-base font-medium">
+                      State
+                    </label>
+                    <Field
+                      type="text"
+                      name="state"
+                      className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                      placeholder="State"
+                    />
+                    <ErrorMessage
+                      name="state"
+                      component="p"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
 
-            {/* Message */}
-            <div>
-              <label
-                htmlFor="message"
-                className="block pb-2 text-sm md:text-base font-medium"
-              >
-                Message
-              </label>
-              <textarea
-                id="message"
-                name="Message"
-                value={formData.Message}
-                onChange={handleChange}
-                rows={5}
-                placeholder="Anything else you wanna communicate..."
-                className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300 resize-y min-h-[140px]"
-              />
-            </div>
+                  <div>
+                    <label className="block pb-2 text-sm md:text-base font-medium">
+                      District
+                    </label>
+                    <Field
+                      type="text"
+                      name="district"
+                      className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                      placeholder="District"
+                    />
+                    <ErrorMessage
+                      name="district"
+                      component="p"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
 
-            {/* Submit Button */}
-            <div>
-              <button
-                type="submit"
-                disabled={!isFormValid || loader}
-                className={`w-full sm:w-auto px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ${
-                  !isFormValid || loader
-                    ? "bg-gray-300 text-gray-500 cursor-not-allowed"
-                    : "bg-primary text-white hover:bg-transparent hover:text-primary border border-primary hover:border-primary"
-                }`}
-              >
-                {loader ? "Sending..." : "Submit Message"}
-              </button>
-            </div>
-          </form>
+                  <div>
+                    <label className="block pb-2 text-sm md:text-base font-medium">
+                      City
+                    </label>
+                    <Field
+                      type="text"
+                      name="city"
+                      className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300"
+                      placeholder="City"
+                    />
+                    <ErrorMessage
+                      name="city"
+                      component="p"
+                      className="text-red-500 text-sm mt-1"
+                    />
+                  </div>
+                </div>
 
-          {/* Success Message */}
-          {showThanks && (
-            <div className="absolute -bottom-4 left-1/2 -translate-x-1/2 bg-primary text-white px-6 py-3 rounded-2xl flex items-center gap-3 text-base shadow-lg">
-              Thank you for contacting us! We will get back to you soon.
-              <div className="w-4 h-4 rounded-full animate-spin border-2 border-white border-t-transparent" />
-            </div>
-          )}
+                {/* Message */}
+                <div>
+                  <label className="block pb-2 text-sm md:text-base font-medium">
+                    Message
+                  </label>
+                  <Field
+                    as="textarea"
+                    name="message"
+                    rows={5}
+                    className="w-full text-md md:text-base px-4 py-2.5 rounded-2xl border border-gray-300 focus:border-primary focus:outline-none transition-all duration-300 resize-y min-h-[140px]"
+                    placeholder="Anything else you wanna communicate..."
+                  />
+                  <ErrorMessage
+                    name="message"
+                    component="p"
+                    className="text-red-500 text-sm mt-1"
+                  />
+                </div>
+
+                {/* Submit Button */}
+                <div>
+                  <button
+                    type="submit"
+                    disabled={isSubmitting}
+                    className={`w-full sm:w-auto px-8 py-3 rounded-full text-lg font-medium transition-all duration-300 ${
+                      isSubmitting
+                        ? "bg-gray-300 text-gray-500 cursor-not-allowed"
+                        : "bg-[#02BE0F] text-white hover:bg-transparent hover:text-primary border border-primary hover:border-primary"
+                    }`}
+                  >
+                    {isSubmitting ? "Sending..." : "Submit Message"}
+                  </button>
+                </div>
+              </Form>
+            )}
+          </Formik>
         </div>
       </div>
     </section>

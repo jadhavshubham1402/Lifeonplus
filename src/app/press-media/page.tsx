@@ -32,12 +32,12 @@ export default function PressMedia() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Header */}
-      <div className="bg-green-700 text-white py-10 mt-24">
+      <div className="bg-green-700 text-white py-8 mt-20">
         <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-5xl md:text-6xl font-bold text-white mb-4">
+          <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
             Press Media
           </h1>
-          <p className="text-xl text-green-100 max-w-2xl mx-auto">
+          <p className="text-lg text-green-100 max-w-2xl mx-auto">
             Featured stories, media coverage, and press releases about
             LifeOnPlus
           </p>
